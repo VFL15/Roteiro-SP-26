@@ -1,0 +1,660 @@
+[
+    {
+        "nome": "Cinema",
+        "local": "Parque da Cidade",
+        "endereco": "Rua Jardelina de Almeida López, 451",
+        "horarios": {
+            "segunda": "10:00 - 16:00",
+            "terca": "10:00 - 16:00",
+            "quarta": "10:00 - 16:00",
+            "quinta": "10:00 - 16:00",
+            "sexta": "10:00 - 18:00",
+            "sabado": "09:00 - 20:00",
+            "domingo": "09:00 - 18:00"
+        }
+    },
+    {
+        "nome": "Feira de Artesanato",
+        "local": "Praça Central",
+        "endereco": "Avenida Paulista, 1000",
+        "horarios": {
+            "segunda": "Fechado",
+            "terca": "14:00 - 20:00",
+            "quarta": "14:00 - 20:00",
+            "quinta": "14:00 - 20:00",
+            "sexta": "14:00 - 22:00",
+            "sabado": "10:00 - 22:00",
+            "domingo": "10:00 - 20:00"
+        }
+    },
+    {
+        "nome": "Mercado Orgânico",
+        "local": "Vila Verde",
+        "endereco": "Rua das Flores, 234",
+        "horarios": {
+            "segunda": "07:00 - 13:00",
+            "terca": "07:00 - 13:00",
+            "quarta": "07:00 - 13:00",
+            "quinta": "07:00 - 13:00",
+            "sexta": "07:00 - 13:00",
+            "sabado": "06:00 - 14:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Museu de Arte",
+        "local": "Centro Histórico",
+        "endereco": "Rua da República, 567",
+        "horarios": {
+            "segunda": "Fechado",
+            "terca": "10:00 - 18:00",
+            "quarta": "10:00 - 18:00",
+            "quinta": "10:00 - 18:00",
+            "sexta": "10:00 - 20:00",
+            "sabado": "09:00 - 19:00",
+            "domingo": "09:00 - 17:00"
+        }
+    },
+    {
+        "nome": "Parque Infantil",
+        "local": "Zona Norte",
+        "endereco": "Avenida Jarbas Passarinho, 789",
+        "horarios": {
+            "segunda": "08:00 - 18:00",
+            "terca": "08:00 - 18:00",
+            "quarta": "08:00 - 18:00",
+            "quinta": "08:00 - 18:00",
+            "sexta": "08:00 - 20:00",
+            "sabado": "07:00 - 21:00",
+            "domingo": "07:00 - 20:00"
+        }
+    },
+    {
+        "nome": "Restaurante Italiano",
+        "local": "Bairro Vila Rica",
+        "endereco": "Rua Gourmet, 321",
+        "horarios": {
+            "segunda": "11:00 - 14:00 / 18:00 - 23:00",
+            "terca": "11:00 - 14:00 / 18:00 - 23:00",
+            "quarta": "11:00 - 14:00 / 18:00 - 23:00",
+            "quinta": "11:00 - 14:00 / 18:00 - 23:00",
+            "sexta": "11:00 - 14:00 / 18:00 - 00:00",
+            "sabado": "12:00 - 15:00 / 18:00 - 00:00",
+            "domingo": "12:00 - 15:00 / 18:00 - 23:00"
+        }
+    },
+    {
+        "nome": "Biblioteca Municipal",
+        "local": "Centro",
+        "endereco": "Rua Machado de Assis, 654",
+        "horarios": {
+            "segunda": "09:00 - 20:00",
+            "terca": "09:00 - 20:00",
+            "quarta": "09:00 - 20:00",
+            "quinta": "09:00 - 20:00",
+            "sexta": "09:00 - 18:00",
+            "sabado": "09:00 - 14:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Academia de Fitness",
+        "local": "Zona Comercial",
+        "endereco": "Avenida Brasil, 987",
+        "horarios": {
+            "segunda": "06:00 - 22:00",
+            "terca": "06:00 - 22:00",
+            "quarta": "06:00 - 22:00",
+            "quinta": "06:00 - 22:00",
+            "sexta": "06:00 - 22:00",
+            "sabado": "08:00 - 18:00",
+            "domingo": "08:00 - 17:00"
+        }
+    },
+    {
+        "nome": "Clínica Veterinária",
+        "local": "Bairro Assunção",
+        "endereco": "Rua dos Animais, 111",
+        "horarios": {
+            "segunda": "09:00 - 12:00 / 14:00 - 19:00",
+            "terca": "09:00 - 12:00 / 14:00 - 19:00",
+            "quarta": "09:00 - 12:00 / 14:00 - 19:00",
+            "quinta": "09:00 - 12:00 / 14:00 - 19:00",
+            "sexta": "09:00 - 12:00 / 14:00 - 20:00",
+            "sabado": "09:00 - 13:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Loja de Roupas",
+        "local": "Shopping Center",
+        "endereco": "Rua Principal, 222",
+        "horarios": {
+            "segunda": "10:00 - 20:00",
+            "terca": "10:00 - 20:00",
+            "quarta": "10:00 - 20:00",
+            "quinta": "10:00 - 20:00",
+            "sexta": "10:00 - 21:00",
+            "sabado": "10:00 - 21:00",
+            "domingo": "10:00 - 19:00"
+        }
+    },
+    {
+        "nome": "Café com Livros",
+        "local": "Bairro Vila Mariana",
+        "endereco": "Rua Serena, 333",
+        "horarios": {
+            "segunda": "08:00 - 19:00",
+            "terca": "08:00 - 19:00",
+            "quarta": "08:00 - 19:00",
+            "quinta": "08:00 - 19:00",
+            "sexta": "08:00 - 21:00",
+            "sabado": "09:00 - 21:00",
+            "domingo": "09:00 - 18:00"
+        }
+    },
+    {
+        "nome": "Farmácia 24h",
+        "local": "Centro",
+        "endereco": "Avenida Saúde, 444",
+        "horarios": {
+            "segunda": "24 horas",
+            "terca": "24 horas",
+            "quarta": "24 horas",
+            "quinta": "24 horas",
+            "sexta": "24 horas",
+            "sabado": "24 horas",
+            "domingo": "24 horas"
+        }
+    },
+    {
+        "nome": "Salão de Beleza",
+        "local": "Zona Sul",
+        "endereco": "Rua da Vaidade, 555",
+        "horarios": {
+            "segunda": "09:00 - 18:00",
+            "terca": "09:00 - 18:00",
+            "quarta": "09:00 - 18:00",
+            "quinta": "09:00 - 18:00",
+            "sexta": "09:00 - 20:00",
+            "sabado": "08:00 - 18:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Piscina Pública",
+        "local": "Zona Leste",
+        "endereco": "Avenida Aquática, 666",
+        "horarios": {
+            "segunda": "06:00 - 22:00",
+            "terca": "06:00 - 22:00",
+            "quarta": "06:00 - 22:00",
+            "quinta": "06:00 - 22:00",
+            "sexta": "06:00 - 23:00",
+            "sabado": "08:00 - 23:00",
+            "domingo": "08:00 - 22:00"
+        }
+    },
+    {
+        "nome": "Padaria Artesanal",
+        "local": "Bairro Vila União",
+        "endereco": "Rua do Pão, 777",
+        "horarios": {
+            "segunda": "06:00 - 19:00",
+            "terca": "06:00 - 19:00",
+            "quarta": "06:00 - 19:00",
+            "quinta": "06:00 - 19:00",
+            "sexta": "06:00 - 20:00",
+            "sabado": "06:00 - 19:00",
+            "domingo": "07:00 - 18:00"
+        }
+    },
+    {
+        "nome": "Teatro Municipal",
+        "local": "Centro Cultural",
+        "endereco": "Rua das Artes, 888",
+        "horarios": {
+            "segunda": "14:00 - 22:00",
+            "terca": "14:00 - 22:00",
+            "quarta": "14:00 - 22:00",
+            "quinta": "14:00 - 23:00",
+            "sexta": "14:00 - 23:00",
+            "sabado": "10:00 - 23:00",
+            "domingo": "10:00 - 21:00"
+        }
+    },
+    {
+        "nome": "Oficina de Cerâmica",
+        "local": "Zona Oeste",
+        "endereco": "Avenida Criativa, 999",
+        "horarios": {
+            "segunda": "10:00 - 18:00",
+            "terca": "10:00 - 18:00",
+            "quarta": "10:00 - 18:00",
+            "quinta": "10:00 - 18:00",
+            "sexta": "10:00 - 20:00",
+            "sabado": "09:00 - 17:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Supermercado Super Preço",
+        "local": "Bairro Tatuapé",
+        "endereco": "Avenida Comercial, 1111",
+        "horarios": {
+            "segunda": "07:00 - 22:00",
+            "terca": "07:00 - 22:00",
+            "quarta": "07:00 - 22:00",
+            "quinta": "07:00 - 22:00",
+            "sexta": "07:00 - 23:00",
+            "sabado": "07:00 - 22:00",
+            "domingo": "08:00 - 21:00"
+        }
+    },
+    {
+        "nome": "Escolinha de Futebol",
+        "local": "Campo Vila",
+        "endereco": "Rua Pelé, 2222",
+        "horarios": {
+            "segunda": "15:00 - 19:00",
+            "terca": "15:00 - 19:00",
+            "quarta": "15:00 - 19:00",
+            "quinta": "15:00 - 19:00",
+            "sexta": "15:00 - 20:00",
+            "sabado": "09:00 - 18:00",
+            "domingo": "10:00 - 17:00"
+        }
+    },
+    {
+        "nome": "Lanchonete do Seu João",
+        "local": "Bairro Centro-Oeste",
+        "endereco": "Rua Saudade, 3333",
+        "horarios": {
+            "segunda": "11:00 - 22:00",
+            "terca": "11:00 - 22:00",
+            "quarta": "11:00 - 22:00",
+            "quinta": "11:00 - 22:00",
+            "sexta": "11:00 - 23:00",
+            "sabado": "12:00 - 23:00",
+            "domingo": "12:00 - 22:00"
+        }
+    },
+    {
+        "nome": "Consultório Odontológico",
+        "local": "Zona Médica",
+        "endereco": "Avenida da Saúde, 4444",
+        "horarios": {
+            "segunda": "08:00 - 12:00 / 13:00 - 19:00",
+            "terca": "08:00 - 12:00 / 13:00 - 19:00",
+            "quarta": "08:00 - 12:00 / 13:00 - 19:00",
+            "quinta": "08:00 - 12:00 / 13:00 - 19:00",
+            "sexta": "08:00 - 12:00 / 13:00 - 18:00",
+            "sabado": "08:00 - 12:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Lan House Online",
+        "local": "Bairro Gamer",
+        "endereco": "Rua Virtual, 5555",
+        "horarios": {
+            "segunda": "12:00 - 23:00",
+            "terca": "12:00 - 23:00",
+            "quarta": "12:00 - 23:00",
+            "quinta": "12:00 - 23:00",
+            "sexta": "12:00 - 00:00",
+            "sabado": "10:00 - 00:00",
+            "domingo": "10:00 - 23:00"
+        }
+    },
+    {
+        "nome": "Floricultura Primavera",
+        "local": "Vila Margarida",
+        "endereco": "Rua das Flores, 6666",
+        "horarios": {
+            "segunda": "08:00 - 19:00",
+            "terca": "08:00 - 19:00",
+            "quarta": "08:00 - 19:00",
+            "quinta": "08:00 - 19:00",
+            "sexta": "08:00 - 20:00",
+            "sabado": "08:00 - 18:00",
+            "domingo": "09:00 - 17:00"
+        }
+    },
+    {
+        "nome": "Autoescola Segura",
+        "local": "Vila Segura",
+        "endereco": "Avenida Segurança, 7777",
+        "horarios": {
+            "segunda": "08:00 - 18:00",
+            "terca": "08:00 - 18:00",
+            "quarta": "08:00 - 18:00",
+            "quinta": "08:00 - 18:00",
+            "sexta": "08:00 - 20:00",
+            "sabado": "09:00 - 16:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Clínica de Fisioterapia",
+        "local": "Zona Médica",
+        "endereco": "Rua do Bem-Estar, 8888",
+        "horarios": {
+            "segunda": "07:00 - 20:00",
+            "terca": "07:00 - 20:00",
+            "quarta": "07:00 - 20:00",
+            "quinta": "07:00 - 20:00",
+            "sexta": "07:00 - 19:00",
+            "sabado": "08:00 - 17:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Petshop Bichinhos",
+        "local": "Bairro Vila Pets",
+        "endereco": "Rua dos Animais, 9999",
+        "horarios": {
+            "segunda": "09:00 - 19:00",
+            "terca": "09:00 - 19:00",
+            "quarta": "09:00 - 19:00",
+            "quinta": "09:00 - 19:00",
+            "sexta": "09:00 - 20:00",
+            "sabado": "09:00 - 18:00",
+            "domingo": "10:00 - 17:00"
+        }
+    },
+    {
+        "nome": "Coworking Inovação",
+        "local": "Zona Tech",
+        "endereco": "Avenida Tecnologia, 10101",
+        "horarios": {
+            "segunda": "08:00 - 20:00",
+            "terca": "08:00 - 20:00",
+            "quarta": "08:00 - 20:00",
+            "quinta": "08:00 - 20:00",
+            "sexta": "08:00 - 19:00",
+            "sabado": "10:00 - 17:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Drogaria Popular",
+        "local": "Centro Comercial",
+        "endereco": "Rua Principal, 11111",
+        "horarios": {
+            "segunda": "08:00 - 20:00",
+            "terca": "08:00 - 20:00",
+            "quarta": "08:00 - 20:00",
+            "quinta": "08:00 - 20:00",
+            "sexta": "08:00 - 21:00",
+            "sabado": "08:00 - 20:00",
+            "domingo": "09:00 - 19:00"
+        }
+    },
+    {
+        "nome": "Churrascaria Premium",
+        "local": "Zona Gastronômica",
+        "endereco": "Avenida Churrasco, 12121",
+        "horarios": {
+            "segunda": "Fechado",
+            "terca": "18:00 - 23:00",
+            "quarta": "18:00 - 23:00",
+            "quinta": "18:00 - 00:00",
+            "sexta": "18:00 - 00:00",
+            "sabado": "12:00 - 00:00",
+            "domingo": "12:00 - 23:00"
+        }
+    },
+    {
+        "nome": "Escola de Idiomas",
+        "local": "Bairro Educação",
+        "endereco": "Rua Saber, 13131",
+        "horarios": {
+            "segunda": "08:00 - 22:00",
+            "terca": "08:00 - 22:00",
+            "quarta": "08:00 - 22:00",
+            "quinta": "08:00 - 22:00",
+            "sexta": "08:00 - 20:00",
+            "sabado": "10:00 - 17:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Galeria de Arte",
+        "local": "Bairro Artístico",
+        "endereco": "Rua Criação, 14141",
+        "horarios": {
+            "segunda": "Fechado",
+            "terca": "10:00 - 18:00",
+            "quarta": "10:00 - 18:00",
+            "quinta": "10:00 - 18:00",
+            "sexta": "10:00 - 20:00",
+            "sabado": "10:00 - 20:00",
+            "domingo": "10:00 - 17:00"
+        }
+    },
+    {
+        "nome": "Barbershop Clássico",
+        "local": "Centro",
+        "endereco": "Rua da Moda, 15151",
+        "horarios": {
+            "segunda": "09:00 - 19:00",
+            "terca": "09:00 - 19:00",
+            "quarta": "09:00 - 19:00",
+            "quinta": "09:00 - 19:00",
+            "sexta": "09:00 - 20:00",
+            "sabado": "08:00 - 19:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Yoga e Meditação",
+        "local": "Vila Zen",
+        "endereco": "Rua Tranquilidade, 16161",
+        "horarios": {
+            "segunda": "07:00 - 20:00",
+            "terca": "07:00 - 20:00",
+            "quarta": "07:00 - 20:00",
+            "quinta": "07:00 - 20:00",
+            "sexta": "07:00 - 19:00",
+            "sabado": "09:00 - 18:00",
+            "domingo": "09:00 - 17:00"
+        }
+    },
+    {
+        "nome": "Sorveteria Gelado Feliz",
+        "local": "Zona Comercial",
+        "endereco": "Avenida Refrescante, 17171",
+        "horarios": {
+            "segunda": "12:00 - 22:00",
+            "terca": "12:00 - 22:00",
+            "quarta": "12:00 - 22:00",
+            "quinta": "12:00 - 22:00",
+            "sexta": "12:00 - 23:00",
+            "sabado": "11:00 - 23:00",
+            "domingo": "11:00 - 22:00"
+        }
+    },
+    {
+        "nome": "Óptica Visão Clara",
+        "local": "Bairro Comércio",
+        "endereco": "Rua da Saúde Visual, 18181",
+        "horarios": {
+            "segunda": "09:00 - 19:00",
+            "terca": "09:00 - 19:00",
+            "quarta": "09:00 - 19:00",
+            "quinta": "09:00 - 19:00",
+            "sexta": "09:00 - 20:00",
+            "sabado": "09:00 - 18:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Pizzaria Italiana Nonna",
+        "local": "Bairro Vila Italiana",
+        "endereco": "Rua Massimo, 19191",
+        "horarios": {
+            "segunda": "18:00 - 23:00",
+            "terca": "18:00 - 23:00",
+            "quarta": "18:00 - 23:00",
+            "quinta": "18:00 - 00:00",
+            "sexta": "12:00 - 14:00 / 18:00 - 00:00",
+            "sabado": "12:00 - 14:00 / 18:00 - 00:00",
+            "domingo": "12:00 - 14:00 / 18:00 - 23:00"
+        }
+    },
+    {
+        "nome": "Distribuidora de Bebidas",
+        "local": "Zona Industrial",
+        "endereco": "Avenida Comercial, 20202",
+        "horarios": {
+            "segunda": "07:00 - 18:00",
+            "terca": "07:00 - 18:00",
+            "quarta": "07:00 - 18:00",
+            "quinta": "07:00 - 18:00",
+            "sexta": "07:00 - 19:00",
+            "sabado": "08:00 - 17:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Loja de Eletrônicos",
+        "local": "Shopping Center",
+        "endereco": "Rua Tecnologia, 21212",
+        "horarios": {
+            "segunda": "10:00 - 20:00",
+            "terca": "10:00 - 20:00",
+            "quarta": "10:00 - 20:00",
+            "quinta": "10:00 - 20:00",
+            "sexta": "10:00 - 21:00",
+            "sabado": "10:00 - 21:00",
+            "domingo": "10:00 - 19:00"
+        }
+    },
+    {
+        "nome": "Atelier de Costura",
+        "local": "Bairro Vila Moda",
+        "endereco": "Rua Agulha, 22222",
+        "horarios": {
+            "segunda": "10:00 - 18:00",
+            "terca": "10:00 - 18:00",
+            "quarta": "10:00 - 18:00",
+            "quinta": "10:00 - 18:00",
+            "sexta": "10:00 - 19:00",
+            "sabado": "10:00 - 17:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Consultório Psicológico",
+        "local": "Zona Médica",
+        "endereco": "Rua Bem-Estar Mental, 23232",
+        "horarios": {
+            "segunda": "08:00 - 20:00",
+            "terca": "08:00 - 20:00",
+            "quarta": "08:00 - 20:00",
+            "quinta": "08:00 - 20:00",
+            "sexta": "08:00 - 18:00",
+            "sabado": "09:00 - 13:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Livraria do Conhecimento",
+        "local": "Bairro Literário",
+        "endereco": "Rua dos Escritores, 24242",
+        "horarios": {
+            "segunda": "10:00 - 19:00",
+            "terca": "10:00 - 19:00",
+            "quarta": "10:00 - 19:00",
+            "quinta": "10:00 - 19:00",
+            "sexta": "10:00 - 20:00",
+            "sabado": "10:00 - 18:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Barbearia Moderna",
+        "local": "Centro Comercial",
+        "endereco": "Avenida Estilo, 25252",
+        "horarios": {
+            "segunda": "09:00 - 20:00",
+            "terca": "09:00 - 20:00",
+            "quarta": "09:00 - 20:00",
+            "quinta": "09:00 - 20:00",
+            "sexta": "09:00 - 21:00",
+            "sabado": "08:00 - 20:00",
+            "domingo": "Fechado"
+        }
+    },
+    {
+        "nome": "Estúdio de Dança",
+        "local": "Bairro Movimento",
+        "endereco": "Rua Ritmo, 26262",
+        "horarios": {
+            "segunda": "14:00 - 22:00",
+            "terca": "14:00 - 22:00",
+            "quarta": "14:00 - 22:00",
+            "quinta": "14:00 - 22:00",
+            "sexta": "14:00 - 23:00",
+            "sabado": "10:00 - 19:00",
+            "domingo": "10:00 - 17:00"
+        }
+    },
+    {
+        "nome": "Farmácia Natureza",
+        "local": "Vila Orgânica",
+        "endereco": "Rua Natural, 27272",
+        "horarios": {
+            "segunda": "09:00 - 19:00",
+            "terca": "09:00 - 19:00",
+            "quarta": "09:00 - 19:00",
+            "quinta": "09:00 - 19:00",
+            "sexta": "09:00 - 20:00",
+            "sabado": "09:00 - 18:00",
+            "domingo": "10:00 - 17:00"
+        }
+    },
+    {
+        "nome": "Borracharia 24h",
+        "local": "Zona Automóvel",
+        "endereco": "Avenida Pneu, 28282",
+        "horarios": {
+            "segunda": "24 horas",
+            "terca": "24 horas",
+            "quarta": "24 horas",
+            "quinta": "24 horas",
+            "sexta": "24 horas",
+            "sabado": "24 horas",
+            "domingo": "24 horas"
+        }
+    },
+    {
+        "nome": "Confeitaria Doces Sonhos",
+        "local": "Bairro Vila Doce",
+        "endereco": "Rua Açúcar, 29292",
+        "horarios": {
+            "segunda": "08:00 - 19:00",
+            "terca": "08:00 - 19:00",
+            "quarta": "08:00 - 19:00",
+            "quinta": "08:00 - 19:00",
+            "sexta": "08:00 - 20:00",
+            "sabado": "08:00 - 19:00",
+            "domingo": "09:00 - 18:00"
+        }
+    },
+    {
+        "nome": "Agência de Viagens",
+        "local": "Centro",
+        "endereco": "Rua Destino, 30303",
+        "horarios": {
+            "segunda": "09:00 - 18:00",
+            "terca": "09:00 - 18:00",
+            "quarta": "09:00 - 18:00",
+            "quinta": "09:00 - 18:00",
+            "sexta": "09:00 - 19:00",
+            "sabado": "10:00 - 16:00",
+            "domingo": "Fechado"
+        }
+    }
+]

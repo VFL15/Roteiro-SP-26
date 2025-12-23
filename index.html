@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP26</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <ul class="sortable-list"></ul>
+    <div class="drop-indicator"></div>
+    
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js';
+        import { getDatabase } from 'https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js';
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyC9dAK5P47xAUe-orpGy42jb503TrOX4zY",
+            authDomain: "sp26-aee30.firebaseapp.com",
+            databaseURL: "https://sp26-aee30-default-rtdb.firebaseio.com",
+            projectId: "sp26-aee30",
+            storageBucket: "sp26-aee30.firebasestorage.app",
+            messagingSenderId: "916501125100",
+            appId: "1:916501125100:web:6e2a822c790e282ada92c9",
+            measurementId: "G-7M26WF8PZQ"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        window.firebaseDb = getDatabase(app);
+    </script>
+    <script src="js/estado.js" type="module"></script>
+</body>
+</html>
