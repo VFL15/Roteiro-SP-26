@@ -13,38 +13,9 @@ body {
     height: 100%;
 }
 
-/* Scrollbar customizada */
-.custom-scrollbar {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 60px;
-    height: calc(100vh - 70px);
-    background-color: transparent;
-    z-index: 999;
-    cursor: grab;
-}
+/* Scrollbar customizada removida */
 
-.custom-scrollbar:active {
-    cursor: grabbing;
-}
-
-.custom-scrollbar-thumb {
-    position: absolute;
-    right: 5px;
-    top: 0;
-    width: 50px;
-    height: 100px;
-    background: linear-gradient(180deg, #007bff 0%, #0056b3 100%);
-    border-radius: 10px;
-    transition: background-color 0.2s;
-}
-
-.custom-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #0056b3 0%, #003d82 100%);
-}
-
-/* Remover scrollbar nativa do browser */
+/* Ocultar scrollbar nativa globalmente */
 ::-webkit-scrollbar {
     width: 0;
 }
@@ -63,7 +34,7 @@ body {
     list-style-type: none;
     padding: 20px 0 90px 0;
     margin: 0;
-    width: calc(100% - 60px);
+    width: 100%;
     min-height: calc(100vh - 70px);
     user-select: none;
     -webkit-user-select: none;

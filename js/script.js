@@ -2,69 +2,10 @@ import { ref, set, get, onValue } from 'https://www.gstatic.com/firebasejs/12.7.
 
 document.addEventListener('DOMContentLoaded', () => {
     const list = document.querySelector('.sortable-list');
-    const scrollbarThumb = document.querySelector('.custom-scrollbar-thumb');
-    const scrollbarContainer = document.querySelector('.custom-scrollbar');
     let eventos = [];
-    let isDraggingScrollbar = false;
+    
 
-    // Função para atualizar posição da scrollbar
-    function updateScrollbar() {
-        const navHeight = 70; // Altura da barra de navegação inferior
-        const scrollbarHeight = window.innerHeight - navHeight;
-        const scrollableHeight = list.scrollHeight - scrollbarHeight;
-        const scrollPercentage = scrollableHeight > 0 ? list.scrollTop / scrollableHeight : 0;
-        const thumbHeight = Math.max(50, scrollbarHeight * (scrollbarHeight / list.scrollHeight));
-        const thumbTop = scrollPercentage * (scrollbarHeight - thumbHeight);
-        
-        scrollbarThumb.style.height = thumbHeight + 'px';
-        scrollbarThumb.style.top = thumbTop + 'px';
-    }
-
-    // Atualizar scrollbar quando scroll acontece
-    list.addEventListener('scroll', updateScrollbar);
-    window.addEventListener('resize', updateScrollbar);
-
-    // Permitir scroll ao clicar e arrastar a scrollbar
-    scrollbarThumb.addEventListener('mousedown', (e) => {
-        isDraggingScrollbar = true;
-        e.preventDefault();
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (isDraggingScrollbar) {
-            const navHeight = 70;
-            const scrollbarHeight = window.innerHeight - navHeight;
-            const scrollableHeight = list.scrollHeight - scrollbarHeight;
-            const percentage = (e.clientY - 25) / (scrollbarHeight - 50);
-            list.scrollTop = Math.max(0, percentage * scrollableHeight);
-        }
-    });
-
-    document.addEventListener('mouseup', () => {
-        isDraggingScrollbar = false;
-    });
-
-    // Scroll pelo touch em mobile
-    let touchStartY = 0;
-    scrollbarContainer.addEventListener('touchstart', (e) => {
-        touchStartY = e.touches[0].clientY;
-        isDraggingScrollbar = true;
-    });
-
-    scrollbarContainer.addEventListener('touchmove', (e) => {
-        if (isDraggingScrollbar) {
-            const navHeight = 70;
-            const scrollbarHeight = window.innerHeight - navHeight;
-            const scrollableHeight = list.scrollHeight - scrollbarHeight;
-            const percentage = (e.touches[0].clientY - 25) / (scrollbarHeight - 50);
-            list.scrollTop = Math.max(0, percentage * scrollableHeight);
-            updateScrollbar();
-        }
-    });
-
-    scrollbarContainer.addEventListener('touchend', () => {
-        isDraggingScrollbar = false;
-    });
+    // Scrollbar personalizada removida
 
     fetch('data/eventos.json')
         .then(response => response.json())
