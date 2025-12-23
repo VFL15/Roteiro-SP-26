@@ -8,7 +8,21 @@
 </head>
 <body>
     <ul class="sortable-list"></ul>
-    <div class="drop-indicator"></div>
+    <div class="custom-scrollbar">
+        <div class="custom-scrollbar-thumb"></div>
+    </div>
+
+    <!-- Barra de navegação inferior -->
+    <nav class="bottom-nav">
+        <button class="nav-item" data-page="mapas">
+            <span class="nav-icon">🗺️</span>
+            <span class="nav-label">Mapas</span>
+        </button>
+        <button class="nav-item active" data-page="eventos">
+            <span class="nav-icon">📋</span>
+            <span class="nav-label">Eventos</span>
+        </button>
+    </nav>
     
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js';
@@ -28,6 +42,6 @@
         const app = initializeApp(firebaseConfig);
         window.firebaseDb = getDatabase(app);
     </script>
-    <script src="js/estado.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
 </body>
 </html>

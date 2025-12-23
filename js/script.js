@@ -2,8 +2,69 @@ import { ref, set, get, onValue } from 'https://www.gstatic.com/firebasejs/12.7.
 
 document.addEventListener('DOMContentLoaded', () => {
     const list = document.querySelector('.sortable-list');
-    let draggedElement = null;
+    const scrollbarThumb = document.querySelector('.custom-scrollbar-thumb');
+    const scrollbarContainer = document.querySelector('.custom-scrollbar');
     let eventos = [];
+    let isDraggingScrollbar = false;
+
+    // Função para atualizar posição da scrollbar
+    function updateScrollbar() {
+        const navHeight = 70; // Altura da barra de navegação inferior
+        const scrollbarHeight = window.innerHeight - navHeight;
+        const scrollableHeight = list.scrollHeight - scrollbarHeight;
+        const scrollPercentage = scrollableHeight > 0 ? list.scrollTop / scrollableHeight : 0;
+        const thumbHeight = Math.max(50, scrollbarHeight * (scrollbarHeight / list.scrollHeight));
+        const thumbTop = scrollPercentage * (scrollbarHeight - thumbHeight);
+        
+        scrollbarThumb.style.height = thumbHeight + 'px';
+        scrollbarThumb.style.top = thumbTop + 'px';
+    }
+
+    // Atualizar scrollbar quando scroll acontece
+    list.addEventListener('scroll', updateScrollbar);
+    window.addEventListener('resize', updateScrollbar);
+
+    // Permitir scroll ao clicar e arrastar a scrollbar
+    scrollbarThumb.addEventListener('mousedown', (e) => {
+        isDraggingScrollbar = true;
+        e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDraggingScrollbar) {
+            const navHeight = 70;
+            const scrollbarHeight = window.innerHeight - navHeight;
+            const scrollableHeight = list.scrollHeight - scrollbarHeight;
+            const percentage = (e.clientY - 25) / (scrollbarHeight - 50);
+            list.scrollTop = Math.max(0, percentage * scrollableHeight);
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDraggingScrollbar = false;
+    });
+
+    // Scroll pelo touch em mobile
+    let touchStartY = 0;
+    scrollbarContainer.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+        isDraggingScrollbar = true;
+    });
+
+    scrollbarContainer.addEventListener('touchmove', (e) => {
+        if (isDraggingScrollbar) {
+            const navHeight = 70;
+            const scrollbarHeight = window.innerHeight - navHeight;
+            const scrollableHeight = list.scrollHeight - scrollbarHeight;
+            const percentage = (e.touches[0].clientY - 25) / (scrollbarHeight - 50);
+            list.scrollTop = Math.max(0, percentage * scrollableHeight);
+            updateScrollbar();
+        }
+    });
+
+    scrollbarContainer.addEventListener('touchend', () => {
+        isDraggingScrollbar = false;
+    });
 
     fetch('data/eventos.json')
         .then(response => response.json())
@@ -128,7 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const evento = eventos[eventIdx];
             const li = document.createElement('li');
             li.classList.add('sortable-item');
-            li.draggable = true;
             li.dataset.eventIndex = eventIdx;
             // Arrows box
             const arrowsBox = document.createElement('div');
@@ -149,11 +209,43 @@ document.addEventListener('DOMContentLoaded', () => {
             const textSpan = document.createElement('span');
             textSpan.className = 'item-text';
             textSpan.textContent = evento.nome;
+            
+            // Badges
+            const badgesDiv = document.createElement('div');
+            badgesDiv.className = 'badges';
+            
+            // Determinar horário de hoje
+            const diasSemana = ['domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado'];
+            const hoje = diasSemana[new Date().getDay()];
+            const horarioHoje = evento.horarios[hoje];
+            
+            if (horarioHoje && horarioHoje !== 'Fechado') {
+                const horarioBadge = document.createElement('span');
+                horarioBadge.className = 'badge horario';
+                horarioBadge.textContent = `⏰ ${horarioHoje}`;
+                badgesDiv.appendChild(horarioBadge);
+            } else if (horarioHoje === 'Fechado') {
+                const horarioBadge = document.createElement('span');
+                horarioBadge.className = 'badge horario';
+                horarioBadge.textContent = '🔒 Fechado hoje';
+                horarioBadge.style.backgroundColor = '#ffebee';
+                horarioBadge.style.color = '#c62828';
+                badgesDiv.appendChild(horarioBadge);
+            }
+            
+            // Badge de local
+            const localBadge = document.createElement('span');
+            localBadge.className = 'badge local';
+            localBadge.textContent = `📍 ${evento.local}`;
+            badgesDiv.appendChild(localBadge);
+            
+            textBox.appendChild(textSpan);
+            textBox.appendChild(badgesDiv);
+            
             const editBtn = document.createElement('button');
             editBtn.type = 'button';
             editBtn.className = 'edit-btn';
             editBtn.textContent = 'Info';
-            textBox.appendChild(textSpan);
             textBox.appendChild(editBtn);
             // Append to li
             li.appendChild(arrowsBox);
@@ -167,143 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
         set(orderRef, items)
             .catch(error => console.error('Error saving order:', error));
     }
-
-    let draggingItem = null;
-    const dropIndicator = document.querySelector('.drop-indicator');
-
-    // Evento disparado quando o usuário começa a arrastar um item
-    list.addEventListener('dragstart', (e) => {
-        draggingItem = e.target;
-        e.target.classList.add('dragging');
-        const rect = e.target.getBoundingClientRect();
-        e.target.style.position = 'absolute';
-        e.target.style.left = (e.clientX - rect.width / 2) + 'px';
-        e.target.style.top = e.clientY + 'px';
-        e.target.style.width = rect.width + 'px';
-        e.target.style.zIndex = '1000';
-    });
-
-    // Evento disparado quando o usuário termina de arrastar um item
-    list.addEventListener('dragend', (e) => {
-        if (draggingItem) {
-            draggingItem.style.position = '';
-            draggingItem.style.left = '';
-            draggingItem.style.top = '';
-            draggingItem.style.width = '';
-            draggingItem.style.zIndex = '';
-            draggingItem.classList.remove('dragging');
-        }
-        draggingItem = null;
-        // Update the items array based on current order
-        const newItems = Array.from(list.children).map(li => parseInt(li.dataset.eventIndex));
-        items = newItems;
-        saveOrder();
-    });
-
-    // Função para determinar qual item está abaixo do cursor durante o arrasto
-    function getDragAfterElement(container, y) {
-        const draggableElements = [...container.querySelectorAll('.sortable-item:not(.dragging):not(.placeholder)')];
-
-        return draggableElements.reduce((closest, child) => {
-            const box = child.getBoundingClientRect();
-            const offset = y - box.top - box.height / 2;
-            // Se o offset for negativo e mais próximo de 0, é o elemento logo abaixo
-            if (offset < 0 && offset > closest.offset) {
-                return { offset: offset, element: child };
-            } else {
-                return closest;
-            }
-        }, { offset: Number.NEGATIVE_INFINITY }).element;
-    }
-
-    function updateDropIndicator(afterElement) {
-        if (afterElement) {
-            const rect = afterElement.getBoundingClientRect();
-            dropIndicator.style.top = rect.top + 'px';
-            dropIndicator.style.display = 'block';
-        } else {
-            const listRect = list.getBoundingClientRect();
-            dropIndicator.style.top = listRect.bottom + 'px';
-            dropIndicator.style.display = 'block';
-        }
-    }
-
-    // Touch events for mobile
-    list.addEventListener('touchstart', (e) => {
-        draggingItem = e.target.closest('.sortable-item');
-        if (!draggingItem) return;
-        draggingItem.classList.add('dragging');
-        const rect = draggingItem.getBoundingClientRect();
-        draggingItem.style.position = 'absolute';
-        draggingItem.style.left = (e.touches[0].clientX - rect.width / 2) + 'px';
-        draggingItem.style.top = e.touches[0].clientY + 'px';
-        draggingItem.style.width = rect.width + 'px';
-        draggingItem.style.zIndex = '1000';
-        // Insert placeholder
-        const placeholder = document.createElement('li');
-        placeholder.className = 'sortable-item placeholder';
-        placeholder.style.height = rect.height + 'px';
-        placeholder.style.visibility = 'hidden';
-        list.insertBefore(placeholder, draggingItem);
-    });
-
-    list.addEventListener('touchmove', (e) => {
-        if (!draggingItem) return;
-        e.preventDefault();
-        const touch = e.touches[0];
-        draggingItem.style.left = (touch.clientX - draggingItem.offsetWidth / 2) + 'px';
-        draggingItem.style.top = touch.clientY + 'px';
-        const afterElement = getDragAfterElement(list, touch.clientY);
-        updateDropIndicator(afterElement);
-    });
-
-    list.addEventListener('touchend', (e) => {
-        if (!draggingItem) return;
-        draggingItem.style.position = '';
-        draggingItem.style.left = '';
-        draggingItem.style.top = '';
-        draggingItem.style.width = '';
-        draggingItem.style.zIndex = '';
-        draggingItem.classList.remove('dragging');
-        const touch = e.changedTouches[0];
-        const afterElement = getDragAfterElement(list, touch.clientY);
-        // Remove placeholder
-        const placeholder = list.querySelector('.placeholder');
-        if (placeholder) placeholder.remove();
-        dropIndicator.style.display = 'none';
-        if (afterElement == null) {
-            list.appendChild(draggingItem);
-        } else {
-            list.insertBefore(draggingItem, afterElement);
-        }
-        const newItems = Array.from(list.children).map(li => parseInt(li.dataset.eventIndex));
-        items = newItems;
-        saveOrder();
-        draggingItem = null;
-    });
-
-    // For desktop, allow drop anywhere
-    document.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        if (draggingItem) {
-            draggingItem.style.left = (e.clientX - draggingItem.offsetWidth / 2) + 'px';
-            draggingItem.style.top = e.clientY + 'px';
-            const afterElement = getDragAfterElement(list, e.clientY);
-            updateDropIndicator(afterElement);
-        }
-    });
-
-    document.addEventListener('drop', (e) => {
-        e.preventDefault();
-        if (draggingItem) {
-            const afterElement = getDragAfterElement(list, e.clientY);
-            if (afterElement == null) {
-                list.appendChild(draggingItem);
-            } else {
-                list.insertBefore(draggingItem, afterElement);
-            }
-        }
-    });
 
     list.addEventListener('click', (e) => {
         if (e.target.classList.contains('arrow')) {
