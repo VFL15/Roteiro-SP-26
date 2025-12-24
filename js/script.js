@@ -4,6 +4,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const list = document.querySelector('.sortable-list');
     let eventos = [];
     
+    // Page navigation
+    const pageEventos = document.getElementById('page-eventos');
+    const pageMapas = document.getElementById('page-mapas');
+    const navButtons = document.querySelectorAll('.nav-item');
+    
+    navButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetPage = btn.getAttribute('data-page');
+            
+            // Update active button
+            navButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // Show/hide pages
+            if (targetPage === 'eventos') {
+                pageEventos.classList.add('active');
+                pageMapas.classList.remove('active');
+            } else if (targetPage === 'mapas') {
+                pageMapas.classList.add('active');
+                pageEventos.classList.remove('active');
+            }
+        });
+    });
 
     // Scrollbar personalizada removida
 

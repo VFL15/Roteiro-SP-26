@@ -30,6 +30,29 @@ body {
     scrollbar-color: #007bff transparent;
 }
 
+/* Pages container */
+.page {
+    display: none;
+    width: 100%;
+    height: calc(100vh - 36px);
+    overflow-y: auto;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Mapas page styling */
+.mapas-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 24px;
+    color: #F4F7FC;
+    font-family: 'Poiret One', system-ui, sans-serif;
+}
+
 .sortable-list {
     list-style-type: none;
     padding: 16px 0 72px 0;
