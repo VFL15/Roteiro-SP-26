@@ -232,7 +232,7 @@ body {
 
 .nav-icon {
     font-size: 1em; /* igual à altura do texto */
-    color: #242223;
+    color: #F4F7FC;
     transition: transform 0.3s ease;
 }
 
@@ -245,5 +245,5 @@ body {
     font-weight: 400; /* Poiret One is a light modern font */
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: #242223;
+    color: #F4F7FC;
 }
