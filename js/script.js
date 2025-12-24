@@ -183,11 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
             textBox.appendChild(textSpan);
             textBox.appendChild(badgesDiv);
             
-            const editBtn = document.createElement('button');
-            editBtn.type = 'button';
-            editBtn.className = 'edit-btn';
-            editBtn.textContent = 'Info';
-            textBox.appendChild(editBtn);
             // Append to li
             li.appendChild(arrowsBox);
             li.appendChild(textBox);
@@ -202,9 +197,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     list.addEventListener('click', (e) => {
+        // Check if clicked element is within a sortable-item but not the arrow buttons
+        const li = e.target.closest('.sortable-item');
+        if (!li) return;
+        
         if (e.target.classList.contains('arrow')) {
             e.preventDefault();
-            const li = e.target.closest('.sortable-item');
             const index = Array.from(list.children).indexOf(li);
             if (e.target.classList.contains('up') && index > 0) {
                 [items[index], items[index - 1]] = [items[index - 1], items[index]];
@@ -215,8 +213,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderList();
                 saveOrder();
             }
-        } else if (e.target.classList.contains('edit-btn')) {
-            const li = e.target.closest('.sortable-item');
+        } else {
+            // Click anywhere on the event to open details
             const eventIdx = parseInt(li.dataset.eventIndex);
             const evento = eventos[eventIdx];
             if (evento && typeof evento === 'object') {
@@ -236,8 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${horariosHtml}
                     <button id="close-modal" style="margin-top:15px; padding:8px 15px; cursor:pointer;">Fechar</button>
                 `;
-            } else {
-                modalContent.innerHTML = `<h3>${items[index]}</h3><button id="close-modal">Fechar</button>`;
             }
             modal.style.display = 'flex';
             document.getElementById('close-modal').addEventListener('click', () => {
