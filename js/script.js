@@ -241,6 +241,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const eventIdx = parseInt(li.dataset.eventIndex);
             const evento = eventos[eventIdx];
             if (evento && typeof evento === 'object') {
+                // Images carousel/gallery
+                let imagesHtml = '';
+                if (evento.imagens && evento.imagens.length > 0) {
+                    imagesHtml = '<div style="display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:15px;">';
+                    evento.imagens.forEach(img => {
+                        imagesHtml += `<img src="${img}" style="width:100%; max-height:150px; object-fit:cover; border-radius:8px;">`;
+                    });
+                    imagesHtml += '</div>';
+                }
+                
                 let horariosHtml = '<table style="width:100%; margin-top:10px; border-collapse:collapse;"><tr><th style="border:1px solid #ddd; padding:5px;">Dia</th><th style="border:1px solid #ddd; padding:5px;">Horário</th></tr>';
                 const dias = ['segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado', 'domingo'];
                 const diasTexto = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'];
@@ -251,6 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 horariosHtml += '</table>';
                 modalContent.innerHTML = `
                     <h3>${evento.nome}</h3>
+                    ${imagesHtml}
                     <p><strong>Local:</strong> ${evento.local}</p>
                     <p><strong>Endereço:</strong> ${evento.endereco}</p>
                     <h4>Horários por Dia:</h4>
