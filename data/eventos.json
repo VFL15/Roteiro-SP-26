@@ -1,665 +1,739 @@
 [
     {
-        "nome":  "Cinema",
-        "local":  "Parque da Cidade",
-        "endereco":  "Rua Jardelina de Almeida López, 451",
-        "imagens":  [
-                        "assets/images/placeholder.svg",
-                        "assets/images/placeholder.svg"
-                    ],
-        "horarios":  {
-                         "segunda":  "10:00 - 16:00",
-                         "terca":  "10:00 - 16:00",
-                         "quarta":  "10:00 - 16:00",
-                         "quinta":  "10:00 - 16:00",
-                         "sexta":  "10:00 - 18:00",
-                         "sabado":  "09:00 - 20:00",
-                         "domingo":  "09:00 - 18:00"
-                     }
+        "nome": "Cinema",
+        "tipo": "Entretenimento",
+        "local": "Parque da Cidade",
+        "bairro": "Vila Verde",
+        "endereco": "Rua Jardelina de Almeida López, 451",
+        "latitude": -23.5650,
+        "longitude": -46.6500,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "10:00 - 16:00",
+            "sexta": "10:00 - 18:00",
+            "sabado": "09:00 - 20:00",
+            "domingo": "09:00 - 18:00"
+        },
+        "descricao": "Cinema com salas de última geração para filmes em 2D e 3D",
+        "site": "https://cinema.com.br",
+        "instagram": "@cinemasaocidade",
+        "distancia_airbnb_m": 2800
     },
     {
-        "nome":  "Feira de Artesanato",
-        "local":  "Praça Central",
-        "endereco":  "Avenida Paulista, 1000",
-        "horarios":  {
-                         "segunda":  "Fechado",
-                         "terca":  "14:00 - 20:00",
-                         "quarta":  "14:00 - 20:00",
-                         "quinta":  "14:00 - 20:00",
-                         "sexta":  "14:00 - 22:00",
-                         "sabado":  "10:00 - 22:00",
-                         "domingo":  "10:00 - 20:00"
-                     }
+        "nome": "Feira de Artesanato",
+        "tipo": "Arte e Cultura",
+        "local": "Praça Central",
+        "bairro": "Centro",
+        "endereco": "Avenida Paulista, 1000",
+        "latitude": -23.5611,
+        "longitude": -46.6560,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "14:00 - 20:00",
+            "sexta": "14:00 - 22:00",
+            "sabado": "10:00 - 22:00",
+            "domingo": "10:00 - 20:00"
+        },
+        "descricao": "Feira com artesanato local, arte e produtos típicos da região",
+        "site": "",
+        "instagram": "@feiraartecentro",
+        "distancia_airbnb_m": 850
     },
     {
-        "nome":  "Mercado Orgânico",
-        "local":  "Vila Verde",
-        "endereco":  "Rua das Flores, 234",
-        "horarios":  {
-                         "segunda":  "07:00 - 13:00",
-                         "terca":  "07:00 - 13:00",
-                         "quarta":  "07:00 - 13:00",
-                         "quinta":  "07:00 - 13:00",
-                         "sexta":  "07:00 - 13:00",
-                         "sabado":  "06:00 - 14:00",
-                         "domingo":  "Fechado"
-                     }
+        "nome": "Mercado Orgânico",
+        "tipo": "Compras",
+        "local": "Vila Verde",
+        "bairro": "Vila Verde",
+        "endereco": "Rua das Flores, 234",
+        "latitude": -23.5720,
+        "longitude": -46.6450,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "07:00 - 13:00",
+            "sexta": "07:00 - 13:00",
+            "sabado": "06:00 - 14:00",
+            "domingo": "Fechado"
+        },
+        "descricao": "Mercado com produtos orgânicos e frutas frescas direto do produtor",
+        "site": "https://mercadorganico.com.br",
+        "instagram": "@mercadorganico",
+        "distancia_airbnb_m": 3100
     },
     {
-        "nome":  "Museu de Arte",
-        "local":  "Centro Histórico",
-        "endereco":  "Rua da República, 567",
-        "horarios":  {
-                         "segunda":  "Fechado",
-                         "terca":  "10:00 - 18:00",
-                         "quarta":  "10:00 - 18:00",
-                         "quinta":  "10:00 - 18:00",
-                         "sexta":  "10:00 - 20:00",
-                         "sabado":  "09:00 - 19:00",
-                         "domingo":  "09:00 - 17:00"
-                     }
+        "nome": "Museu de Arte",
+        "tipo": "Museu",
+        "local": "Centro Histórico",
+        "bairro": "Centro",
+        "endereco": "Rua da República, 567",
+        "latitude": -23.5480,
+        "longitude": -46.6350,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "10:00 - 18:00",
+            "sexta": "10:00 - 20:00",
+            "sabado": "09:00 - 19:00",
+            "domingo": "09:00 - 17:00"
+        },
+        "descricao": "Acervo de arte moderna, contemporânea e colonial brasileira",
+        "site": "https://museudearte.org.br",
+        "instagram": "@museudearte",
+        "distancia_airbnb_m": 2000
     },
     {
-        "nome":  "Parque Infantil",
-        "local":  "Zona Norte",
-        "endereco":  "Avenida Jarbas Passarinho, 789",
-        "horarios":  {
-                         "segunda":  "08:00 - 18:00",
-                         "terca":  "08:00 - 18:00",
-                         "quarta":  "08:00 - 18:00",
-                         "quinta":  "08:00 - 18:00",
-                         "sexta":  "08:00 - 20:00",
-                         "sabado":  "07:00 - 21:00",
-                         "domingo":  "07:00 - 20:00"
-                     }
+        "nome": "Parque Infantil",
+        "tipo": "Família",
+        "local": "Zona Norte",
+        "bairro": "Zona Norte",
+        "endereco": "Avenida Jarbas Passarinho, 789",
+        "latitude": -23.5200,
+        "longitude": -46.6800,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "08:00 - 18:00",
+            "sexta": "08:00 - 20:00",
+            "sabado": "07:00 - 21:00",
+            "domingo": "07:00 - 20:00"
+        },
+        "descricao": "Parque com brinquedos e áreas verdes para crianças e famílias",
+        "site": "https://parqueinfantil.com.br",
+        "instagram": "@parqueinfantil",
+        "distancia_airbnb_m": 4200
     },
     {
-        "nome":  "Restaurante Italiano",
-        "local":  "Bairro Vila Rica",
-        "endereco":  "Rua Gourmet, 321",
-        "horarios":  {
-                         "segunda":  "11:00 - 14:00 / 18:00 - 23:00",
-                         "terca":  "11:00 - 14:00 / 18:00 - 23:00",
-                         "quarta":  "11:00 - 14:00 / 18:00 - 23:00",
-                         "quinta":  "11:00 - 14:00 / 18:00 - 23:00",
-                         "sexta":  "11:00 - 14:00 / 18:00 - 00:00",
-                         "sabado":  "12:00 - 15:00 / 18:00 - 00:00",
-                         "domingo":  "12:00 - 15:00 / 18:00 - 23:00"
-                     }
+        "nome": "Restaurante Italiano",
+        "tipo": "Gastronomia",
+        "local": "Bairro Vila Rica",
+        "bairro": "Vila Rica",
+        "endereco": "Rua Gourmet, 321",
+        "latitude": -23.5750,
+        "longitude": -46.6650,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "11:00 - 14:00 / 18:00 - 23:00",
+            "sexta": "11:00 - 14:00 / 18:00 - 00:00",
+            "sabado": "12:00 - 15:00 / 18:00 - 00:00",
+            "domingo": "12:00 - 15:00 / 18:00 - 23:00"
+        },
+        "descricao": "Autêntica culinária italiana com pratos e vinhos importados",
+        "site": "https://restauranteitaliano.com.br",
+        "instagram": "@ristoranteitaliano",
+        "distancia_airbnb_m": 1500
     },
     {
-        "nome":  "Biblioteca Municipal",
-        "local":  "Centro",
-        "endereco":  "Rua Machado de Assis, 654",
-        "horarios":  {
-                         "segunda":  "09:00 - 20:00",
-                         "terca":  "09:00 - 20:00",
-                         "quarta":  "09:00 - 20:00",
-                         "quinta":  "09:00 - 20:00",
-                         "sexta":  "09:00 - 18:00",
-                         "sabado":  "09:00 - 14:00",
-                         "domingo":  "Fechado"
-                     }
+        "nome": "Biblioteca Municipal",
+        "tipo": "Cultura",
+        "local": "Centro",
+        "bairro": "Centro",
+        "endereco": "Rua Machado de Assis, 654",
+        "latitude": -23.5400,
+        "longitude": -46.6400,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "09:00 - 20:00",
+            "sexta": "09:00 - 18:00",
+            "sabado": "09:00 - 14:00",
+            "domingo": "Fechado"
+        },
+        "descricao": "Biblioteca com grande acervo de livros, jornais e revistas",
+        "site": "https://bibliomun.com.br",
+        "instagram": "@bibiotecamunicipal",
+        "distancia_airbnb_m": 1800
     },
     {
-        "nome":  "Academia de Fitness",
-        "local":  "Zona Comercial",
-        "endereco":  "Avenida Brasil, 987",
-        "horarios":  {
-                         "segunda":  "06:00 - 22:00",
-                         "terca":  "06:00 - 22:00",
-                         "quarta":  "06:00 - 22:00",
-                         "quinta":  "06:00 - 22:00",
-                         "sexta":  "06:00 - 22:00",
-                         "sabado":  "08:00 - 18:00",
-                         "domingo":  "08:00 - 17:00"
-                     }
+        "nome": "Academia de Fitness",
+        "tipo": "Saúde",
+        "local": "Zona Comercial",
+        "bairro": "Zona Comercial",
+        "endereco": "Avenida Brasil, 987",
+        "latitude": -23.5550,
+        "longitude": -46.6300,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "06:00 - 22:00",
+            "sexta": "06:00 - 22:00",
+            "sabado": "08:00 - 18:00",
+            "domingo": "08:00 - 17:00"
+        },
+        "descricao": "Academia completa com musculação, cardio e aulas de grupo",
+        "site": "https://academia.com.br",
+        "instagram": "@academiafitness",
+        "distancia_airbnb_m": 2200
     },
     {
-        "nome":  "Clínica Veterinária",
-        "local":  "Bairro Assunção",
-        "endereco":  "Rua dos Animais, 111",
-        "horarios":  {
-                         "segunda":  "09:00 - 12:00 / 14:00 - 19:00",
-                         "terca":  "09:00 - 12:00 / 14:00 - 19:00",
-                         "quarta":  "09:00 - 12:00 / 14:00 - 19:00",
-                         "quinta":  "09:00 - 12:00 / 14:00 - 19:00",
-                         "sexta":  "09:00 - 12:00 / 14:00 - 20:00",
-                         "sabado":  "09:00 - 13:00",
-                         "domingo":  "Fechado"
-                     }
+        "nome": "Clínica Veterinária",
+        "tipo": "Saúde Animal",
+        "local": "Bairro Assunção",
+        "bairro": "Assunção",
+        "endereco": "Rua dos Animais, 111",
+        "latitude": -23.5680,
+        "longitude": -46.6580,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "09:00 - 12:00 / 14:00 - 19:00",
+            "sexta": "09:00 - 12:00 / 14:00 - 20:00",
+            "sabado": "09:00 - 13:00",
+            "domingo": "Fechado"
+        },
+        "descricao": "Clínica veterinária com atendimento clínico e cirúrgico para pequenos animais",
+        "site": "https://clinicavet.com.br",
+        "instagram": "@clinicavet",
+        "distancia_airbnb_m": 1100
     },
     {
-        "nome":  "Loja de Roupas",
-        "local":  "Shopping Center",
-        "endereco":  "Rua Principal, 222",
-        "horarios":  {
-                         "segunda":  "10:00 - 20:00",
-                         "terca":  "10:00 - 20:00",
-                         "quarta":  "10:00 - 20:00",
-                         "quinta":  "10:00 - 20:00",
-                         "sexta":  "10:00 - 21:00",
-                         "sabado":  "10:00 - 21:00",
-                         "domingo":  "10:00 - 19:00"
-                     }
+        "nome": "Loja de Roupas",
+        "tipo": "Moda",
+        "local": "Shopping Center",
+        "bairro": "Centro Comercial",
+        "endereco": "Rua Principal, 222",
+        "latitude": -23.5620,
+        "longitude": -46.6380,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "10:00 - 20:00",
+            "sexta": "10:00 - 21:00",
+            "sabado": "10:00 - 21:00",
+            "domingo": "10:00 - 19:00"
+        },
+        "descricao": "Loja de moda com roupas, acessórios e calçados das melhores marcas",
+        "site": "https://lojaroupas.com.br",
+        "instagram": "@lojaroupas",
+        "distancia_airbnb_m": 2600
     },
     {
-        "nome":  "Café com Livros",
-        "local":  "Bairro Vila Mariana",
-        "endereco":  "Rua Serena, 333",
-        "horarios":  {
-                         "segunda":  "08:00 - 19:00",
-                         "terca":  "08:00 - 19:00",
-                         "quarta":  "08:00 - 19:00",
-                         "quinta":  "08:00 - 19:00",
-                         "sexta":  "08:00 - 21:00",
-                         "sabado":  "09:00 - 21:00",
-                         "domingo":  "09:00 - 18:00"
-                     }
+        "nome": "Café com Livros",
+        "tipo": "Cafeteria",
+        "local": "Bairro Vila Mariana",
+        "bairro": "Vila Mariana",
+        "endereco": "Rua Serena, 333",
+        "latitude": -23.5840,
+        "longitude": -46.6720,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "08:00 - 19:00",
+            "sexta": "08:00 - 21:00",
+            "sabado": "09:00 - 21:00",
+            "domingo": "09:00 - 18:00"
+        },
+        "descricao": "Café aconchegante com ambiente de leitura e bebidas artesanais",
+        "site": "https://cafecomlivros.com.br",
+        "instagram": "@cafelivros",
+        "distancia_airbnb_m": 3600
     },
     {
-        "nome":  "Farmácia 24h",
-        "local":  "Centro",
-        "endereco":  "Avenida Saúde, 444",
-        "horarios":  {
-                         "segunda":  "24 horas",
-                         "terca":  "24 horas",
-                         "quarta":  "24 horas",
-                         "quinta":  "24 horas",
-                         "sexta":  "24 horas",
-                         "sabado":  "24 horas",
-                         "domingo":  "24 horas"
-                     }
+        "nome": "Farmácia 24h",
+        "tipo": "Saúde",
+        "local": "Centro",
+        "bairro": "Centro",
+        "endereco": "Avenida Saúde, 444",
+        "latitude": -23.5450,
+        "longitude": -46.6320,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "24 horas",
+            "sexta": "24 horas",
+            "sabado": "24 horas",
+            "domingo": "24 horas"
+        },
+        "descricao": "Farmácia 24 horas com medicamentos, cosméticos e suplementos",
+        "site": "https://farmacia24h.com.br",
+        "instagram": "@farmacia24h",
+        "distancia_airbnb_m": 1200
     },
     {
-        "nome":  "Salão de Beleza",
-        "local":  "Zona Sul",
-        "endereco":  "Rua da Vaidade, 555",
-        "horarios":  {
-                         "segunda":  "09:00 - 18:00",
-                         "terca":  "09:00 - 18:00",
-                         "quarta":  "09:00 - 18:00",
-                         "quinta":  "09:00 - 18:00",
-                         "sexta":  "09:00 - 20:00",
-                         "sabado":  "08:00 - 18:00",
-                         "domingo":  "Fechado"
-                     }
+        "nome": "Salão de Beleza",
+        "tipo": "Beleza",
+        "local": "Zona Sul",
+        "bairro": "Zona Sul",
+        "endereco": "Rua da Vaidade, 555",
+        "latitude": -23.6050,
+        "longitude": -46.6400,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "09:00 - 18:00",
+            "sexta": "09:00 - 20:00",
+            "sabado": "08:00 - 18:00",
+            "domingo": "Fechado"
+        },
+        "descricao": "Salão completo com cabelo, manicure, pedicure e tratamentos faciais",
+        "site": "https://salaobeleza.com.br",
+        "instagram": "@salaobeleza",
+        "distancia_airbnb_m": 4500
     },
     {
-        "nome":  "Piscina Pública",
-        "local":  "Zona Leste",
-        "endereco":  "Avenida Aquática, 666",
-        "horarios":  {
-                         "segunda":  "06:00 - 22:00",
-                         "terca":  "06:00 - 22:00",
-                         "quarta":  "06:00 - 22:00",
-                         "quinta":  "06:00 - 22:00",
-                         "sexta":  "06:00 - 23:00",
-                         "sabado":  "08:00 - 23:00",
-                         "domingo":  "08:00 - 22:00"
-                     }
+        "nome": "Piscina Pública",
+        "tipo": "Lazer",
+        "local": "Zona Leste",
+        "bairro": "Zona Leste",
+        "endereco": "Avenida Aquática, 666",
+        "latitude": -23.5300,
+        "longitude": -46.6150,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "06:00 - 22:00",
+            "sexta": "06:00 - 23:00",
+            "sabado": "08:00 - 23:00",
+            "domingo": "08:00 - 22:00"
+        },
+        "descricao": "Complexo com piscina olímpica, infantil e área de lazer",
+        "site": "https://piscinapublica.com.br",
+        "instagram": "@piscinapublica",
+        "distancia_airbnb_m": 3200
     },
     {
-        "nome":  "Padaria Artesanal",
-        "local":  "Bairro Vila União",
-        "endereco":  "Rua do Pão, 777",
-        "horarios":  {
-                         "segunda":  "06:00 - 19:00",
-                         "terca":  "06:00 - 19:00",
-                         "quarta":  "06:00 - 19:00",
-                         "quinta":  "06:00 - 19:00",
-                         "sexta":  "06:00 - 20:00",
-                         "sabado":  "06:00 - 19:00",
-                         "domingo":  "07:00 - 18:00"
-                     }
+        "nome": "Padaria Artesanal",
+        "tipo": "Gastronomia",
+        "local": "Bairro Vila União",
+        "bairro": "Vila União",
+        "endereco": "Rua do Pão, 777",
+        "latitude": -23.5490,
+        "longitude": -46.6480,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "06:00 - 19:00",
+            "sexta": "06:00 - 20:00",
+            "sabado": "06:00 - 19:00",
+            "domingo": "07:00 - 18:00"
+        },
+        "descricao": "Padaria artesanal com pães, bolos e doces feitos diariamente",
+        "site": "https://padariartesanal.com.br",
+        "instagram": "@padaria_artesanal",
+        "distancia_airbnb_m": 1600
     },
     {
-        "nome":  "Teatro Municipal",
-        "local":  "Centro Cultural",
-        "endereco":  "Rua das Artes, 888",
-        "horarios":  {
-                         "segunda":  "14:00 - 22:00",
-                         "terca":  "14:00 - 22:00",
-                         "quarta":  "14:00 - 22:00",
-                         "quinta":  "14:00 - 23:00",
-                         "sexta":  "14:00 - 23:00",
-                         "sabado":  "10:00 - 23:00",
-                         "domingo":  "10:00 - 21:00"
-                     }
+        "nome": "Teatro Municipal",
+        "tipo": "Artes Cênicas",
+        "local": "Centro Cultural",
+        "bairro": "Centro",
+        "endereco": "Rua das Artes, 888",
+        "latitude": -23.5380,
+        "longitude": -46.6380,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "14:00 - 23:00",
+            "sexta": "14:00 - 23:00",
+            "sabado": "10:00 - 23:00",
+            "domingo": "10:00 - 21:00"
+        },
+        "descricao": "Teatro com apresentações teatrais, musicais e shows culturais",
+        "site": "https://teatromunicipal.com.br",
+        "instagram": "@teatromunicipal",
+        "distancia_airbnb_m": 2400
     },
     {
-        "nome":  "Oficina de Cerâmica",
-        "local":  "Zona Oeste",
-        "endereco":  "Avenida Criativa, 999",
-        "horarios":  {
-                         "segunda":  "10:00 - 18:00",
-                         "terca":  "10:00 - 18:00",
-                         "quarta":  "10:00 - 18:00",
-                         "quinta":  "10:00 - 18:00",
-                         "sexta":  "10:00 - 20:00",
-                         "sabado":  "09:00 - 17:00",
-                         "domingo":  "Fechado"
-                     }
+        "nome": "Oficina de Cerâmica",
+        "tipo": "Arte e Artesanato",
+        "local": "Zona Oeste",
+        "bairro": "Zona Oeste",
+        "endereco": "Avenida Criativa, 999",
+        "latitude": -23.5700,
+        "longitude": -46.7000,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "10:00 - 18:00",
+            "sexta": "10:00 - 20:00",
+            "sabado": "09:00 - 17:00",
+            "domingo": "Fechado"
+        },
+        "descricao": "Oficina de cerâmica e artes plásticas com aulas e venda de peças",
+        "site": "https://oficinaceramica.com.br",
+        "instagram": "@oficinaceramica",
+        "distancia_airbnb_m": 4800
     },
     {
-        "nome":  "Supermercado Super Preço",
-        "local":  "Bairro Tatuapé",
-        "endereco":  "Avenida Comercial, 1111",
-        "horarios":  {
-                         "segunda":  "07:00 - 22:00",
-                         "terca":  "07:00 - 22:00",
-                         "quarta":  "07:00 - 22:00",
-                         "quinta":  "07:00 - 22:00",
-                         "sexta":  "07:00 - 23:00",
-                         "sabado":  "07:00 - 22:00",
-                         "domingo":  "08:00 - 21:00"
-                     }
+        "nome": "Supermercado Super Preço",
+        "tipo": "Compras",
+        "local": "Bairro Tatuapé",
+        "bairro": "Tatuapé",
+        "endereco": "Avenida Comercial, 1111",
+        "latitude": -23.5260,
+        "longitude": -46.5950,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "07:00 - 22:00",
+            "sexta": "07:00 - 23:00",
+            "sabado": "07:00 - 22:00",
+            "domingo": "08:00 - 21:00"
+        },
+        "descricao": "Supermercado completo com alimentos, bebidas e artigos gerais",
+        "site": "https://superpreco.com.br",
+        "instagram": "@superpreco",
+        "distancia_airbnb_m": 2900
     },
     {
-        "nome":  "Escolinha de Futebol",
-        "local":  "Campo Vila",
-        "endereco":  "Rua Pelé, 2222",
-        "horarios":  {
-                         "segunda":  "15:00 - 19:00",
-                         "terca":  "15:00 - 19:00",
-                         "quarta":  "15:00 - 19:00",
-                         "quinta":  "15:00 - 19:00",
-                         "sexta":  "15:00 - 20:00",
-                         "sabado":  "09:00 - 18:00",
-                         "domingo":  "10:00 - 17:00"
-                     }
+        "nome": "Escolinha de Futebol",
+        "tipo": "Esportes",
+        "local": "Campo Vila",
+        "bairro": "Vila Desportiva",
+        "endereco": "Rua Pelé, 2222",
+        "latitude": -23.5900,
+        "longitude": -46.6350,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "15:00 - 19:00",
+            "sexta": "15:00 - 20:00",
+            "sabado": "09:00 - 18:00",
+            "domingo": "10:00 - 17:00"
+        },
+        "descricao": "Escolinha de futebol com treinamentos para todas as idades",
+        "site": "https://escolinhafsoccer.com.br",
+        "instagram": "@escolinha_futebol",
+        "distancia_airbnb_m": 3800
     },
     {
-        "nome":  "Lanchonete do Seu João",
-        "local":  "Bairro Centro-Oeste",
-        "endereco":  "Rua Saudade, 3333",
-        "horarios":  {
-                         "segunda":  "11:00 - 22:00",
-                         "terca":  "11:00 - 22:00",
-                         "quarta":  "11:00 - 22:00",
-                         "quinta":  "11:00 - 22:00",
-                         "sexta":  "11:00 - 23:00",
-                         "sabado":  "12:00 - 23:00",
-                         "domingo":  "12:00 - 22:00"
-                     }
+        "nome": "Lanchonete do Seu João",
+        "tipo": "Gastronomia",
+        "local": "Bairro Centro-Oeste",
+        "bairro": "Centro-Oeste",
+        "endereco": "Rua Saudade, 3333",
+        "latitude": -23.5650,
+        "longitude": -46.6850,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "11:00 - 22:00",
+            "sexta": "11:00 - 23:00",
+            "sabado": "12:00 - 23:00",
+            "domingo": "12:00 - 22:00"
+        },
+        "descricao": "Lanchonete tradicional com comida caseira e preços populares",
+        "site": "",
+        "instagram": "@lanchoneteseujoao",
+        "distancia_airbnb_m": 2100
     },
     {
-        "nome":  "Consultório Odontológico",
-        "local":  "Zona Médica",
-        "endereco":  "Avenida da Saúde, 4444",
-        "horarios":  {
-                         "segunda":  "08:00 - 12:00 / 13:00 - 19:00",
-                         "terca":  "08:00 - 12:00 / 13:00 - 19:00",
-                         "quarta":  "08:00 - 12:00 / 13:00 - 19:00",
-                         "quinta":  "08:00 - 12:00 / 13:00 - 19:00",
-                         "sexta":  "08:00 - 12:00 / 13:00 - 18:00",
-                         "sabado":  "08:00 - 12:00",
-                         "domingo":  "Fechado"
-                     }
+        "nome": "Consultório Odontológico",
+        "tipo": "Saúde",
+        "local": "Zona Médica",
+        "bairro": "Zona Médica",
+        "endereco": "Avenida da Saúde, 4444",
+        "latitude": -23.5350,
+        "longitude": -46.6250,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "08:00 - 12:00 / 13:00 - 19:00",
+            "sexta": "08:00 - 12:00 / 13:00 - 18:00",
+            "sabado": "08:00 - 12:00",
+            "domingo": "Fechado"
+        },
+        "descricao": "Consultório odontológico com equipamentos modernos e atendimento humanizado",
+        "site": "https://odontologo.com.br",
+        "instagram": "@consultoriodental",
+        "distancia_airbnb_m": 1900
     },
     {
-        "nome":  "Lan House Online",
-        "local":  "Bairro Gamer",
-        "endereco":  "Rua Virtual, 5555",
-        "horarios":  {
-                         "segunda":  "12:00 - 23:00",
-                         "terca":  "12:00 - 23:00",
-                         "quarta":  "12:00 - 23:00",
-                         "quinta":  "12:00 - 23:00",
-                         "sexta":  "12:00 - 00:00",
-                         "sabado":  "10:00 - 00:00",
-                         "domingo":  "10:00 - 23:00"
-                     }
+        "nome": "Lan House Online",
+        "tipo": "Entretenimento",
+        "local": "Bairro Gamer",
+        "bairro": "Gamer",
+        "endereco": "Rua Virtual, 5555",
+        "latitude": -23.5520,
+        "longitude": -46.6180,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "12:00 - 23:00",
+            "sexta": "12:00 - 00:00",
+            "sabado": "10:00 - 00:00",
+            "domingo": "10:00 - 23:00"
+        },
+        "descricao": "Lan house com computadores gamer, torneios e área de descanso",
+        "site": "https://lanhouseonline.com.br",
+        "instagram": "@lanhouseonline",
+        "distancia_airbnb_m": 2500
     },
     {
-        "nome":  "Floricultura Primavera",
-        "local":  "Vila Margarida",
-        "endereco":  "Rua das Flores, 6666",
-        "horarios":  {
-                         "segunda":  "08:00 - 19:00",
-                         "terca":  "08:00 - 19:00",
-                         "quarta":  "08:00 - 19:00",
-                         "quinta":  "08:00 - 19:00",
-                         "sexta":  "08:00 - 20:00",
-                         "sabado":  "08:00 - 18:00",
-                         "domingo":  "09:00 - 17:00"
-                     }
+        "nome": "Floricultura Primavera",
+        "tipo": "Compras",
+        "local": "Vila Margarida",
+        "bairro": "Vila Margarida",
+        "endereco": "Rua das Flores, 6666",
+        "latitude": -23.5630,
+        "longitude": -46.6690,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "08:00 - 19:00",
+            "sexta": "08:00 - 20:00",
+            "sabado": "08:00 - 18:00",
+            "domingo": "09:00 - 17:00"
+        },
+        "descricao": "Floricultura com flores, plantas ornamentais e arranjos personalizados",
+        "site": "https://floricultaprimavera.com.br",
+        "instagram": "@floriprimavera",
+        "distancia_airbnb_m": 1400
     },
     {
-        "nome":  "Autoescola Segura",
-        "local":  "Vila Segura",
-        "endereco":  "Avenida Segurança, 7777",
-        "horarios":  {
-                         "segunda":  "08:00 - 18:00",
-                         "terca":  "08:00 - 18:00",
-                         "quarta":  "08:00 - 18:00",
-                         "quinta":  "08:00 - 18:00",
-                         "sexta":  "08:00 - 20:00",
-                         "sabado":  "09:00 - 16:00",
-                         "domingo":  "Fechado"
-                     }
+        "nome": "Autoescola Segura",
+        "tipo": "Educação",
+        "local": "Vila Segura",
+        "bairro": "Vila Segura",
+        "endereco": "Avenida Segurança, 7777",
+        "latitude": -23.5780,
+        "longitude": -46.6150,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "08:00 - 18:00",
+            "sexta": "08:00 - 20:00",
+            "sabado": "09:00 - 16:00",
+            "domingo": "Fechado"
+        },
+        "descricao": "Autoescola com aulas teóricas e práticas para habilitação",
+        "site": "https://autoescolasegura.com.br",
+        "instagram": "@autoescolasegura",
+        "distancia_airbnb_m": 3300
     },
     {
-        "nome":  "Clínica de Fisioterapia",
-        "local":  "Zona Médica",
-        "endereco":  "Rua do Bem-Estar, 8888",
-        "horarios":  {
-                         "segunda":  "07:00 - 20:00",
-                         "terca":  "07:00 - 20:00",
-                         "quarta":  "07:00 - 20:00",
-                         "quinta":  "07:00 - 20:00",
-                         "sexta":  "07:00 - 19:00",
-                         "sabado":  "08:00 - 17:00",
-                         "domingo":  "Fechado"
-                     }
+        "nome": "Clínica de Fisioterapia",
+        "tipo": "Saúde",
+        "local": "Zona Médica",
+        "bairro": "Zona Médica",
+        "endereco": "Rua do Bem-Estar, 8888",
+        "latitude": -23.5400,
+        "longitude": -46.6200,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "07:00 - 20:00",
+            "sexta": "07:00 - 19:00",
+            "sabado": "08:00 - 17:00",
+            "domingo": "Fechado"
+        },
+        "descricao": "Clínica de fisioterapia com equipamentos modernos e profissionais especializados",
+        "site": "https://clinicafisio.com.br",
+        "instagram": "@clinicafisio",
+        "distancia_airbnb_m": 2000
     },
     {
-        "nome":  "Petshop Bichinhos",
-        "local":  "Bairro Vila Pets",
-        "endereco":  "Rua dos Animais, 9999",
-        "horarios":  {
-                         "segunda":  "09:00 - 19:00",
-                         "terca":  "09:00 - 19:00",
-                         "quarta":  "09:00 - 19:00",
-                         "quinta":  "09:00 - 19:00",
-                         "sexta":  "09:00 - 20:00",
-                         "sabado":  "09:00 - 18:00",
-                         "domingo":  "10:00 - 17:00"
-                     }
+        "nome": "Petshop Bichinhos",
+        "tipo": "Animais",
+        "local": "Bairro Vila Pets",
+        "bairro": "Vila Pets",
+        "endereco": "Rua dos Animais, 9999",
+        "latitude": -23.5560,
+        "longitude": -46.6420,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "09:00 - 19:00",
+            "sexta": "09:00 - 20:00",
+            "sabado": "09:00 - 18:00",
+            "domingo": "10:00 - 17:00"
+        },
+        "descricao": "Petshop com banho, tosa, alimentação e acessórios para animais",
+        "site": "https://petshopbichinhos.com.br",
+        "instagram": "@petshopbichinhos",
+        "distancia_airbnb_m": 1700
     },
     {
-        "nome":  "Coworking Inovação",
-        "local":  "Zona Tech",
-        "endereco":  "Avenida Tecnologia, 10101",
-        "horarios":  {
-                         "segunda":  "08:00 - 20:00",
-                         "terca":  "08:00 - 20:00",
-                         "quarta":  "08:00 - 20:00",
-                         "quinta":  "08:00 - 20:00",
-                         "sexta":  "08:00 - 19:00",
-                         "sabado":  "10:00 - 17:00",
-                         "domingo":  "Fechado"
-                     }
+        "nome": "Coworking Inovação",
+        "tipo": "Negócios",
+        "local": "Zona Tech",
+        "bairro": "Zona Tech",
+        "endereco": "Avenida Tecnologia, 10101",
+        "latitude": -23.5480,
+        "longitude": -46.6150,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "08:00 - 20:00",
+            "sexta": "08:00 - 19:00",
+            "sabado": "10:00 - 17:00",
+            "domingo": "Fechado"
+        },
+        "descricao": "Espaço de coworking com salas, internet rápida e área de reunião",
+        "site": "https://coworkinginovacao.com.br",
+        "instagram": "@coworkinginovacao",
+        "distancia_airbnb_m": 2700
     },
     {
-        "nome":  "Drogaria Popular",
-        "local":  "Centro Comercial",
-        "endereco":  "Rua Principal, 11111",
-        "horarios":  {
-                         "segunda":  "08:00 - 20:00",
-                         "terca":  "08:00 - 20:00",
-                         "quarta":  "08:00 - 20:00",
-                         "quinta":  "08:00 - 20:00",
-                         "sexta":  "08:00 - 21:00",
-                         "sabado":  "08:00 - 20:00",
-                         "domingo":  "09:00 - 19:00"
-                     }
+        "nome": "Drogaria Popular",
+        "tipo": "Saúde",
+        "local": "Centro Comercial",
+        "bairro": "Centro Comercial",
+        "endereco": "Rua Principal, 11111",
+        "latitude": -23.5530,
+        "longitude": -46.6380,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "08:00 - 20:00",
+            "sexta": "08:00 - 21:00",
+            "sabado": "08:00 - 20:00",
+            "domingo": "09:00 - 19:00"
+        },
+        "descricao": "Drogaria com medicamentos, cosméticos e produtos de higiene",
+        "site": "https://drogariapopular.com.br",
+        "instagram": "@drogariapopular",
+        "distancia_airbnb_m": 2200
     },
     {
-        "nome":  "Churrascaria Premium",
-        "local":  "Zona Gastronômica",
-        "endereco":  "Avenida Churrasco, 12121",
-        "horarios":  {
-                         "segunda":  "Fechado",
-                         "terca":  "18:00 - 23:00",
-                         "quarta":  "18:00 - 23:00",
-                         "quinta":  "18:00 - 00:00",
-                         "sexta":  "18:00 - 00:00",
-                         "sabado":  "12:00 - 00:00",
-                         "domingo":  "12:00 - 23:00"
-                     }
+        "nome": "Churrascaria Premium",
+        "tipo": "Gastronomia",
+        "local": "Zona Gastronômica",
+        "bairro": "Zona Gastronômica",
+        "endereco": "Avenida Churrasco, 12121",
+        "latitude": -23.5820,
+        "longitude": -46.6300,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "18:00 - 00:00",
+            "sexta": "18:00 - 00:00",
+            "sabado": "12:00 - 00:00",
+            "domingo": "12:00 - 23:00"
+        },
+        "descricao": "Churrascaria com carnes selecionadas, vinhos e atendimento impecável",
+        "site": "https://churrascariapremium.com.br",
+        "instagram": "@churrascariapremium",
+        "distancia_airbnb_m": 3700
     },
     {
-        "nome":  "Escola de Idiomas",
-        "local":  "Bairro Educação",
-        "endereco":  "Rua Saber, 13131",
-        "horarios":  {
-                         "segunda":  "08:00 - 22:00",
-                         "terca":  "08:00 - 22:00",
-                         "quarta":  "08:00 - 22:00",
-                         "quinta":  "08:00 - 22:00",
-                         "sexta":  "08:00 - 20:00",
-                         "sabado":  "10:00 - 17:00",
-                         "domingo":  "Fechado"
-                     }
+        "nome": "Escola de Idiomas",
+        "tipo": "Educação",
+        "local": "Bairro Educação",
+        "bairro": "Educação",
+        "endereco": "Rua Saber, 13131",
+        "latitude": -23.5610,
+        "longitude": -46.6080,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "08:00 - 22:00",
+            "sexta": "08:00 - 20:00",
+            "sabado": "10:00 - 17:00",
+            "domingo": "Fechado"
+        },
+        "descricao": "Escola de idiomas com aulas de inglês, espanhol, francês e outras línguas",
+        "site": "https://escolaidiomas.com.br",
+        "instagram": "@escolaidiomas",
+        "distancia_airbnb_m": 2800
     },
     {
-        "nome":  "Galeria de Arte",
-        "local":  "Bairro Artístico",
-        "endereco":  "Rua Criação, 14141",
-        "horarios":  {
-                         "segunda":  "Fechado",
-                         "terca":  "10:00 - 18:00",
-                         "quarta":  "10:00 - 18:00",
-                         "quinta":  "10:00 - 18:00",
-                         "sexta":  "10:00 - 20:00",
-                         "sabado":  "10:00 - 20:00",
-                         "domingo":  "10:00 - 17:00"
-                     }
+        "nome": "Galeria de Arte",
+        "tipo": "Arte e Cultura",
+        "local": "Bairro Artístico",
+        "bairro": "Bairro Artístico",
+        "endereco": "Rua Criação, 14141",
+        "latitude": -23.5680,
+        "longitude": -46.5850,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "10:00 - 18:00",
+            "sexta": "10:00 - 20:00",
+            "sabado": "10:00 - 20:00",
+            "domingo": "10:00 - 17:00"
+        },
+        "descricao": "Galeria com exposições de arte contemporânea e instalações interativas",
+        "site": "https://galeriaarte.com.br",
+        "instagram": "@galeriaarte",
+        "distancia_airbnb_m": 3100
     },
     {
-        "nome":  "Barbershop Clássico",
-        "local":  "Centro",
-        "endereco":  "Rua da Moda, 15151",
-        "horarios":  {
-                         "segunda":  "09:00 - 19:00",
-                         "terca":  "09:00 - 19:00",
-                         "quarta":  "09:00 - 19:00",
-                         "quinta":  "09:00 - 19:00",
-                         "sexta":  "09:00 - 20:00",
-                         "sabado":  "08:00 - 19:00",
-                         "domingo":  "Fechado"
-                     }
-    },
-    {
-        "nome":  "Yoga e Meditação",
-        "local":  "Vila Zen",
-        "endereco":  "Rua Tranquilidade, 16161",
-        "horarios":  {
-                         "segunda":  "07:00 - 20:00",
-                         "terca":  "07:00 - 20:00",
-                         "quarta":  "07:00 - 20:00",
-                         "quinta":  "07:00 - 20:00",
-                         "sexta":  "07:00 - 19:00",
-                         "sabado":  "09:00 - 18:00",
-                         "domingo":  "09:00 - 17:00"
-                     }
-    },
-    {
-        "nome":  "Sorveteria Gelado Feliz",
-        "local":  "Zona Comercial",
-        "endereco":  "Avenida Refrescante, 17171",
-        "horarios":  {
-                         "segunda":  "12:00 - 22:00",
-                         "terca":  "12:00 - 22:00",
-                         "quarta":  "12:00 - 22:00",
-                         "quinta":  "12:00 - 22:00",
-                         "sexta":  "12:00 - 23:00",
-                         "sabado":  "11:00 - 23:00",
-                         "domingo":  "11:00 - 22:00"
-                     }
-    },
-    {
-        "nome":  "Óptica Visão Clara",
-        "local":  "Bairro Comércio",
-        "endereco":  "Rua da Saúde Visual, 18181",
-        "horarios":  {
-                         "segunda":  "09:00 - 19:00",
-                         "terca":  "09:00 - 19:00",
-                         "quarta":  "09:00 - 19:00",
-                         "quinta":  "09:00 - 19:00",
-                         "sexta":  "09:00 - 20:00",
-                         "sabado":  "09:00 - 18:00",
-                         "domingo":  "Fechado"
-                     }
-    },
-    {
-        "nome":  "Pizzaria Italiana Nonna",
-        "local":  "Bairro Vila Italiana",
-        "endereco":  "Rua Massimo, 19191",
-        "horarios":  {
-                         "segunda":  "18:00 - 23:00",
-                         "terca":  "18:00 - 23:00",
-                         "quarta":  "18:00 - 23:00",
-                         "quinta":  "18:00 - 00:00",
-                         "sexta":  "12:00 - 14:00 / 18:00 - 00:00",
-                         "sabado":  "12:00 - 14:00 / 18:00 - 00:00",
-                         "domingo":  "12:00 - 14:00 / 18:00 - 23:00"
-                     }
-    },
-    {
-        "nome":  "Distribuidora de Bebidas",
-        "local":  "Zona Industrial",
-        "endereco":  "Avenida Comercial, 20202",
-        "horarios":  {
-                         "segunda":  "07:00 - 18:00",
-                         "terca":  "07:00 - 18:00",
-                         "quarta":  "07:00 - 18:00",
-                         "quinta":  "07:00 - 18:00",
-                         "sexta":  "07:00 - 19:00",
-                         "sabado":  "08:00 - 17:00",
-                         "domingo":  "Fechado"
-                     }
-    },
-    {
-        "nome":  "Loja de Eletrônicos",
-        "local":  "Shopping Center",
-        "endereco":  "Rua Tecnologia, 21212",
-        "horarios":  {
-                         "segunda":  "10:00 - 20:00",
-                         "terca":  "10:00 - 20:00",
-                         "quarta":  "10:00 - 20:00",
-                         "quinta":  "10:00 - 20:00",
-                         "sexta":  "10:00 - 21:00",
-                         "sabado":  "10:00 - 21:00",
-                         "domingo":  "10:00 - 19:00"
-                     }
-    },
-    {
-        "nome":  "Atelier de Costura",
-        "local":  "Bairro Vila Moda",
-        "endereco":  "Rua Agulha, 22222",
-        "horarios":  {
-                         "segunda":  "10:00 - 18:00",
-                         "terca":  "10:00 - 18:00",
-                         "quarta":  "10:00 - 18:00",
-                         "quinta":  "10:00 - 18:00",
-                         "sexta":  "10:00 - 19:00",
-                         "sabado":  "10:00 - 17:00",
-                         "domingo":  "Fechado"
-                     }
-    },
-    {
-        "nome":  "Consultório Psicológico",
-        "local":  "Zona Médica",
-        "endereco":  "Rua Bem-Estar Mental, 23232",
-        "horarios":  {
-                         "segunda":  "08:00 - 20:00",
-                         "terca":  "08:00 - 20:00",
-                         "quarta":  "08:00 - 20:00",
-                         "quinta":  "08:00 - 20:00",
-                         "sexta":  "08:00 - 18:00",
-                         "sabado":  "09:00 - 13:00",
-                         "domingo":  "Fechado"
-                     }
-    },
-    {
-        "nome":  "Livraria do Conhecimento",
-        "local":  "Bairro Literário",
-        "endereco":  "Rua dos Escritores, 24242",
-        "horarios":  {
-                         "segunda":  "10:00 - 19:00",
-                         "terca":  "10:00 - 19:00",
-                         "quarta":  "10:00 - 19:00",
-                         "quinta":  "10:00 - 19:00",
-                         "sexta":  "10:00 - 20:00",
-                         "sabado":  "10:00 - 18:00",
-                         "domingo":  "Fechado"
-                     }
-    },
-    {
-        "nome":  "Barbearia Moderna",
-        "local":  "Centro Comercial",
-        "endereco":  "Avenida Estilo, 25252",
-        "horarios":  {
-                         "segunda":  "09:00 - 20:00",
-                         "terca":  "09:00 - 20:00",
-                         "quarta":  "09:00 - 20:00",
-                         "quinta":  "09:00 - 20:00",
-                         "sexta":  "09:00 - 21:00",
-                         "sabado":  "08:00 - 20:00",
-                         "domingo":  "Fechado"
-                     }
-    },
-    {
-        "nome":  "Estúdio de Dança",
-        "local":  "Bairro Movimento",
-        "endereco":  "Rua Ritmo, 26262",
-        "horarios":  {
-                         "segunda":  "14:00 - 22:00",
-                         "terca":  "14:00 - 22:00",
-                         "quarta":  "14:00 - 22:00",
-                         "quinta":  "14:00 - 22:00",
-                         "sexta":  "14:00 - 23:00",
-                         "sabado":  "10:00 - 19:00",
-                         "domingo":  "10:00 - 17:00"
-                     }
-    },
-    {
-        "nome":  "Farmácia Natureza",
-        "local":  "Vila Orgânica",
-        "endereco":  "Rua Natural, 27272",
-        "horarios":  {
-                         "segunda":  "09:00 - 19:00",
-                         "terca":  "09:00 - 19:00",
-                         "quarta":  "09:00 - 19:00",
-                         "quinta":  "09:00 - 19:00",
-                         "sexta":  "09:00 - 20:00",
-                         "sabado":  "09:00 - 18:00",
-                         "domingo":  "10:00 - 17:00"
-                     }
-    },
-    {
-        "nome":  "Borracharia 24h",
-        "local":  "Zona Automóvel",
-        "endereco":  "Avenida Pneu, 28282",
-        "horarios":  {
-                         "segunda":  "24 horas",
-                         "terca":  "24 horas",
-                         "quarta":  "24 horas",
-                         "quinta":  "24 horas",
-                         "sexta":  "24 horas",
-                         "sabado":  "24 horas",
-                         "domingo":  "24 horas"
-                     }
-    },
-    {
-        "nome":  "Confeitaria Doces Sonhos",
-        "local":  "Bairro Vila Doce",
-        "endereco":  "Rua Açúcar, 29292",
-        "horarios":  {
-                         "segunda":  "08:00 - 19:00",
-                         "terca":  "08:00 - 19:00",
-                         "quarta":  "08:00 - 19:00",
-                         "quinta":  "08:00 - 19:00",
-                         "sexta":  "08:00 - 20:00",
-                         "sabado":  "08:00 - 19:00",
-                         "domingo":  "09:00 - 18:00"
-                     }
-    },
-    {
-        "nome":  "Agência de Viagens",
-        "local":  "Centro",
-        "endereco":  "Rua Destino, 30303",
-        "horarios":  {
-                         "segunda":  "09:00 - 18:00",
-                         "terca":  "09:00 - 18:00",
-                         "quarta":  "09:00 - 18:00",
-                         "quinta":  "09:00 - 18:00",
-                         "sexta":  "09:00 - 19:00",
-                         "sabado":  "10:00 - 16:00",
-                         "domingo":  "Fechado"
-                     }
+        "nome": "Barbershop Clássico",
+        "tipo": "Beleza",
+        "local": "Centro",
+        "bairro": "Centro",
+        "endereco": "Rua da Moda, 15151",
+        "latitude": -23.5420,
+        "longitude": -46.6500,
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "horarios": {
+            "quinta": "09:00 - 19:00",
+            "sexta": "09:00 - 20:00",
+            "sabado": "08:00 - 19:00",
+            "domingo": "Fechado"
+        },
+        "descricao": "Barbershop clássico com cortes tradicionais e design moderno",
+        "site": "https://barbershopclassico.com.br",
+        "instagram": "@barbershopclassico",
+        "distancia_airbnb_m": 1300
     }
 ]
 

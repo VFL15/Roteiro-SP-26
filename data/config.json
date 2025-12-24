@@ -1,0 +1,10 @@
+{
+    "airbnb": {
+        "nome": "Airbnb",
+        "endereco": "Rua da Consolação, 297",
+        "cidade": "São Paulo",
+        "cep": "01301-100",
+        "latitude": -23.5598,
+        "longitude": -46.6574
+    }
+}

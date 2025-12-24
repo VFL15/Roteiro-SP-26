@@ -333,6 +333,11 @@ body {
     color: #7b1fa2;
 }
 
+.badge.distancia {
+    background-color: #ede7f6;
+    color: #5e35b1;
+}
+
 .edit-btn {
     display: none;
 }

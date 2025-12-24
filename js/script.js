@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let eventos = [];
     let filteredEventos = [];
     let activeFilters = {
+        tipo: '',
         local: '',
         dia: ''
     };
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Filter functionality
     const filterBtn = document.getElementById('filterBtn');
     const filterPanel = document.getElementById('filterPanel');
+    const filterTipo = document.getElementById('filterTipo');
     const filterLocal = document.getElementById('filterLocal');
     const filterDia = document.getElementById('filterDia');
     const applyFiltersBtn = document.getElementById('applyFilters');
@@ -46,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     applyFiltersBtn.addEventListener('click', () => {
+        activeFilters.tipo = filterTipo.value;
         activeFilters.local = filterLocal.value;
         activeFilters.dia = filterDia.value;
         applyFilters();
@@ -53,8 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     clearFiltersBtn.addEventListener('click', () => {
+        filterTipo.value = '';
         filterLocal.value = '';
         filterDia.value = '';
+        activeFilters.tipo = '';
         activeFilters.local = '';
         activeFilters.dia = '';
         applyFilters();
@@ -63,14 +68,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function applyFilters() {
         filteredEventos = eventos.filter(evento => {
+            let matchTipo = !activeFilters.tipo || evento.tipo === activeFilters.tipo;
             let matchLocal = !activeFilters.local || evento.local === activeFilters.local;
             let matchDia = !activeFilters.dia || (evento.horarios[activeFilters.dia] && evento.horarios[activeFilters.dia] !== 'Fechado');
-            return matchLocal && matchDia;
+            return matchTipo && matchLocal && matchDia;
         });
         renderList();
     }
 
     function populateFilterOptions() {
+        // Populate tipo filter
+        const tipos = [...new Set(eventos.map(e => e.tipo))].sort();
+        tipos.forEach(tipo => {
+            const option = document.createElement('option');
+            option.value = tipo;
+            option.textContent = tipo;
+            filterTipo.appendChild(option);
+        });
+
         // Populate local filter
         const locais = [...new Set(eventos.map(e => e.local))].sort();
         locais.forEach(local => {
@@ -243,6 +258,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const badgesDiv = document.createElement('div');
             badgesDiv.className = 'badges';
             
+            // Badge de tipo
+            const tipoBadge = document.createElement('span');
+            tipoBadge.className = 'badge tipo';
+            tipoBadge.textContent = evento.tipo;
+            badgesDiv.appendChild(tipoBadge);
+            
             // Determinar horário de hoje
             const diasSemana = ['domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado'];
             const hoje = diasSemana[new Date().getDay()];
@@ -267,6 +288,15 @@ document.addEventListener('DOMContentLoaded', () => {
             localBadge.className = 'badge local';
             localBadge.textContent = `📍 ${evento.local}`;
             badgesDiv.appendChild(localBadge);
+            
+            // Badge de distância
+            if (evento.distancia_airbnb_m) {
+                const distancia_km = (evento.distancia_airbnb_m / 1000).toFixed(1);
+                const distanciaBadge = document.createElement('span');
+                distanciaBadge.className = 'badge distancia';
+                distanciaBadge.textContent = `🚶 ${distancia_km}km`;
+                badgesDiv.appendChild(distanciaBadge);
+            }
             
             textBox.appendChild(textSpan);
             textBox.appendChild(badgesDiv);
@@ -326,8 +356,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 horariosHtml += '</table>';
                 modalContent.innerHTML = `
                     <h3>${evento.nome}</h3>
+                    <p style="margin:5px 0; font-size:12px; color:#666;"><strong>Tipo:</strong> ${evento.tipo} | <strong>Bairro:</strong> ${evento.bairro}</p>
                     ${imagesHtml}
+                    <p><strong>Descrição:</strong> ${evento.descricao}</p>
                     <p><strong>Local:</strong> ${evento.local}</p>
+                    <p><strong>Endereço:</strong> ${evento.endereco}</p>
+                    ${evento.distancia_airbnb_m ? `<p><strong>Distância Airbnb:</strong> ${(evento.distancia_airbnb_m / 1000).toFixed(1)}km</p>` : ''}
+                    ${evento.site ? `<p><strong>Site:</strong> <a href="${evento.site}" target="_blank">${evento.site}</a></p>` : ''}
+                    ${evento.instagram ? `<p><strong>Instagram:</strong> <a href="https://instagram.com/${evento.instagram.replace('@', '')}" target="_blank">${evento.instagram}</a></p>` : ''}
                     <p><strong>Endereço:</strong> ${evento.endereco}</p>
                     <h4>Horários por Dia:</h4>
                     ${horariosHtml}
