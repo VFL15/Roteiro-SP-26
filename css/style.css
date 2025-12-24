@@ -203,11 +203,11 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: transparent;
+    background: #545358;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: inherit;
+    color: #F4F7FC;
     gap: 4px;
 }
 
@@ -216,7 +216,8 @@ body {
 }
 
 .nav-item.active {
-    color: #007bff;
+    background: #9F3132;
+    color: #F4F7FC;
 }
 
 .nav-icon {
@@ -225,8 +226,9 @@ body {
     transition: transform 0.3s ease;
 }
 
-.nav-item:active .nav-icon {
-    transform: scale(0.9);
+.nav-item.active .nav-icon,
+.nav-item.active .nav-label {
+    color: #F4F7FC;
 }
 
 .nav-label {
