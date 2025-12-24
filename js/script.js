@@ -289,15 +289,6 @@ document.addEventListener('DOMContentLoaded', () => {
             localBadge.textContent = `📍 ${evento.local}`;
             badgesDiv.appendChild(localBadge);
             
-            // Badge de distância
-            if (evento.distancia_airbnb_m) {
-                const distancia_km = (evento.distancia_airbnb_m / 1000).toFixed(1);
-                const distanciaBadge = document.createElement('span');
-                distanciaBadge.className = 'badge distancia';
-                distanciaBadge.textContent = `🚶 ${distancia_km}km`;
-                badgesDiv.appendChild(distanciaBadge);
-            }
-            
             textBox.appendChild(textSpan);
             textBox.appendChild(badgesDiv);
             
