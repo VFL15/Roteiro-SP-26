@@ -43,6 +43,121 @@ body {
     background-color: #9F3132;
     z-index: 999;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 18px;
+    height: 28px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poiret One', sans-serif;
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.filter-icon {
+    font-size: 14px;
+}
+
+.filter-label {
+    color: #F4F7FC;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Filter Panel */
+.filter-panel {
+    position: fixed;
+    top: 36px;
+    left: 0;
+    right: 0;
+    background: #F4F7FC;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 998;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-panel.active {
+    display: flex;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filter-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #545358;
+    font-family: 'Poiret One', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+    color: #545358;
+    cursor: pointer;
+}
+
+.filter-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.filter-action-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poiret One', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.filter-action-btn.clear {
+    background: #f0f0f0;
+    color: #545358;
+}
+
+.filter-action-btn.clear:hover {
+    background: #e0e0e0;
+}
+
+.filter-action-btn.apply {
+    background: #9F3132;
+    color: #F4F7FC;
+}
+
+.filter-action-btn.apply:hover {
+    background: #8a2a2b;
 }
 
 /* Pages container */

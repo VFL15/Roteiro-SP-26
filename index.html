@@ -9,7 +9,39 @@
 </head>
 <body>
     <!-- Header superior -->
-    <header class="top-header"></header>
+    <header class="top-header">
+        <button class="filter-btn" id="filterBtn">
+            <span class="filter-icon">🔍</span>
+            <span class="filter-label">Filtros</span>
+        </button>
+    </header>
+
+    <!-- Painel de filtros -->
+    <div class="filter-panel" id="filterPanel">
+        <div class="filter-group">
+            <label>Local:</label>
+            <select id="filterLocal" class="filter-select">
+                <option value="">Todos</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label>Dia:</label>
+            <select id="filterDia" class="filter-select">
+                <option value="">Todos</option>
+                <option value="segunda">Segunda</option>
+                <option value="terca">Terça</option>
+                <option value="quarta">Quarta</option>
+                <option value="quinta">Quinta</option>
+                <option value="sexta">Sexta</option>
+                <option value="sabado">Sábado</option>
+                <option value="domingo">Domingo</option>
+            </select>
+        </div>
+        <div class="filter-actions">
+            <button id="clearFilters" class="filter-action-btn clear">Limpar</button>
+            <button id="applyFilters" class="filter-action-btn apply">Aplicar</button>
+        </div>
+    </div>
     
     <!-- Página de Eventos -->
     <div id="page-eventos" class="page active">

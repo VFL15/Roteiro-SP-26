@@ -3,6 +3,11 @@ import { ref, set, get, onValue } from 'https://www.gstatic.com/firebasejs/12.7.
 document.addEventListener('DOMContentLoaded', () => {
     const list = document.querySelector('.sortable-list');
     let eventos = [];
+    let filteredEventos = [];
+    let activeFilters = {
+        local: '',
+        dia: ''
+    };
     
     // Page navigation
     const pageEventos = document.getElementById('page-eventos');
@@ -28,12 +33,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Filter functionality
+    const filterBtn = document.getElementById('filterBtn');
+    const filterPanel = document.getElementById('filterPanel');
+    const filterLocal = document.getElementById('filterLocal');
+    const filterDia = document.getElementById('filterDia');
+    const applyFiltersBtn = document.getElementById('applyFilters');
+    const clearFiltersBtn = document.getElementById('clearFilters');
+
+    filterBtn.addEventListener('click', () => {
+        filterPanel.classList.toggle('active');
+    });
+
+    applyFiltersBtn.addEventListener('click', () => {
+        activeFilters.local = filterLocal.value;
+        activeFilters.dia = filterDia.value;
+        applyFilters();
+        filterPanel.classList.remove('active');
+    });
+
+    clearFiltersBtn.addEventListener('click', () => {
+        filterLocal.value = '';
+        filterDia.value = '';
+        activeFilters.local = '';
+        activeFilters.dia = '';
+        applyFilters();
+        filterPanel.classList.remove('active');
+    });
+
+    function applyFilters() {
+        filteredEventos = eventos.filter(evento => {
+            let matchLocal = !activeFilters.local || evento.local === activeFilters.local;
+            let matchDia = !activeFilters.dia || (evento.horarios[activeFilters.dia] && evento.horarios[activeFilters.dia] !== 'Fechado');
+            return matchLocal && matchDia;
+        });
+        renderList();
+    }
+
+    function populateFilterOptions() {
+        // Populate local filter
+        const locais = [...new Set(eventos.map(e => e.local))].sort();
+        locais.forEach(local => {
+            const option = document.createElement('option');
+            option.value = local;
+            option.textContent = local;
+            filterLocal.appendChild(option);
+        });
+    }
+
     // Scrollbar personalizada removida
 
     fetch('data/eventos.json')
         .then(response => response.json())
         .then(data => {
             eventos = data;
+            filteredEventos = eventos;
+            populateFilterOptions();
             loadItems();
         });
 
@@ -149,8 +204,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderList() {
         list.innerHTML = '';
+        
+        // Use filtered events if filters are active
+        const eventsToShow = (activeFilters.local || activeFilters.dia) ? filteredEventos : eventos;
+        
         items.forEach(eventIdx => {
             const evento = eventos[eventIdx];
+            
+            // Skip if not in filtered list
+            if ((activeFilters.local || activeFilters.dia) && !filteredEventos.includes(evento)) {
+                return;
+            }
+            
             const li = document.createElement('li');
             li.classList.add('sortable-item');
             li.dataset.eventIndex = eventIdx;
