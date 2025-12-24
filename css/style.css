@@ -1,6 +1,7 @@
 html {
-    overflow-y: hidden !important;
+    overflow: hidden !important;
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -8,9 +9,11 @@ body {
     background-color: #9F3132;
     margin: 0;
     padding: 0;
-    overflow-y: hidden !important;
+    overflow: hidden !important;
     min-height: 100vh;
     height: 100%;
+    width: 100%;
+    max-width: 100vw;
 }
 
 /* Scrollbar customizada removida */
@@ -46,9 +49,11 @@ body {
 .page {
     display: none;
     width: 100%;
+    max-width: 100vw;
     height: calc(100vh - 72px);
     margin-top: 36px;
     overflow-y: auto;
+    overflow-x: hidden;
     scrollbar-width: none; /* Firefox: hide scrollbar */
 }
 
@@ -94,7 +99,7 @@ body {
 .sortable-item {
     position: relative;
     padding: 0;
-    margin: 0;
+    margin: 8px 0;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
