@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     // Page navigation
-    const pageEventos = document.getElementById('page-eventos');
+    const pageVisitacao = document.getElementById('page-visitacao');
+    const pageClassificacao = document.getElementById('page-classificacao');
     const pageMapas = document.getElementById('page-mapas');
     const navButtons = document.querySelectorAll('.nav-item');
     
@@ -24,12 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('active');
             
             // Show/hide pages
-            if (targetPage === 'eventos') {
-                pageEventos.classList.add('active');
-                pageMapas.classList.remove('active');
+            pageVisitacao.classList.remove('active');
+            pageClassificacao.classList.remove('active');
+            pageMapas.classList.remove('active');
+            
+            if (targetPage === 'visitacao') {
+                pageVisitacao.classList.add('active');
+            } else if (targetPage === 'classificacao') {
+                pageClassificacao.classList.add('active');
             } else if (targetPage === 'mapas') {
                 pageMapas.classList.add('active');
-                pageEventos.classList.remove('active');
             }
         });
     });

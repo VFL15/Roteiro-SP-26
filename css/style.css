@@ -191,6 +191,17 @@ body {
     font-family: 'Poiret One', system-ui, sans-serif;
 }
 
+/* Visitacao page styling */
+.visitacao-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 24px;
+    color: #F4F7FC;
+    font-family: 'Poiret One', system-ui, sans-serif;
+}
+
 .sortable-list {
     list-style-type: none;
     padding: 0;

@@ -46,8 +46,15 @@
         </div>
     </div>
     
-    <!-- Página de Eventos -->
-    <div id="page-eventos" class="page active">
+    <!-- Página de Visitação -->
+    <div id="page-visitacao" class="page active">
+        <div class="visitacao-content">
+            <p style="text-align: center; color: #F4F7FC; margin-top: 50px;">Página de Visitação</p>
+        </div>
+    </div>
+
+    <!-- Página de Classificação -->
+    <div id="page-classificacao" class="page">
         <ul class="sortable-list"></ul>
     </div>
 
@@ -60,13 +67,17 @@
 
     <!-- Barra de navegação inferior -->
     <nav class="bottom-nav">
+        <button class="nav-item active" data-page="visitacao">
+            <span class="nav-icon">📍</span>
+            <span class="nav-label">Visitação</span>
+        </button>
+        <button class="nav-item" data-page="classificacao">
+            <span class="nav-icon">📋</span>
+            <span class="nav-label">Classificação</span>
+        </button>
         <button class="nav-item" data-page="mapas">
             <span class="nav-icon">🗺️</span>
             <span class="nav-label">Mapas</span>
-        </button>
-        <button class="nav-item active" data-page="eventos">
-            <span class="nav-icon">📋</span>
-            <span class="nav-label">Eventos</span>
         </button>
     </nav>
     
