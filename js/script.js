@@ -268,6 +268,13 @@ document.addEventListener('DOMContentLoaded', () => {
             tipoBadge.className = 'badge tipo';
             tipoBadge.textContent = evento.tipo;
             badgesDiv.appendChild(tipoBadge);
+
+            // Horário de visitação único para todos os dias
+            const horarioVisitacao = evento.horario_visitacao || 'A definir';
+            const visitaBadge = document.createElement('span');
+            visitaBadge.className = 'badge visitacao';
+            visitaBadge.textContent = `👟 Visita: ${horarioVisitacao}`;
+            badgesDiv.appendChild(visitaBadge);
             
             // Determinar horário de hoje
             const diasSemana = ['domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado'];
@@ -332,6 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const eventIdx = parseInt(li.dataset.eventIndex);
             const evento = eventos[eventIdx];
             if (evento && typeof evento === 'object') {
+                const horarioVisita = evento.horario_visitacao || 'A definir';
                 // Images carousel/gallery
                 let imagesHtml = '';
                 if (evento.imagens && evento.imagens.length > 0) {
@@ -361,7 +369,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${evento.site ? `<p><strong>Site:</strong> <a href="${evento.site}" target="_blank">${evento.site}</a></p>` : ''}
                     ${evento.instagram ? `<p><strong>Instagram:</strong> <a href="https://instagram.com/${evento.instagram.replace('@', '')}" target="_blank">${evento.instagram}</a></p>` : ''}
                     <p><strong>Endereço:</strong> ${evento.endereco}</p>
-                    <h4>Horários por Dia:</h4>
+                    <p><strong>Horário de visitação (todos os dias):</strong> ${horarioVisita}</p>
+                    <h4>Horários de funcionamento por dia:</h4>
                     ${horariosHtml}
                     <button id="close-modal" style="margin-top:15px; padding:8px 15px; cursor:pointer;">Fechar</button>
                 `;

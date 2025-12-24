@@ -339,6 +339,11 @@ body {
     color: #f57c00;
 }
 
+.badge.visitacao {
+    background-color: #e0f2f1;
+    color: #00695c;
+}
+
 .badge.local {
     background-color: #f3e5f5;
     color: #7b1fa2;
