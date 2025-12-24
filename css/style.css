@@ -219,6 +219,7 @@ body {
     z-index: 1000;
     font-family: 'Poiret One', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
     border-radius: 30px 30px 0 0;
+    overflow: hidden;
 }
 .bottom-nav * {
     font-family: 'Poiret One', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -237,6 +238,14 @@ body {
     transition: all 0.3s ease;
     color: #F4F7FC;
     gap: 4px;
+}
+
+.nav-item:first-child {
+    border-radius: 30px 0 0 0;
+}
+
+.nav-item:last-child {
+    border-radius: 0 30px 0 0;
 }
 
 .nav-item:hover {
