@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             }
             
-            localStorage.setItem('eventosEditados', JSON.stringify(eventos));
+            // Removido cache local: Firebase é a fonte de verdade
         }, (error) => {
             console.error('Erro ao sincronizar eventos do Firebase:', error);
         });
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         evento.site = document.getElementById('edit-site').value;
         evento.instagram = document.getElementById('edit-instagram').value;
         
-        localStorage.setItem('eventosEditados', JSON.stringify(eventos));
+        // Removido cache local: Firebase é a fonte de verdade
         
         // Sincronizar com Firebase
         const eventoRef = ref(window.firebaseDb, `eventos/${currentEventoIndex}`);
@@ -976,33 +976,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     // =========================
     // INICIALIZAÇÃO
     // =========================
-    const savedData = localStorage.getItem('eventosEditados');
-    if (savedData) {
-        eventos = JSON.parse(savedData);
-        eventos.forEach(ev => { ev.tipo = normalizeTipo(ev.tipo); });
-        eventos.forEach(ev => ensureBairroOption(ev.bairro));
-        // Carregar manifesto de mídia e aplicar se necessário
-        try {
-            const manifestResp = await fetch('data/midia_manifest.json?v=' + Date.now());
-            if (manifestResp.ok) {
-                midiaManifest = await manifestResp.json();
-                rebuildManifestIndex();
-            }
-        } catch (e) {
-            console.warn('Manifesto de mídia não disponível no carregamento inicial.');
-        }
-        eventos.forEach(ev => aplicarImagens(ev));
-        rebuildIdIndexMap();
-        filteredEventos = eventos;
-        if (eventos.length > 0 && document.getElementById('eventoTotal')) {
-            document.getElementById('eventoTotal').textContent = eventos.length;
-            displayEvento(0);
-        }
-        populateFilterOptions();
-        loadItems();
-    } else {
-        await loadEventos();
-    }
+    // Limpar qualquer cache legado do navegador para evitar divergências
+    try {
+        localStorage.removeItem('eventosEditados');
+    } catch {}
+    
+    // Carregar sempre do JSON + sincronizar com Firebase
+    await loadEventos();
 
     // =========================
     // FUNÇÕES DE ROTEIRO
