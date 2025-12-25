@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const baseTipos = ['passeio', 'ingestão', 'compras'];
     let isSyncingFromFirebase = false; // Flag para evitar loops infinitos
     let midiaManifest = null; // Manifesto de mídia por evento
+    let midiaManifestIndex = new Map(); // chave normalizada -> imagens
     const placeholderUrl = 'https://via.placeholder.com/600x400?text=Sem+imagem';
     let idToIndex = new Map(); // mapa nome/id -> índice no array eventos
 
@@ -36,6 +37,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         return { evento: eventos[idx], index: idx };
     };
 
+    const normalizeKey = (str) => (str || '')
+        .toString()
+        .normalize('NFD')
+        .replace(/\p{Diacritic}/gu, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, '');
+
+    const rebuildManifestIndex = () => {
+        midiaManifestIndex = new Map();
+        if (!midiaManifest) return;
+        Object.entries(midiaManifest).forEach(([key, imgs]) => {
+            if (key === '__placeholder__') return;
+            const norm = normalizeKey(key);
+            if (!norm) return;
+            midiaManifestIndex.set(norm, imgs);
+        });
+    };
+
     const isPlaceholderImage = (url) => {
         if (!url) return true;
         const lower = url.toString().toLowerCase();
@@ -51,7 +70,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
         if (midiaManifest) {
-            const manifestImgs = midiaManifest[ev.nome] || midiaManifest?.__placeholder__ || [];
+            const manifestImgs = midiaManifest[ev.nome]
+                || midiaManifestIndex.get(normalizeKey(ev.nome))
+                || midiaManifest?.__placeholder__
+                || [];
             if (manifestImgs.length > 0) {
                 ev.imagens = manifestImgs;
                 return;
@@ -81,6 +103,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (manifestResp.ok) {
                     midiaManifest = await manifestResp.json();
                 }
+                rebuildManifestIndex();
             } catch (e) {
                 console.warn('Manifesto de mídia não disponível. Usando placeholder quando necessário.');
             }
@@ -764,6 +787,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const manifestResp = await fetch('data/midia_manifest.json?v=' + Date.now());
             if (manifestResp.ok) {
                 midiaManifest = await manifestResp.json();
+                rebuildManifestIndex();
             }
         } catch (e) {
             console.warn('Manifesto de mídia não disponível no carregamento inicial.');
