@@ -783,15 +783,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                     });
                 });
                 
-                // Setup drag-and-drop para reordenar imagens
+                // Setup drag-and-drop para reordenar imagens (desktop e mobile)
                 const setupImageDragDrop = () => {
                     const midiaContainer = modalContent.querySelector('#midia-container');
                     if (!midiaContainer) return;
                     
                     const items = midiaContainer.querySelectorAll('.midia-item');
                     let draggedElement = null;
+                    let touchStartY = 0;
                     
                     items.forEach(item => {
+                        // Desktop: Drag and Drop
                         item.addEventListener('dragstart', (e) => {
                             draggedElement = item;
                             item.style.opacity = '0.5';
@@ -810,47 +812,81 @@ document.addEventListener('DOMContentLoaded', async () => {
                         
                         item.addEventListener('drop', (e) => {
                             e.preventDefault();
-                            if (draggedElement && draggedElement !== item) {
-                                const draggedIdx = parseInt(draggedElement.dataset.imgIndex);
-                                const targetIdx = parseInt(item.dataset.imgIndex);
-                                
-                                // Reordenar array de imagens
-                                const [movedImg] = evento.imagens.splice(draggedIdx, 1);
-                                evento.imagens.splice(targetIdx, 0, movedImg);
-                                
-                                // Atualizar DOM imediatamente
-                                const midiaContainer = modalContent.querySelector('#midia-container');
-                                if (midiaContainer) {
-                                    midiaContainer.innerHTML = '';
-                                    evento.imagens.forEach((img, idx) => {
-                                        const link = document.createElement('a');
-                                        link.href = img;
-                                        link.target = '_blank';
-                                        link.rel = 'noopener noreferrer';
-                                        link.className = 'midia-item';
-                                        link.dataset.imgIndex = idx;
-                                        link.draggable = true;
-                                        link.style.cssText = 'text-decoration:none; display:block; width:calc((100% - 10px) / 2); cursor:grab; user-select:none;';
-                                        
-                                        const img_el = document.createElement('img');
-                                        img_el.src = img;
-                                        img_el.alt = 'imagem do evento';
-                                        img_el.referrerPolicy = 'no-referrer';
-                                        img_el.loading = 'lazy';
-                                        img_el.style.cssText = 'width:100%; height:auto; object-fit:contain; background:#f0f0f0; pointer-events:none;';
-                                        img_el.onerror = function() { this.onerror=null; this.src='${placeholderUrl}'; };
-                                        
-                                        link.appendChild(img_el);
-                                        midiaContainer.appendChild(link);
-                                    });
-                                    setupImageDragDrop();
-                                }
-                                
-                                // Salvar no Firebase
-                                saveEvento();
-                            }
+                            performDrop(item);
                         });
+                        
+                        // Mobile: Touch events
+                        item.addEventListener('touchstart', (e) => {
+                            draggedElement = item;
+                            touchStartY = e.touches[0].clientY;
+                            item.style.opacity = '0.5';
+                        }, false);
+                        
+                        item.addEventListener('touchmove', (e) => {
+                            e.preventDefault();
+                        }, false);
+                        
+                        item.addEventListener('touchend', (e) => {
+                            if (!draggedElement) return;
+                            
+                            const touchEndY = e.changedTouches[0].clientY;
+                            const touchEndX = e.changedTouches[0].clientX;
+                            
+                            // Encontrar elemento sob o dedo
+                            const elementBelow = document.elementFromPoint(touchEndX, touchEndY);
+                            const targetItem = elementBelow?.closest('.midia-item');
+                            
+                            if (targetItem && targetItem !== draggedElement) {
+                                performDrop(targetItem);
+                            }
+                            
+                            draggedElement.style.opacity = '1';
+                            draggedElement = null;
+                        }, false);
                     });
+                    
+                    // Função auxiliar para executar o drop
+                    const performDrop = (targetItem) => {
+                        if (!draggedElement || draggedElement === targetItem) return;
+                        
+                        const draggedIdx = parseInt(draggedElement.dataset.imgIndex);
+                        const targetIdx = parseInt(targetItem.dataset.imgIndex);
+                        
+                        // Reordenar array de imagens
+                        const [movedImg] = evento.imagens.splice(draggedIdx, 1);
+                        evento.imagens.splice(targetIdx, 0, movedImg);
+                        
+                        // Atualizar DOM imediatamente
+                        const midiaContainer = modalContent.querySelector('#midia-container');
+                        if (midiaContainer) {
+                            midiaContainer.innerHTML = '';
+                            evento.imagens.forEach((img, idx) => {
+                                const link = document.createElement('a');
+                                link.href = img;
+                                link.target = '_blank';
+                                link.rel = 'noopener noreferrer';
+                                link.className = 'midia-item';
+                                link.dataset.imgIndex = idx;
+                                link.draggable = true;
+                                link.style.cssText = 'text-decoration:none; display:block; width:calc((100% - 10px) / 2); cursor:grab; user-select:none; touch-action:none;';
+                                
+                                const img_el = document.createElement('img');
+                                img_el.src = img;
+                                img_el.alt = 'imagem do evento';
+                                img_el.referrerPolicy = 'no-referrer';
+                                img_el.loading = 'lazy';
+                                img_el.style.cssText = 'width:100%; height:auto; object-fit:contain; background:#f0f0f0; pointer-events:none; -webkit-user-select:none; user-select:none;';
+                                img_el.onerror = function() { this.onerror=null; this.src='${placeholderUrl}'; };
+                                
+                                link.appendChild(img_el);
+                                midiaContainer.appendChild(link);
+                            });
+                            setupImageDragDrop();
+                        }
+                        
+                        // Salvar no Firebase
+                        saveEvento();
+                    };
                 };
                 
                 setupImageDragDrop();
