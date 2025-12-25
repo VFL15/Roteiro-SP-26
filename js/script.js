@@ -44,6 +44,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         .toLowerCase()
         .replace(/[^a-z0-9]/g, '');
 
+    const toDirectDriveUrl = (url) => {
+        if (!url) return url;
+        const viewMatch = url.match(/id=([\w-]{10,})/);
+        const dMatch = url.match(/\/d\/([\w-]{10,})/);
+        const id = viewMatch?.[1] || dMatch?.[1];
+        if (!id) return url;
+        // Usa export=download para garantir entrega direta da imagem
+        return `https://drive.google.com/uc?export=download&id=${id}`;
+    };
+
+    const mapImageUrls = (arr) => (Array.isArray(arr) ? arr.map(toDirectDriveUrl) : []);
+
     const rebuildManifestIndex = () => {
         midiaManifestIndex = new Map();
         if (!midiaManifest) return;
@@ -66,7 +78,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const imgs = Array.isArray(ev.imagens) ? ev.imagens : [];
         const filtradas = imgs.filter(img => !isPlaceholderImage(img));
         if (filtradas.length > 0) {
-            ev.imagens = filtradas;
+            ev.imagens = mapImageUrls(filtradas);
             return;
         }
         if (midiaManifest) {
@@ -75,7 +87,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 || midiaManifest?.__placeholder__
                 || [];
             if (manifestImgs.length > 0) {
-                ev.imagens = manifestImgs;
+                ev.imagens = mapImageUrls(manifestImgs);
                 return;
             }
         }
