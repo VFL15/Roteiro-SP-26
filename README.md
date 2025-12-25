@@ -1,53 +1,86 @@
-# SP26 - Gerenciador de Eventos
+# 🗺️ Roteiro SP-26 - Guia de Viagem para São Paulo
 
-## Configuração do Firebase
+Um roteiro interativo e personalizável para explorar São Paulo em grupos ou casais. Organize seus pontos de interesse (passeios, restaurantes, compras) com horários de funcionamento, localizações e dicas de visitação.
 
-Para sincronizar a ordem dos eventos entre todos os usuários, você precisa configurar o Firebase:
+**🌐 Acesse o site:** [Roteiro SP-26](https://vfl15.github.io/Roteiro-SP-26/)
 
-### Passo 1: Criar projeto no Firebase
+## 📌 O que é?
 
-1. Acesse [Firebase Console](https://console.firebase.google.com/)
-2. Clique em "Adicionar projeto"
-3. Dê um nome (ex: "sp26-eventos")
-4. Desabilite Google Analytics (opcional)
-5. Clique em "Criar projeto"
+Roteiro SP-26 é uma aplicação web desenvolvida para ajudar viajantes a planejar suas atividades em São Paulo de forma organizada e eficiente. Com foco em grupos e casais, a ferramenta permite:
 
-### Passo 2: Configurar Realtime Database
+- **Visualizar eventos**: 46 pontos de interesse curados em São Paulo
+- **Editar detalhes**: nome, descrição, tipo (passeio/ingestão/compras), bairro, endereço
+- **Gerenciar horários**: horários de funcionamento por dia (Quinta a Domingo) e horário de visitação
+- **Organizar prioridades**: reordenar eventos por importância com sincronização em tempo real
+- **Filtrar por preferência**: buscar eventos por tipo, bairro ou dia disponível
+- **Consultar informações**: sites, Instagram, distância e detalhes completos
 
-1. No menu lateral, clique em "Realtime Database"
-2. Clique em "Criar banco de dados"
-3. Escolha a localização (ex: United States)
-4. Inicie em **modo de teste** (permite leitura/escrita sem autenticação)
-5. Clique em "Ativar"
+## ✨ Funcionalidades
 
-### Passo 3: Obter configurações
+### 📋 Página de Eventos
+- Navegação em carousel através dos 46 eventos
+- Editor inline com suporte a:
+  - **Tipo**: Passeio, Ingestão, Compras (com opção de adicionar novos)
+  - **Bairro**: Seleção automática de opções existentes
+  - **Horários de Funcionamento**: Quinta, Sexta, Sábado, Domingo
+  - **Horário de Visitação**: Horário dedicado para visitas
+  - **Reserva**: Sim/Não e link de reserva
+  - **Redes Sociais**: Website e Instagram
 
-1. Clique no ícone de engrenagem > "Configurações do projeto"
-2. Role até "Seus aplicativos" e clique no ícone `</>`
-3. Registre o app (nome: "SP26")
-4. Copie o objeto `firebaseConfig`
+### 📊 Página de Classificação
+- Lista ordenável de eventos com reordenação drag-and-drop vertical (setas ↑ ↓)
+- Sincronização em tempo real com Firebase Realtime Database
+- Filtros por tipo, bairro e dia da semana
+- Visualização de detalhes com modal de informações
 
-### Passo 4: Atualizar o código
+### 🗺️ Página de Mapas
+- Placeholder para integração futura com mapas interativos
 
-Abra `index.html` e substitua o `firebaseConfig` pelo seu:
+## 🛠️ Tecnologias
 
-```javascript
-const firebaseConfig = {
-    apiKey: "SUA_API_KEY",
-    authDomain: "seu-projeto.firebaseapp.com",
-    databaseURL: "https://seu-projeto-default-rtdb.firebaseio.com",
-    projectId: "seu-projeto",
-    storageBucket: "seu-projeto.appspot.com",
-    messagingSenderId: "123456789",
-    appId: "1:123456789:web:abc123"
-};
-```
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Backend**: Firebase Realtime Database (para sincronização de ordem)
+- **Armazenamento**: JSON local + localStorage para edições
+- **Hosting**: GitHub Pages
 
-### Passo 5: Publicar no GitHub Pages
+## 🚀 Como Usar
 
-1. Crie um repositório no GitHub
-2. Faça upload de todos os arquivos
-3. Vá em Settings > Pages
+1. Acesse [Roteiro SP-26](https://vfl15.github.io/Roteiro-SP-26/)
+2. Navegue pela aba **Eventos** para explorar e editar pontos de interesse
+3. Use a aba **Classificação** para reordenar e filtrar eventos
+4. Suas edições são salvas localmente no navegador
+
+## 📊 Dados
+
+A aplicação contém 46 eventos em São Paulo com informações sobre:
+- Nome e descrição
+- Tipo (Passeio, Ingestão, Compras)
+- Localização (bairro e endereço)
+- Horários de funcionamento por dia
+- Horário de visitação
+- Links para site e Instagram
+- Imagens de galeria
+
+## 💾 Persistência
+
+- **Edições locais**: Salvas em localStorage do navegador
+- **Ordem de eventos**: Sincronizada via Firebase Realtime Database
+- **Sincronização**: Em tempo real entre abas/dispositivos (via Firebase)
+
+## 🤝 Contribuições
+
+Este é um projeto pessoal para planejamento de viagem. Para sugestões ou melhorias, sinta-se livre para abrir uma issue ou fazer um pull request.
+
+## 💝 Sobre
+
+Desenvolvido com ❤️ para planejar uma viagem incrível em São Paulo com quem amo! 
+
+Feito com dedicação e muito carinho para explorar o melhor que São Paulo tem a oferecer. 🌃
+
+---
+
+**Mantido por:** [VFL15](https://github.com/VFL15)  
+**Repositório:** [github.com/VFL15/Roteiro-SP-26](https://github.com/VFL15/Roteiro-SP-26)
 4. Em "Source", selecione a branch `main` e pasta `root`
 5. Clique em "Save"
 6. Seu site estará disponível em `https://seu-usuario.github.io/nome-repositorio/`
