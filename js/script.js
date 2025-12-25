@@ -479,6 +479,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!items || items.length === 0) {
                 items = eventos.map(ev => eventoId(ev));
             }
+            
+            // Garantir que todos os eventos existentes estejam no array items
+            // (evitar que eventos fiquem de fora se o eventOrder estiver desatualizado)
+            const itemsSet = new Set(items);
+            const missingEvents = eventos
+                .map(ev => eventoId(ev))
+                .filter(id => !itemsSet.has(id));
+            
+            if (missingEvents.length > 0) {
+                items = [...items, ...missingEvents];
+                // Salvar ordem atualizada no Firebase
+                saveOrder();
+            }
+            
             renderList();
         }, (error) => {
             console.error('Error loading order:', error);

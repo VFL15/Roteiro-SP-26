@@ -161,6 +161,8 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none; /* Firefox: hide scrollbar */
+    padding-bottom: 48px; /* Space for bottom navigation menu */
+    box-sizing: border-box;
 }
 
 .page::-webkit-scrollbar {
@@ -225,7 +227,7 @@ body {
 
 .sortable-list {
     list-style-type: none;
-    padding: 0;
+    padding: 0 0 48px 0; /* Bottom padding for menu */
     margin: 0;
     width: 100%;
     min-height: calc(100vh - 92px);
@@ -473,7 +475,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    padding: 20px 20px 68px 20px; /* Extra bottom padding for menu */
     height: 100%;
     overflow: hidden;
 }
@@ -651,6 +653,7 @@ textarea.editor-input {
     flex: 1;
     overflow-y: auto;
     padding-right: 8px;
+    padding-bottom: 48px; /* Space for bottom menu */
 }
 
 .roteiro-dia {
