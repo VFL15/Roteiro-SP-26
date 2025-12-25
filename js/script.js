@@ -681,9 +681,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                     imagesHtml = '<div id="midia-container" style="display:flex; flex-wrap:wrap; gap:4px; margin-bottom:4px; -webkit-user-select:none; user-select:none;">';
                     evento.imagens.forEach((img, idx) => {
                         imagesHtml += `
-                            <a href="${img}" target="_blank" rel="noopener noreferrer" class="midia-item" data-img-index="${idx}"
-                               draggable="true"
-                               style="text-decoration:none; display:block; width:calc((100% - 10px) / 2); cursor:grab; user-select:none; touch-action:none; -webkit-user-select:none;">
+                                     <a href="${img}" target="_blank" rel="noopener noreferrer" class="midia-item" data-img-index="${idx}"
+                                         draggable="false"
+                                         style="text-decoration:none; display:block; width:calc((100% - 10px) / 2); cursor:pointer; user-select:none; touch-action:pan-y; -webkit-user-select:none;">
                                 <img src="${img}" alt="imagem do evento" referrerpolicy="no-referrer" loading="lazy"
                                      style="width:100%; height:auto; object-fit:contain; background:#f0f0f0; pointer-events:none; -webkit-user-select:none; -webkit-touch-callout:none; user-select:none;"
                                      onerror="this.onerror=null;this.src='${placeholderUrl}';">
@@ -792,14 +792,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                     button.textContent = isEditingImages ? '✅ Pronto' : '✏️ Editar';
                     button.style.background = isEditingImages ? '#4CAF50' : '#9F3132';
                     
-                    // Mudar cursor das imagens
+                    // Mudar comportamento das imagens
                     const items = modalContent.querySelectorAll('.midia-item');
                     items.forEach(item => {
                         if (isEditingImages) {
                             item.style.cursor = 'grab';
                             item.style.opacity = '1';
+                            item.draggable = true;
+                            item.style.touchAction = 'none';
                         } else {
                             item.style.cursor = 'pointer';
+                            item.draggable = false;
+                            item.style.touchAction = 'pan-y';
                         }
                     });
                 };
@@ -901,8 +905,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 link.rel = 'noopener noreferrer';
                                 link.className = 'midia-item';
                                 link.dataset.imgIndex = idx;
-                                link.draggable = true;
-                                link.style.cssText = 'text-decoration:none; display:block; width:calc((100% - 10px) / 2); cursor:grab; user-select:none; touch-action:none; -webkit-user-select:none;';
+                                link.draggable = false;
+                                link.style.cssText = 'text-decoration:none; display:block; width:calc((100% - 10px) / 2); cursor:pointer; user-select:none; touch-action:pan-y; -webkit-user-select:none;';
                                 
                                 const img_el = document.createElement('img');
                                 img_el.src = img;

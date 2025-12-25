@@ -413,6 +413,12 @@ body {
     display: none; /* WebKit */
 }
 
+/* Media container: allow vertical pan */
+#midia-container,
+#midia-container .midia-item {
+    touch-action: pan-y;
+}
+
 .nav-item {
     flex: 1;
     height: 100%;
