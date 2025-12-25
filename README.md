@@ -8,12 +8,12 @@ Um roteiro interativo e personalizável para explorar São Paulo em grupos ou ca
 
 Roteiro SP-26 é uma aplicação web desenvolvida para ajudar viajantes a planejar suas atividades em São Paulo de forma organizada e eficiente. Com foco em grupos e casais, a ferramenta permite:
 
-- **Visualizar eventos**: 46 pontos de interesse curados em São Paulo
-- **Editar detalhes**: nome, descrição, tipo (passeio/ingestão/compras), bairro, endereço
-- **Gerenciar horários**: horários de funcionamento por dia (Quinta a Domingo) e horário de visitação
-- **Organizar prioridades**: reordenar eventos por importância com sincronização em tempo real
-- **Filtrar por preferência**: buscar eventos por tipo, bairro ou dia disponível
-- **Consultar informações**: sites, Instagram, distância e detalhes completos
+- **Visualizar eventos**
+- **Editar detalhes**
+- **Gerenciar horários**
+- **Organizar prioridades**
+- **Filtrar por preferência**
+- **Consultar informações**
 
 ## 🚀 Como Usar
 
@@ -29,12 +29,6 @@ Roteiro SP-26 é uma **ferramenta de logística de viagem** desenvolvida para aj
 Através de tecnologia e inteligência digital, simplificamos o processo de planejamento considerando as preferências e valores de cada participante do grupo, facilitando decisões coletivas com base em dados organizados.
 
 A ferramenta é pensada para **consenso interno** entre membros do grupo, permitindo que todos visualizem opções, horários e detalhes antes de tomar decisões coletivas.
-
-## 💾 Persistência
-
-- **Edições locais**: Salvas em localStorage do navegador
-- **Ordem de eventos**: Sincronizada via Firebase Realtime Database
-- **Sincronização**: Em tempo real entre abas/dispositivos (via Firebase)
 
 ## 💝 Sobre
 
@@ -64,6 +58,10 @@ Feito com dedicação e muito carinho para explorar o melhor que São Paulo tem 
 - Placeholder para integração futura com mapas interativos
 
 ## Recursos
+
+- **Edições locais**: Salvas em localStorage do navegador
+- **Ordem de eventos**: Sincronizada via Firebase Realtime Database
+- **Sincronização**: Em tempo real entre abas/dispositivos (via Firebase)
 
 - ✅ Sincronização em tempo real entre todos os usuários
 - ✅ Arrasta e solta para reordenar
