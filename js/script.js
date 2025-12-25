@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         const dMatch = url.match(/\/d\/([\w-]{10,})/);
         const id = viewMatch?.[1] || dMatch?.[1];
         if (!id) return url;
-        // Usa export=download para garantir entrega direta da imagem
-        return `https://drive.google.com/uc?export=download&id=${id}`;
+        // Usa export=view para renderizar direto no <img>
+        return `https://drive.google.com/uc?export=view&id=${id}`;
     };
 
     const mapImageUrls = (arr) => (Array.isArray(arr) ? arr.map(toDirectDriveUrl) : []);
