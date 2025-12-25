@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const bairroSelect = document.getElementById('edit-bairro');
     const baseTipos = ['passeio', 'ingestão', 'compras'];
     let isSyncingFromFirebase = false; // Flag para evitar loops infinitos
+    let midiaManifest = null; // Manifesto de mídia por evento
 
     const capitalize = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '';
     const normalizeTipo = (value) => (value || '').toString().trim().toLowerCase();
@@ -34,9 +35,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             const response = await fetch('data/eventos.json?v=' + Date.now());
             eventos = await response.json();
+            // Carregar manifesto de mídia
+            try {
+                const manifestResp = await fetch('data/midia_manifest.json?v=' + Date.now());
+                if (manifestResp.ok) {
+                    midiaManifest = await manifestResp.json();
+                }
+            } catch (e) {
+                console.warn('Manifesto de mídia não disponível. Usando placeholder quando necessário.');
+            }
             eventos.forEach(ev => {
                 ev.tipo = normalizeTipo(ev.tipo);
                 ensureBairroOption(ev.bairro);
+                // Aplicar imagens do manifesto se não houver imagens definidas
+                if ((!ev.imagens || ev.imagens.length === 0) && midiaManifest) {
+                    const imgs = midiaManifest[ev.nome] || midiaManifest?.__placeholder__ || [];
+                    ev.imagens = imgs;
+                }
             });
             filteredEventos = eventos;
             // Garantir que tipos existentes apareçam no select
@@ -693,6 +708,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         eventos = JSON.parse(savedData);
         eventos.forEach(ev => { ev.tipo = normalizeTipo(ev.tipo); });
         eventos.forEach(ev => ensureBairroOption(ev.bairro));
+        // Carregar manifesto de mídia e aplicar se necessário
+        try {
+            const manifestResp = await fetch('data/midia_manifest.json?v=' + Date.now());
+            if (manifestResp.ok) {
+                midiaManifest = await manifestResp.json();
+                eventos.forEach(ev => {
+                    if ((!ev.imagens || ev.imagens.length === 0) && midiaManifest) {
+                        const imgs = midiaManifest[ev.nome] || midiaManifest?.__placeholder__ || [];
+                        ev.imagens = imgs;
+                    }
+                });
+            }
+        } catch (e) {
+            console.warn('Manifesto de mídia não disponível no carregamento inicial.');
+        }
         filteredEventos = eventos;
         if (eventos.length > 0 && document.getElementById('eventoTotal')) {
             document.getElementById('eventoTotal').textContent = eventos.length;
