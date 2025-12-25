@@ -682,7 +682,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (evento.imagens && evento.imagens.length > 0) {
                     imagesHtml = '<div style="display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:15px;">';
                     evento.imagens.forEach(img => {
-                        imagesHtml += `<img src="${img}" alt="imagem do evento" style="width:100%; max-height:150px; object-fit:cover; border-radius:8px;" onerror="this.onerror=null;this.src='${placeholderUrl}';">`;
+                        const display = img.length > 38 ? img.slice(0, 35) + '…' : img;
+                        imagesHtml += `
+                            <a href="${img}" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:#444; display:block;">
+                                <img src="${img}" alt="imagem do evento" style="width:100%; max-height:150px; object-fit:cover; border-radius:8px;" onerror="this.onerror=null;this.src='${placeholderUrl}';">
+                                <div style="font-size:11px; margin-top:4px; word-break:break-all;">${display}</div>
+                            </a>
+                        `;
                     });
                     imagesHtml += '</div>';
                 }
