@@ -475,9 +475,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px 20px 68px 20px; /* Extra bottom padding for menu */
+    padding: 20px;
     height: 100%;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .carousel-container {
@@ -486,7 +487,9 @@ body {
     background: #fff;
     border-radius: 12px;
     padding: 20px;
+    padding-bottom: 80px; /* Extra bottom padding for mobile menu */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .carousel-header {
