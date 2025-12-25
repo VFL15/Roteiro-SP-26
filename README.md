@@ -61,6 +61,18 @@ A aplicação contém 46 eventos em São Paulo com informações sobre:
 - Links para site e Instagram
 - Imagens de galeria
 
+## 🎯 Objetivo Principal
+
+Roteiro SP-26 é uma **ferramenta de logística de viagem** desenvolvida para ajudar grupos a chegarem em **consenso rápido e preciso** sobre itinerários. 
+
+Através de tecnologia e inteligência digital, simplificamos o processo de planejamento considerando as preferências e valores de cada participante do grupo, facilitando decisões coletivas com base em dados organizados.
+
+## 🤝 Uso
+
+Este é um **projeto de hospedagem privada** para fins de planejamento em grupo. Não é um projeto open source e não há abertura para contribuições externas ou sugestões públicas.
+
+A ferramenta é pensada para **consenso interno** entre membros do grupo, permitindo que todos visualizem opções, horários e detalhes antes de tomar decisões coletivas.
+
 ## 💾 Persistência
 
 - **Edições locais**: Salvas em localStorage do navegador
@@ -69,7 +81,7 @@ A aplicação contém 46 eventos em São Paulo com informações sobre:
 
 ## 🤝 Contribuições
 
-Este é um projeto pessoal para planejamento de viagem. Para sugestões ou melhorias, sinta-se livre para abrir uma issue ou fazer um pull request.
+Este é um projeto privado para planejamento de viagem em grupo. Não há abertura para contribuições ou sugestões externas.
 
 ## 💝 Sobre
 
