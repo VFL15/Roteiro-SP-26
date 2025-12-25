@@ -725,3 +725,17 @@ textarea.editor-input {
 .action-btn.reset:hover {
     background: #d0d0d0;
 }
+
+/* Extra spacing between reservation-related fields */
+.editor-field:has(#edit-reservar),
+.editor-field:has(#edit-reserva),
+.editor-field:has(#edit-site) {
+    margin-bottom: 12px;
+}
+
+/* Slightly increase spacing inside these fields for readability */
+#edit-reservar,
+#edit-reserva,
+#edit-site {
+    margin-top: 6px;
+}
