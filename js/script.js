@@ -670,7 +670,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (evento.imagens && evento.imagens.length > 0) {
                     imagesHtml = '<div style="display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:15px;">';
                     evento.imagens.forEach(img => {
-                        imagesHtml += `<img src="${img}" style="width:100%; max-height:150px; object-fit:cover; border-radius:8px;">`;
+                        imagesHtml += `<img src="${img}" alt="imagem do evento" style="width:100%; max-height:150px; object-fit:cover; border-radius:8px;" onerror="this.onerror=null;this.src='${placeholderUrl}';">`;
                     });
                     imagesHtml += '</div>';
                 }
