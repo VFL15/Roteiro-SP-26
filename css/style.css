@@ -399,6 +399,20 @@ body {
     font-family: 'Poiret One', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
+/* Modal scrolling + hide scrollbar */
+.modal-content {
+    /* Enable smooth touch scrolling */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    /* Hide native scrollbars */
+    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none; /* Firefox */
+    touch-action: pan-y; /* Allow vertical touch scroll */
+}
+.modal-content::-webkit-scrollbar {
+    display: none; /* WebKit */
+}
+
 .nav-item {
     flex: 1;
     height: 100%;
