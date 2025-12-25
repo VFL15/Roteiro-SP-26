@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         filteredEventos = eventos.filter(evento => {
             let matchTipo = !activeFilters.tipo || evento.tipo === activeFilters.tipo;
             let matchLocal = !activeFilters.local || evento.local === activeFilters.local;
-            let matchDia = !activeFilters.dia || (evento.horarios[activeFilters.dia] && evento.horarios[activeFilters.dia] !== 'Fechado');
+            let matchDia = !activeFilters.dia || (evento.horarios_funcionamento[activeFilters.dia] && evento.horarios_funcionamento[activeFilters.dia] !== 'Fechado');
             return matchTipo && matchLocal && matchDia;
         });
         renderList();
@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Determinar horário de hoje
             const diasSemana = ['domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado'];
             const hoje = diasSemana[new Date().getDay()];
-            const horarioHoje = evento.horarios[hoje];
+            const horarioHoje = evento.horarios_funcionamento[hoje];
             
             if (horarioHoje && horarioHoje !== 'Fechado') {
                 const horarioBadge = document.createElement('span');
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dias = ['segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado', 'domingo'];
                 const diasTexto = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'];
                 dias.forEach((dia, idx) => {
-                    const horario = evento.horarios[dia] || 'N/A';
+                    const horario = evento.horarios_funcionamento[dia] || 'N/A';
                     horariosHtml += `<tr><td style="border:1px solid #ddd; padding:5px;">${diasTexto[idx]}</td><td style="border:1px solid #ddd; padding:5px;">${horario}</td></tr>`;
                 });
                 horariosHtml += '</table>';

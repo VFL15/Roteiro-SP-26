@@ -1,1060 +1,1177 @@
 [
     {
         "nome": "Cemitério",
-        "tipo": "Cultural",
+        "descricao": "Cemitério da Consolação https://drive.prefeitura.sp.gov.br/cidade/upload/cemiterio%20mapa%20baixa_1219246518.pdf",
+        "tipo": "Passeio",
         "bairro": "Consolação",
-        "endereco": "Cemitério da Consolação",
+        "endereco": "Rua da Consolação, 1660",
         "latitude": -23.554,
         "longitude": -46.662,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 800,
+        "horarios_funcionamento": {
             "quinta": "Fechado",
             "sexta": "14:00",
             "sabado": "Fechado",
             "domingo": "Fechado"
         },
-        "descricao": "Cemitério da Consolação",
-        "site": "",
-        "instagram": "@cemiteriodaconsolacao",
-        "distancia_airbnb_m": 800,
-        "horario_visitacao": "A definir"
+        "horario_visitacao": "14:00",
+        "reservar": "sim",
+        "reserva": "pesquisar no Sympla",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "site": "consolare.com.br/cemiterio-consolacao/",
+        "instagram": "@cemiteriodaconsolacao"
     },
     {
         "nome": "Cortina",
-        "tipo": "Alimentação",
+        "descricao": "Cineclube Cortina",
+        "tipo": "Ingestão",
         "bairro": "República",
-        "endereco": "Cineclube Cortina - República",
+        "endereco": "Rua Araújo, 62",
         "latitude": -23.542,
         "longitude": -46.642,
+        "distancia_airbnb_m": 450,
+        "horarios_funcionamento": {
+            "quinta": "18:00 - 01:00",
+            "sexta": "18:00 - 01:00",
+            "sabado": "12:00 - 01:00",
+            "domingo": "12:00 - 21:00"
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "conferir no @cineclubecortina",
         "imagens": [
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "horarios": {
-            "quinta": "Consultar",
-            "sexta": "Consultar",
-            "sabado": "Consultar",
-            "domingo": "Consultar"
-        },
-        "descricao": "Cineclube Cortina",
         "site": "",
-        "instagram": "@cineclubecortina",
-        "distancia_airbnb_m": 450,
-        "horario_visitacao": "A definir"
+        "instagram": "@cineclubecortina"
     },
     {
-        "nome": "Jô Paulom",
-        "tipo": "Compras",
+        "nome": "Lojas de Vinis",
+        "descricao": "Sonzera Records na Galeria Nova Barão (Condomínio Empresarial Nova Barão) junto com outras lojas de vinis",
+        "tipo": "Passeio",
         "bairro": "República",
-        "endereco": "República - São Paulo",
+        "endereco": "Rua 7 de Abril, 154",
         "latitude": -23.543,
         "longitude": -46.641,
+        "distancia_airbnb_m": 650,
+        "horarios_funcionamento": {
+            "quinta": "10:30 - 19:00",
+            "sexta": "10:30 - 19:00",
+            "sabado": "10:00 - 17:00",
+            "domingo": "Fechado"
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
         "imagens": [
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "horarios": {
-            "quinta": "Consultar",
-            "sexta": "Consultar",
-            "sabado": "Consultar",
-            "domingo": "Consultar"
-        },
-        "descricao": "",
-        "site": "",
-        "instagram": "",
-        "distancia_airbnb_m": 650,
-        "horario_visitacao": "A definir"
+        "site": "sonzerarecords.com.br",
+        "instagram": "sonzera_records"
     },
     {
         "nome": "Theatro Municipal",
-        "tipo": "Cultural",
-        "bairro": "República",
-        "endereco": "Theatro Municipal de São Paulo",
+        "descricao": "Theatro Municipal de São Paulo",
+        "tipo": "Passeio",
+        "bairro": "Sé",
+        "endereco": "Praça Ramos de Azevedo, s/nº",
         "latitude": -23.5452,
         "longitude": -46.6394,
+        "distancia_airbnb_m": 750,
+        "horarios_funcionamento": {
+            "quinta": "10:00 - 19:00",
+            "sexta": "10:00 - 19:00",
+            "sabado": "10:00 - 17:00",
+            "domingo": "10:00 - 17:00"
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "sim",
+        "reserva": "em theatromunicipalsp.byinti.com/#/ticket/ 07/01 e 08/01 a partir de 10h",
         "imagens": [
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "horarios": {
-            "quinta": "Consultar",
-            "sexta": "Consultar",
-            "sabado": "Consultar",
-            "domingo": "Consultar"
-        },
-        "descricao": "Theatro Municipal de São Paulo",
-        "site": "https://theatromunicipal.org.br",
-        "instagram": "@theatromunicipal",
-        "distancia_airbnb_m": 750,
-        "horario_visitacao": "A definir"
+        "site": "theatromunicipal.org.br",
+        "instagram": "@theatromunicipal"
     },
     {
         "nome": "Parque da Ciência",
-        "tipo": "Cultural",
+        "descricao": "Parque da Ciência Butantan",
+        "tipo": "Passeio",
         "bairro": "Butantã",
-        "endereco": "Parque da Ciência Butantan - Butantã",
+        "endereco": "Av. Vital Brasil, 1500",
         "latitude": -23.568,
         "longitude": -46.728,
+        "distancia_airbnb_m": 9100,
+        "horarios_funcionamento": {
+            "quinta": "09:00 - 17:00",
+            "sexta": "09:00 - 17:00",
+            "sabado": "09:00 - 17:00",
+            "domingo": "09:00 - 17:00"
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "para museus deve-se agendar",
         "imagens": [
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "horarios": {
-            "quinta": "Consultar",
-            "sexta": "Consultar",
-            "sabado": "Consultar",
-            "domingo": "Consultar"
-        },
-        "descricao": "Parque da Ciência Butantan",
-        "site": "https://parquedaciencia.butantan.gov.br",
-        "instagram": "@butantanoficial",
-        "distancia_airbnb_m": 9100,
-        "horario_visitacao": "A definir"
+        "site": "parquedaciencia.butantan.gov.br",
+        "instagram": "@butantanoficial"
     },
     {
-        "nome": "Catedral Nossa Senhora da Assunção",
-        "tipo": "Cultural",
+        "nome": "Tour na Catedral da Sé",
+        "descricao": "Catedral Metropolitana Nossa Senhora da Assunção",
+        "tipo": "Passeio",
         "bairro": "Sé",
-        "endereco": "Catedral Metropolitana - Sé",
+        "endereco": "Praça da Sé",
         "latitude": -23.55,
         "longitude": -46.636,
+        "distancia_airbnb_m": 1400,
+        "horarios_funcionamento": {
+            "quinta": "10:30 - 14:00",
+            "sexta": "10:30 - 14:00",
+            "sabado": "09:45 - 14:00",
+            "domingo": "12:30 - 14:00"
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "sim",
+        "reserva": "catedraldasesp.com/visita-guiada",
         "imagens": [
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "horarios": {
-            "quinta": "Consultar",
-            "sexta": "Consultar",
-            "sabado": "Consultar",
-            "domingo": "Consultar"
-        },
-        "descricao": "Catedral Metropolitana",
-        "site": "https://catedraldasesp.com",
-        "instagram": "@catedraldasesp",
+        "site": "catedraldasesp.com",
+        "instagram": "@catedraldasesp"
+    },
+    {
+        "nome": "Missa da Catedral da Sé",
+        "descricao": "Catedral Metropolitana Nossa Senhora da Assunção",
+        "tipo": "Missa",
+        "bairro": "Sé",
+        "endereco": "Praça da Sé",
+        "latitude": -23.55,
+        "longitude": -46.636,
         "distancia_airbnb_m": 1400,
-        "horario_visitacao": "A definir"
+        "horarios_funcionamento": {
+            "quinta": "12:00",
+            "sexta": "12:00",
+            "sabado": "12:00",
+            "domingo": "9h, 11h, 16h"
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "site": "https://catedraldasesp.com",
+        "instagram": "@catedraldasesp"
     },
     {
         "nome": "Passagem Literária",
+        "descricao": "Passagem Literária da Consolação",
         "tipo": "Compras",
         "bairro": "Consolação",
-        "endereco": "Passagem Literária da Consolação",
+        "endereco": "Rua da Consolação, Próx. 2423",
         "latitude": -23.558,
         "longitude": -46.658,
+        "distancia_airbnb_m": 2400,
+        "horarios_funcionamento": {
+            "quinta": "10:30 - 17:00",
+            "sexta": "10:30 - 19:00",
+            "sabado": "11:00 - 19:00",
+            "domingo": "Fechado"
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
         "imagens": [
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "horarios": {
-            "quinta": "Consultar",
-            "sexta": "Consultar",
-            "sabado": "Consultar",
-            "domingo": "Consultar"
-        },
-        "descricao": "Passagem Literária da Consolação",
         "site": "",
-        "instagram": "@passagemliteraria_oficial",
-        "distancia_airbnb_m": 2400,
-        "horario_visitacao": "A definir"
+        "instagram": "@passagemliteraria_oficial"
     },
     {
-        "nome": "Mercado Municipal",
-        "tipo": "Alimentação",
+        "nome": "Mercadão Municipal",
+        "descricao": "Mercado Municipal de São Paulo",
+        "tipo": "Ingestão",
         "bairro": "Centro Histórico",
-        "endereco": "Mercado Municipal de São Paulo",
+        "endereco": "R. da Cantareira, 306",
         "latitude": -23.541,
         "longitude": -46.63,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 2000,
+        "horarios_funcionamento": {
             "quinta": "06:00 - 18:00",
             "sexta": "06:00 - 18:00",
             "sabado": "06:00 - 18:00",
             "domingo": "06:00 - 16:00"
         },
-        "descricao": "Mercado Municipal de São Paulo",
-        "site": "https://mercadomunicipalsp.com",
-        "instagram": "@mercadaospoficial",
-        "distancia_airbnb_m": 2000,
-        "horario_visitacao": "A definir"
-    },
-    {
-        "nome": "Korea Mart",
-        "tipo": "Compras",
-        "bairro": "Liberdade",
-        "endereco": "Korea Mart - Liberdade",
-        "latitude": -23.558,
-        "longitude": -46.634,
+        "horario_visitacao": "08:00 - 12:00",
+        "reservar": "não",
+        "reserva": "",
         "imagens": [
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "horarios": {
+        "site": "mercadomunicipalsp.com",
+        "instagram": "@mercadaospoficial"
+    },
+    {
+        "nome": "Korea Mart",
+        "descricao": "Mercearia e presentes de produtos coreanos",
+        "tipo": "Compras",
+        "bairro": "Liberdade",
+        "endereco": "R. dos Estudantes, 41",
+        "latitude": -23.558,
+        "longitude": -46.634,
+        "distancia_airbnb_m": 1600,
+        "horarios_funcionamento": {
             "quinta": "08:00 - 18:00",
             "sexta": "08:00 - 18:00",
             "sabado": "08:00 - 18:00",
             "domingo": "08:00 - 18:00"
         },
-        "descricao": "",
-        "site": "https://koreamart.com.br",
-        "instagram": "@kmart.sp",
-        "distancia_airbnb_m": 1600,
-        "horario_visitacao": "A definir"
-    },
-    {
-        "nome": "Caixa Cultural",
-        "tipo": "Cultural",
-        "bairro": "Centro Histórico",
-        "endereco": "Caixa Cultural - Centro Histórico",
-        "latitude": -23.547,
-        "longitude": -46.636,
+        "horario_visitacao": "08:00 - 11:00 / 13:00 - 18:00",
+        "reservar": "não",
+        "reserva": "",
         "imagens": [
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "horarios": {
+        "site": "https://koreamart.com.br",
+        "instagram": "@kmart.sp"
+    },
+    {
+        "nome": "Caixa Cultural",
+        "descricao": "",
+        "tipo": "Passeio",
+        "bairro": "Centro Histórico",
+        "endereco": "Praça da Sé, 111",
+        "latitude": -23.547,
+        "longitude": -46.636,
+        "distancia_airbnb_m": 1400,
+        "horarios_funcionamento": {
             "quinta": "08:00 - 19:00",
             "sexta": "08:00 - 19:00",
             "sabado": "08:00 - 19:00",
             "domingo": "08:00 - 19:00"
         },
-        "descricao": "",
-        "site": "https://caixacultural.gov.br/Paginas/SaoPaulo.aspx",
-        "instagram": "@caixaculturalsp",
-        "distancia_airbnb_m": 1400,
-        "horario_visitacao": "A definir"
-    },
-    {
-        "nome": "Botanikafé Pinheiros",
-        "tipo": "Alimentação",
-        "bairro": "Pinheiros",
-        "endereco": "Botanikafé - Pinheiros",
-        "latitude": -23.565,
-        "longitude": -46.695,
+        "horario_visitacao": "08:00 - 11:00 / 13:00 - 19:00",
+        "reservar": "não",
+        "reserva": "",
         "imagens": [
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "horarios": {
+        "site": "caixacultural.gov.br/Paginas/SaoPaulo.aspx",
+        "instagram": "@caixaculturalsp"
+    },
+    {
+        "nome": "Botanikafé Pinheiros",
+        "descricao": "Local arejado que serve comida saudável, drinques artesanais e brunch.",
+        "tipo": "Ingestão",
+        "bairro": "Pinheiros",
+        "endereco": "R. Padre Garcia Velho, 56",
+        "latitude": -23.565,
+        "longitude": -46.695,
+        "distancia_airbnb_m": 6300,
+        "horarios_funcionamento": {
             "quinta": "08:00 - 23:00",
             "sexta": "08:00 - 23:00",
             "sabado": "08:00 - 23:00",
             "domingo": "08:00 - 18:00"
         },
-        "descricao": "",
-        "site": "https://botanikafe.com/unidades/pinheiros",
-        "instagram": "@botanikafe",
-        "distancia_airbnb_m": 6300,
-        "horario_visitacao": "A definir"
-    },
-    {
-        "nome": "Botanikafé Jardins",
-        "tipo": "Alimentação",
-        "bairro": "Jardins",
-        "endereco": "Botanikafé - Jardins",
-        "latitude": -23.566,
-        "longitude": -46.67,
+        "horario_visitacao": "08:00 - 23:00",
+        "reservar": "não",
+        "reserva": "botanikafe.com/reservas",
         "imagens": [
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "horarios": {
+        "site": "botanikafe.com/unidades/pinheiros",
+        "instagram": "@botanikafe"
+    },
+    {
+        "nome": "Botanikafé Jardins",
+        "descricao": "Local arejado que serve comida saudável, drinques artesanais e brunch.",
+        "tipo": "Alimentação",
+        "bairro": "Jardins",
+        "endereco": "Alameda Lorena, 1765",
+        "latitude": -23.566,
+        "longitude": -46.67,
+        "distancia_airbnb_m": 3200,
+        "horarios_funcionamento": {
             "quinta": "08:00 - 23:00",
             "sexta": "08:00 - 23:00",
             "sabado": "08:00 - 23:00",
             "domingo": "08:00 - 23:00"
         },
-        "descricao": "",
-        "site": "https://botanikafe.com/unidades/jardins",
-        "instagram": "@botanikafe",
-        "distancia_airbnb_m": 3200,
-        "horario_visitacao": "A definir"
+        "horario_visitacao": "08:00 - 23:00",
+        "reservar": "sim",
+        "reserva": "botanikafe.com/reservas",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "site": "botanikafe.com/unidades/jardins",
+        "instagram": "@botanikafe"
     },
     {
         "nome": "Galeria do Rock",
+        "descricao": "",
         "tipo": "Compras",
         "bairro": "República",
         "endereco": "Galeria do Rock - República",
         "latitude": -23.544,
         "longitude": -46.639,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 1000,
+        "horarios_funcionamento": {
             "quinta": "09:00 - 19:00",
             "sexta": "09:00 - 19:00",
             "sabado": "09:00 - 18:00",
             "domingo": "Fechado"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "@galeriadorockoficial",
-        "distancia_airbnb_m": 1000,
-        "horario_visitacao": "A definir"
+        "instagram": "@galeriadorockoficial"
     },
     {
         "nome": "Sogo Plaza Shopping",
+        "descricao": "",
         "tipo": "Compras",
         "bairro": "Liberdade",
         "endereco": "Sogo Plaza Shopping - Liberdade",
         "latitude": -23.559,
         "longitude": -46.633,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 1600,
+        "horarios_funcionamento": {
             "quinta": "09:00 - 19:00",
             "sexta": "09:00 - 19:00",
             "sabado": "09:00 - 19:00",
             "domingo": "09:00 - 18:00"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://sogoplaza.com.br",
-        "instagram": "@sogoplaza",
-        "distancia_airbnb_m": 1600,
-        "horario_visitacao": "A definir"
+        "instagram": "@sogoplaza"
     },
     {
         "nome": "CCBB",
+        "descricao": "Centro Cultural Banco do Brasil",
         "tipo": "Cultural",
         "bairro": "Centro Histórico",
         "endereco": "Centro Cultural Banco do Brasil",
         "latitude": -23.548,
         "longitude": -46.634,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 1200,
+        "horarios_funcionamento": {
             "quinta": "09:00 - 20:00",
             "sexta": "09:00 - 20:00",
             "sabado": "09:00 - 20:00",
             "domingo": "09:00 - 20:00"
         },
-        "descricao": "Centro Cultural Banco do Brasil",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://ccbb.com.br/sao-paulo",
-        "instagram": "@ccbbsp",
-        "distancia_airbnb_m": 1200,
-        "horario_visitacao": "A definir"
+        "instagram": "@ccbbsp"
     },
     {
         "nome": "Por um Punhado de Dólares",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Consolação",
         "endereco": "Consolação - São Paulo",
         "latitude": -23.556,
         "longitude": -46.659,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 230,
+        "horarios_funcionamento": {
             "quinta": "09:00 - 22:00",
             "sexta": "09:00 - 22:00",
             "sabado": "09:00 - 22:00",
             "domingo": "09:00 - 20:00"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "@porumpunhadodedolares",
-        "distancia_airbnb_m": 230,
-        "horario_visitacao": "A definir"
+        "instagram": "@porumpunhadodedolares"
     },
     {
         "nome": "Museu da Imigração Japonesa",
+        "descricao": "Museu Histórico da Imigração Japonesa no Brasil",
         "tipo": "Cultural",
         "bairro": "Liberdade",
         "endereco": "Museu Histórico da Imigração Japonesa no Brasil",
         "latitude": -23.562,
         "longitude": -46.632,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 2200,
+        "horarios_funcionamento": {
             "quinta": "10:00 - 16:00",
             "sexta": "10:00 - 16:00",
             "sabado": "10:00 - 16:00",
             "domingo": "10:00 - 16:00"
         },
-        "descricao": "Museu Histórico da Imigração Japonesa no Brasil",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://bunkyo.org.br/br/museu-historico",
-        "instagram": "@museumhijb",
-        "distancia_airbnb_m": 2200,
-        "horario_visitacao": "A definir"
+        "instagram": "@museumhijb"
     },
     {
         "nome": "Akiba Station - Liberdade",
+        "descricao": "",
         "tipo": "Compras",
         "bairro": "Liberdade",
         "endereco": "Akiba Station - Liberdade",
         "latitude": -23.56,
         "longitude": -46.633,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 1600,
+        "horarios_funcionamento": {
             "quinta": "10:00 - 19:00",
             "sexta": "10:00 - 19:00",
             "sabado": "10:00 - 19:00",
             "domingo": "10:00 - 19:00"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://akibastation.com.br/loja-fisica",
-        "instagram": "@akibastationsp",
-        "distancia_airbnb_m": 1600,
-        "horario_visitacao": "A definir"
+        "instagram": "@akibastationsp"
     },
     {
         "nome": "Akiba Station - Thomaz Gonzaga",
+        "descricao": "",
         "tipo": "Compras",
         "bairro": "Liberdade",
         "endereco": "Akiba Station - Rua Thomaz Gonzaga",
         "latitude": -23.561,
         "longitude": -46.634,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 1900,
+        "horarios_funcionamento": {
             "quinta": "10:00 - 19:00",
             "sexta": "10:00 - 19:00",
             "sabado": "10:00 - 19:00",
             "domingo": "10:00 - 19:00"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://akibastation.com.br/loja-fisica",
-        "instagram": "@akibastationsp",
-        "distancia_airbnb_m": 1900,
-        "horario_visitacao": "A definir"
+        "instagram": "@akibastationsp"
     },
     {
         "nome": "Mamute Frutaria & Restaurante",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Butantã",
         "endereco": "Butantã - São Paulo",
         "latitude": -23.57,
         "longitude": -46.73,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 8600,
+        "horarios_funcionamento": {
             "quinta": "11:00 - 16:00",
             "sexta": "11:00 - 16:00",
             "sabado": "11:00 - 18:00",
             "domingo": "Fechado"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "@mamutefrutaria",
-        "distancia_airbnb_m": 8600,
-        "horario_visitacao": "A definir"
+        "instagram": "@mamutefrutaria"
     },
     {
         "nome": "Hello Kitty and Friends",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Liberdade",
         "endereco": "Hello Kitty - Liberdade",
         "latitude": -23.561,
         "longitude": -46.633,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 1800,
+        "horarios_funcionamento": {
             "quinta": "11:00 - 19:00",
             "sexta": "11:00 - 19:00",
             "sabado": "11:00 - 20:00",
             "domingo": "11:00 - 19:00"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://eatasia.com.br",
-        "instagram": "@hellokitty2d_eatasia",
-        "distancia_airbnb_m": 1800,
-        "horario_visitacao": "A definir"
+        "instagram": "@hellokitty2d_eatasia"
     },
     {
         "nome": "Museu da Polícia Civil",
+        "descricao": "",
         "tipo": "Cultural",
         "bairro": "Butantã",
         "endereco": "Museu da Polícia Civil - Butantã",
         "latitude": -23.571,
         "longitude": -46.731,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 9000,
+        "horarios_funcionamento": {
             "quinta": "13:00 - 18:00",
             "sexta": "13:00 - 18:00",
             "sabado": "Fechado",
             "domingo": "Fechado"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://policiacivil.sp.gov.br/portal/faces/pages_home/institucional/museuPoliciaCivil",
-        "instagram": "",
-        "distancia_airbnb_m": 9000,
-        "horario_visitacao": "A definir"
+        "instagram": ""
     },
     {
         "nome": "Vinil Retrô",
+        "descricao": "Cafeteria e Tabacaria",
         "tipo": "Alimentação",
         "bairro": "Consolação",
         "endereco": "Consolação - São Paulo",
         "latitude": -23.556,
         "longitude": -46.6595,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 230,
+        "horarios_funcionamento": {
             "quinta": "16:00 - 01:00",
             "sexta": "16:00 - 01:00",
             "sabado": "16:00 - 01:00",
             "domingo": "16:00 - 01:00"
         },
-        "descricao": "Cafeteria e Tabacaria",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "",
-        "distancia_airbnb_m": 230,
-        "horario_visitacao": "A definir"
+        "instagram": ""
     },
     {
         "nome": "Hitch Bar",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Consolação",
         "endereco": "Consolação - São Paulo",
         "latitude": -23.5565,
         "longitude": -46.6592,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 210,
+        "horarios_funcionamento": {
             "quinta": "17:00 - 01:00",
             "sexta": "17:00 - 01:00",
             "sabado": "17:00 - 01:00",
             "domingo": "16:00 - 00:00"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "@hitchbar.sp",
-        "distancia_airbnb_m": 210,
-        "horario_visitacao": "A definir"
+        "instagram": "@hitchbar.sp"
     },
     {
         "nome": "Big Kahuna",
+        "descricao": "Hamburgueria com temática de Pulp Fiction",
         "tipo": "Alimentação",
         "bairro": "Jardim Paulista",
         "endereco": "Big Kahuna - Jardim Paulista",
         "latitude": -23.568,
         "longitude": -46.672,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 3500,
+        "horarios_funcionamento": {
             "quinta": "18:00 - 23:00",
             "sexta": "12:00 - 00:00",
             "sabado": "12:00 - 00:00",
             "domingo": "12:00 - 23:00"
         },
-        "descricao": "Hamburgueria com temática de Pulp Fiction",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://bigkahunaburger.com.br",
-        "instagram": "@bigkahunaburgerr",
-        "distancia_airbnb_m": 3500,
-        "horario_visitacao": "A definir"
+        "instagram": "@bigkahunaburgerr"
     },
     {
         "nome": "Riviera Bar",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Consolação",
         "endereco": "Riviera Bar - Consolação",
         "latitude": -23.56,
         "longitude": -46.655,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 2400,
+        "horarios_funcionamento": {
             "quinta": "24h",
             "sexta": "24h",
             "sabado": "24h",
             "domingo": "24h"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://getin.app/sao-paulo/riviera-bar",
-        "instagram": "@rivierabarsp",
-        "distancia_airbnb_m": 2400,
-        "horario_visitacao": "A definir"
+        "instagram": "@rivierabarsp"
     },
     {
         "nome": "Praça da Paz - Rita Lee",
+        "descricao": "",
         "tipo": "Natureza",
         "bairro": "Parque Ibirapuera",
         "endereco": "Praça da Paz - Parque Ibirapuera",
         "latitude": -23.5875,
         "longitude": -46.6575,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 4900,
+        "horarios_funcionamento": {
             "quinta": "24h",
             "sexta": "24h",
             "sabado": "24h",
             "domingo": "24h"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "",
-        "distancia_airbnb_m": 4900,
-        "horario_visitacao": "A definir"
+        "instagram": ""
     },
     {
         "nome": "Beco do Batman",
+        "descricao": "",
         "tipo": "Cultural",
         "bairro": "Vila Madalena",
         "endereco": "Beco do Batman - Vila Madalena",
         "latitude": -23.555,
         "longitude": -46.69,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 5400,
+        "horarios_funcionamento": {
             "quinta": "24h",
             "sexta": "24h",
             "sabado": "24h",
             "domingo": "24h"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "",
-        "distancia_airbnb_m": 5400,
-        "horario_visitacao": "A definir"
+        "instagram": ""
     },
     {
         "nome": "Rodoviária",
+        "descricao": "Terminal Rodoviário do Tietê",
         "tipo": "Ida/Volta",
         "bairro": "Santana",
         "endereco": "Terminal Rodoviário do Tietê",
         "latitude": -23.514,
         "longitude": -46.627,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 5700,
+        "horarios_funcionamento": {
             "quinta": "24h",
             "sexta": "24h",
             "sabado": "24h",
             "domingo": "24h"
         },
-        "descricao": "Terminal Rodoviário do Tietê",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "",
-        "distancia_airbnb_m": 5700,
-        "horario_visitacao": "A definir"
+        "instagram": ""
     },
     {
         "nome": "Rooftop Paulista",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Consolação",
         "endereco": "Rooftop Paulista - Consolação",
         "latitude": -23.558,
         "longitude": -46.656,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 2000,
+        "horarios_funcionamento": {
             "quinta": "10:00 - 22:00",
             "sexta": "10:00 - 22:00",
             "sabado": "10:00 - 22:00",
             "domingo": "10:00 - 22:00"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "@rooftoppaulista",
-        "distancia_airbnb_m": 2000,
-        "horario_visitacao": "A definir"
+        "instagram": "@rooftoppaulista"
     },
     {
         "nome": "Palazzo Lounge Bar",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Consolação",
         "endereco": "Palazzo Lounge Bar - Consolação",
         "latitude": -23.5585,
         "longitude": -46.6565,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 2000,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "@palazzoloungebar_",
-        "distancia_airbnb_m": 2000,
-        "horario_visitacao": "A definir"
+        "instagram": "@palazzoloungebar_"
     },
     {
         "nome": "Praça Antônio Prado",
+        "descricao": "Cinema ao ar livre",
         "tipo": "Cultural",
         "bairro": "Centro Histórico",
         "endereco": "Praça Antônio Prado - Centro Histórico",
         "latitude": -23.546,
         "longitude": -46.637,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 1300,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "Cinema ao ar livre",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "",
-        "distancia_airbnb_m": 1300,
-        "horario_visitacao": "A definir"
+        "instagram": ""
     },
     {
         "nome": "Vinícola Urbana",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Pinheiros",
         "endereco": "Vinícola Urbana - Pinheiros",
         "latitude": -23.566,
         "longitude": -46.696,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 4800,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://vinicolaurbana.com.br",
-        "instagram": "@vinicola.urbana",
-        "distancia_airbnb_m": 4800,
-        "horario_visitacao": "A definir"
+        "instagram": "@vinicola.urbana"
     },
     {
         "nome": "Top Cine no Heliponto",
+        "descricao": "Top Center Shopping",
         "tipo": "Cultural",
         "bairro": "Bela Vista",
         "endereco": "Top Center Shopping - Bela Vista",
         "latitude": -23.562,
         "longitude": -46.649,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 2500,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "Top Center Shopping",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://topcentershopping.com.br",
-        "instagram": "@topcentershopping",
-        "distancia_airbnb_m": 2500,
-        "horario_visitacao": "A definir"
+        "instagram": "@topcentershopping"
     },
     {
         "nome": "Mata Città",
+        "descricao": "Conglomerado Matarazzo",
         "tipo": "Alimentação",
         "bairro": "Bela Vista",
         "endereco": "Conglomerado Matarazzo - Bela Vista",
         "latitude": -23.563,
         "longitude": -46.65,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 2200,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "Conglomerado Matarazzo",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "@matacitta",
-        "distancia_airbnb_m": 2200,
-        "horario_visitacao": "A definir"
+        "instagram": "@matacitta"
     },
     {
         "nome": "Baixo Pinheiros Bar",
+        "descricao": "",
         "tipo": "Cultural",
         "bairro": "Pinheiros",
         "endereco": "Baixo Pinheiros Bar - Pinheiros",
         "latitude": -23.567,
         "longitude": -46.698,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 6400,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "@baixopinheirosbar",
-        "distancia_airbnb_m": 6400,
-        "horario_visitacao": "A definir"
+        "instagram": "@baixopinheirosbar"
     },
     {
         "nome": "Sampa Sky",
+        "descricao": "",
         "tipo": "Cultural",
         "bairro": "Centro Histórico",
         "endereco": "Sampa Sky - Centro Histórico",
         "latitude": -23.5465,
         "longitude": -46.6365,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 1300,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://sampasky.com.br",
-        "instagram": "@sampasky",
-        "distancia_airbnb_m": 1300,
-        "horario_visitacao": "A definir"
+        "instagram": "@sampasky"
     },
     {
         "nome": "Paróquia São Luís Gonzaga",
+        "descricao": "",
         "tipo": "Cultural",
         "bairro": "Consolação",
         "endereco": "Paróquia São Luís Gonzaga - Consolação",
         "latitude": -23.559,
         "longitude": -46.657,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 2300,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://saoluis.org.br",
-        "instagram": "@paroquiasaoluisoficial",
-        "distancia_airbnb_m": 2300,
-        "horario_visitacao": "A definir"
+        "instagram": "@paroquiasaoluisoficial"
     },
     {
         "nome": "Bar dos Arcos",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "República",
         "endereco": "Bar dos Arcos - República",
         "latitude": -23.5435,
         "longitude": -46.64,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 750,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://bardosarcos.com.br",
-        "instagram": "@bardosarcos",
-        "distancia_airbnb_m": 750,
-        "horario_visitacao": "A definir"
+        "instagram": "@bardosarcos"
     },
     {
         "nome": "Bar do Cofre",
+        "descricao": "Farol Santander / SubAstor",
         "tipo": "Alimentação",
         "bairro": "Centro Histórico",
         "endereco": "Farol Santander / SubAstor",
         "latitude": -23.545,
         "longitude": -46.6355,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 1300,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "Farol Santander / SubAstor",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://farolsantander.com.br/sp/bar-do-cofre",
-        "instagram": "@obardocofre",
-        "distancia_airbnb_m": 1300,
-        "horario_visitacao": "A definir"
+        "instagram": "@obardocofre"
     },
     {
         "nome": "Sesc",
+        "descricao": "Sesc Avenida Paulista",
         "tipo": "Cultural",
         "bairro": "Bela Vista",
         "endereco": "Sesc Avenida Paulista",
         "latitude": -23.564,
         "longitude": -46.652,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 3100,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "Sesc Avenida Paulista",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://sescsp.org.br/voce-conhece-o-aplicativo-credencial-sesc-sp",
-        "instagram": "@sescavpaulista",
-        "distancia_airbnb_m": 3100,
-        "horario_visitacao": "A definir"
+        "instagram": "@sescavpaulista"
     },
     {
         "nome": "Museu da Imagem e do Som",
+        "descricao": "",
         "tipo": "Cultural",
         "bairro": "Jardim Europa",
         "endereco": "Museu da Imagem e do Som - Jardim Europa",
         "latitude": -23.573,
         "longitude": -46.686,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 4600,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://mis-sp.org.br",
-        "instagram": "@mis_sp",
-        "distancia_airbnb_m": 4600,
-        "horario_visitacao": "A definir"
+        "instagram": "@mis_sp"
     },
     {
         "nome": "Zé do Hambúrguer",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Perdizes",
         "endereco": "Zé do Hambúrguer - Perdizes",
         "latitude": -23.542,
         "longitude": -46.678,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 3300,
+        "horarios_funcionamento": {
             "quinta": "12:00 - 23:00",
             "sexta": "12:00 - 00:00",
             "sabado": "12:00 - 00:00",
             "domingo": "12:00 - 23:00"
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "https://zedohamburger.com.br",
-        "instagram": "@zedohamburger",
-        "distancia_airbnb_m": 3300,
-        "horario_visitacao": "A definir"
+        "instagram": "@zedohamburger"
     },
     {
         "nome": "Café Girondino",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Centro Histórico",
         "endereco": "Café Girondino - Centro Histórico",
         "latitude": -23.5455,
         "longitude": -46.6358,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 0,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "@cafegirondino",
-        "distancia_airbnb_m": 0,
-        "horario_visitacao": "A definir"
+        "instagram": "@cafegirondino"
     },
     {
         "nome": "L40 Cozinha de Latitude",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Vila Olímpia",
         "endereco": "Rua Funchal 65",
         "latitude": -23.594,
         "longitude": -46.687,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 0,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "",
-        "distancia_airbnb_m": 0,
-        "horario_visitacao": "A definir"
+        "instagram": ""
     },
     {
         "nome": "Tratottroria",
+        "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Centro",
         "endereco": "Rua Avanhandava",
         "latitude": -23.55,
         "longitude": -46.645,
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "horarios": {
+        "distancia_airbnb_m": 0,
+        "horarios_funcionamento": {
             "quinta": "",
             "sexta": "",
             "sabado": "",
             "domingo": ""
         },
-        "descricao": "",
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
         "site": "",
-        "instagram": "",
-        "distancia_airbnb_m": 0,
-        "horario_visitacao": "A definir"
+        "instagram": ""
     }
 ]
