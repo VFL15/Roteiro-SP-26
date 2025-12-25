@@ -425,7 +425,145 @@ body {
 .nav-label {
     font-size: 13px;
     font-weight: 400; /* Poiret One is a light modern font */
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+}
+
+/* Eventos Editor Carousel */
+.eventos-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-family: 'Poiret One', sans-serif;
+}
+
+.carousel-nav {
+    background: #9F3132;
     color: #F4F7FC;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    font-family: 'Poiret One', sans-serif;
+    font-weight: bold;
+}
+
+.carousel-nav:hover {
+    background: #8a2a2b;
+    transform: scale(1.1);
+}
+
+.carousel-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #545358;
+}
+
+.evento-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.editor-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.editor-field label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #545358;
+    font-family: 'Poiret One', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.editor-input {
+    padding: 10px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.editor-input:focus {
+    outline: none;
+    border-color: #9F3132;
+    box-shadow: 0 0 5px rgba(159, 49, 50, 0.2);
+}
+
+textarea.editor-input {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.editor-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.editor-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poiret One', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.action-btn.save {
+    background: #9F3132;
+    color: #F4F7FC;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.action-btn.save:hover:not([style*="pointer-events: none"]) {
+    background: #8a2a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(159, 49, 50, 0.3);
+}
+
+.action-btn.reset {
+    background: #e0e0e0;
+    color: #545358;
+}
+
+.action-btn.reset:hover {
+    background: #d0d0d0;
 }
