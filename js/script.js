@@ -714,6 +714,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     
                     <!-- Aba Mídia -->
                     <div class="modal-tab-content" id="tab-midia" style="display: block;">
+                        <button id="edit-images-btn" style="margin-bottom: 12px; padding: 6px 12px; background: #9F3132; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px;">✏️ Editar</button>
                         ${evento.imagens && evento.imagens.length > 0 ? imagesHtml : '<p style="color: #999; text-align: center;">Nenhuma imagem disponível</p>'}
                     </div>
                     
@@ -784,6 +785,31 @@ document.addEventListener('DOMContentLoaded', async () => {
                 });
                 
                 // Setup drag-and-drop para reordenar imagens (desktop e mobile)
+                let isEditingImages = false;
+                
+                const toggleEditMode = (button) => {
+                    isEditingImages = !isEditingImages;
+                    button.textContent = isEditingImages ? '✅ Pronto' : '✏️ Editar';
+                    button.style.background = isEditingImages ? '#4CAF50' : '#9F3132';
+                    
+                    // Mudar cursor das imagens
+                    const items = modalContent.querySelectorAll('.midia-item');
+                    items.forEach(item => {
+                        if (isEditingImages) {
+                            item.style.cursor = 'grab';
+                            item.style.opacity = '1';
+                        } else {
+                            item.style.cursor = 'pointer';
+                        }
+                    });
+                };
+                
+                // Adicionar listener ao botão de editar
+                const editBtn = modalContent.querySelector('#edit-images-btn');
+                if (editBtn) {
+                    editBtn.addEventListener('click', () => toggleEditMode(editBtn));
+                }
+                
                 const setupImageDragDrop = () => {
                     const midiaContainer = modalContent.querySelector('#midia-container');
                     if (!midiaContainer) return;
@@ -795,6 +821,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                     items.forEach(item => {
                         // Desktop: Drag and Drop
                         item.addEventListener('dragstart', (e) => {
+                            if (!isEditingImages) {
+                                e.preventDefault();
+                                return;
+                            }
                             draggedElement = item;
                             item.style.opacity = '0.5';
                             e.dataTransfer.effectAllowed = 'move';
@@ -806,28 +836,32 @@ document.addEventListener('DOMContentLoaded', async () => {
                         });
                         
                         item.addEventListener('dragover', (e) => {
+                            if (!isEditingImages) return;
                             e.preventDefault();
                             e.dataTransfer.dropEffect = 'move';
                         });
                         
                         item.addEventListener('drop', (e) => {
+                            if (!isEditingImages) return;
                             e.preventDefault();
                             performDrop(item);
                         });
                         
                         // Mobile: Touch events
                         item.addEventListener('touchstart', (e) => {
+                            if (!isEditingImages) return;
                             draggedElement = item;
                             touchStartY = e.touches[0].clientY;
                             item.style.opacity = '0.5';
                         }, false);
                         
                         item.addEventListener('touchmove', (e) => {
+                            if (!isEditingImages) return;
                             e.preventDefault();
                         }, false);
                         
                         item.addEventListener('touchend', (e) => {
-                            if (!draggedElement) return;
+                            if (!isEditingImages || !draggedElement) return;
                             
                             const touchEndY = e.changedTouches[0].clientY;
                             const touchEndX = e.changedTouches[0].clientX;
