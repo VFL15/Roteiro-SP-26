@@ -281,11 +281,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const saveBtn = document.getElementById('saveEvento');
                 saveBtn.style.opacity = '0.5';
                 saveBtn.style.pointerEvents = 'none';
-                alert(`✓ ${evento.nome} salvo e sincronizado!`);
             })
             .catch(error => {
                 console.error('Erro ao sincronizar com Firebase:', error);
-                alert('⚠️ Salvo localmente, mas falha na sincronização remota.');
             });
     };
     
@@ -752,8 +750,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                         
                         ${evento.distancia_airbnb_m ? `<div style="margin-top: 12px; font-size: 13px;">🏠 ${(evento.distancia_airbnb_m / 1000).toFixed(1)}km</div>` : ''}
                     </div>
-                    
-                    <button id="close-modal" style="margin-top:15px; padding:8px 15px; background: #9F3132; color: white; border: none; border-radius: 6px; cursor:pointer; width: 100%;">Fechar</button>
                 `;
                 
                 // Setup das abas
