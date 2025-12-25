@@ -20,6 +20,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     let isSyncingFromFirebase = false; // Flag para evitar loops infinitos
     let midiaManifest = null; // Manifesto de mídia por evento
     const placeholderUrl = 'https://via.placeholder.com/600x400?text=Sem+imagem';
+    let idToIndex = new Map(); // mapa nome/id -> índice no array eventos
+
+    const eventoId = (ev) => ev.id || ev.nome;
+    const rebuildIdIndexMap = () => {
+        idToIndex = new Map();
+        eventos.forEach((ev, idx) => {
+            if (!ev.id) ev.id = ev.nome; // garante id estável baseado no nome
+            idToIndex.set(eventoId(ev), idx);
+        });
+    };
+    const getEventoById = (id) => {
+        const idx = idToIndex.get(id);
+        if (idx === undefined) return null;
+        return { evento: eventos[idx], index: idx };
+    };
 
     const isPlaceholderImage = (url) => {
         if (!url) return true;
@@ -74,6 +89,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 ensureBairroOption(ev.bairro);
                 aplicarImagens(ev);
             });
+            rebuildIdIndexMap();
             filteredEventos = eventos;
             // Garantir que tipos existentes apareçam no select
             eventos.forEach(ev => ensureTipoOption(ev.tipo));
@@ -409,19 +425,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     // =========================
     // CLASSIFICAÇÃO
     // =========================
+    const normalizeOrderItem = (item) => {
+        if (typeof item === 'number') {
+            const ev = eventos[item];
+            return ev ? eventoId(ev) : null;
+        }
+        return item;
+    };
+
     function loadItems() {
         const orderRef = ref(window.firebaseDb, 'eventOrder');
         
         onValue(orderRef, (snapshot) => {
             if (snapshot.exists()) {
-                items = snapshot.val();
+                const raw = snapshot.val();
+                items = Array.isArray(raw) ? raw.map(normalizeOrderItem).filter(Boolean) : [];
             } else {
-                items = eventos.map((_, idx) => idx);
+                items = eventos.map(ev => eventoId(ev));
+            }
+            if (!items || items.length === 0) {
+                items = eventos.map(ev => eventoId(ev));
             }
             renderList();
         }, (error) => {
             console.error('Error loading order:', error);
-            items = eventos.map((_, idx) => idx);
+            items = eventos.map(ev => eventoId(ev));
             renderList();
         });
     }
@@ -432,9 +460,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         const eventsToShow = (activeFilters.bairro || activeFilters.dia) ? filteredEventos : eventos;
         
-        items.forEach(eventIdx => {
-            const evento = eventos[eventIdx];
-            if (!evento) return;
+        items.forEach(eventId => {
+            const found = getEventoById(eventId);
+            if (!found) return;
+            const { evento, index: eventIdx } = found;
             
             if ((activeFilters.bairro || activeFilters.dia) && !filteredEventos.includes(evento)) {
                 return;
@@ -442,7 +471,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             const li = document.createElement('li');
             li.classList.add('sortable-item');
-            li.dataset.eventIndex = eventIdx;
+            li.dataset.eventId = eventId;
             
             const arrowsBox = document.createElement('div');
             arrowsBox.className = 'arrows-box';
@@ -608,9 +637,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 saveOrder();
             }
         } else {
-            const eventIdx = parseInt(li.dataset.eventIndex);
-            const evento = eventos[eventIdx];
-            if (evento && typeof evento === 'object') {
+            const eventId = li.dataset.eventId;
+            const found = getEventoById(eventId);
+            if (found && typeof found.evento === 'object') {
+                const { evento, index: eventIdx } = found;
                 const horarioVisita = evento.horario_visitacao || 'A definir';
                 
                 let imagesHtml = '';
@@ -739,6 +769,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.warn('Manifesto de mídia não disponível no carregamento inicial.');
         }
         eventos.forEach(ev => aplicarImagens(ev));
+        rebuildIdIndexMap();
         filteredEventos = eventos;
         if (eventos.length > 0 && document.getElementById('eventoTotal')) {
             document.getElementById('eventoTotal').textContent = eventos.length;
@@ -763,13 +794,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             roteiros[dia] = [];
         });
         
-        // Obter eventos ordenados por classificação (order no sortable-list)
-        const itemsOrdenados = [...items].sort((a, b) => a.order - b.order);
-        
-        // Para cada evento, tentar encaixar em cada dia
-        itemsOrdenados.forEach(item => {
-            const evento = eventos[item.index];
-            if (!evento) return;
+        // Para cada evento na ordem definida pelo usuário
+        items.forEach(eventId => {
+            const found = getEventoById(eventId);
+            if (!found) return;
+            const { evento, index: itemIndex } = found;
             
             // Tentar encaixar em cada dia
             for (let dia of diasOrdenados) {
@@ -781,10 +810,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                     // Verificar se consegue encaixar
                     if (podeEncaixar(horarioVisita, roteiros[dia])) {
                         roteiros[dia].push({
-                            index: item.index,
+                            index: itemIndex,
                             evento: evento,
-                            horario: horarioVisita,
-                            order: item.order
+                            horario: horarioVisita
                         });
                         return; // Já encaixou, sair do loop
                     }
