@@ -19,6 +19,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     const baseTipos = ['passeio', 'ingestão', 'compras'];
     let isSyncingFromFirebase = false; // Flag para evitar loops infinitos
     let midiaManifest = null; // Manifesto de mídia por evento
+    const placeholderUrl = 'https://via.placeholder.com/600x400?text=Sem+imagem';
+
+    const isPlaceholderImage = (url) => {
+        if (!url) return true;
+        const lower = url.toString().toLowerCase();
+        return lower.includes('placeholder.svg') || lower.includes('assets/images/placeholder');
+    };
+
+    const aplicarImagens = (ev) => {
+        // Usa imagens definidas que não sejam placeholders; se não houver, usa manifesto ou placeholder padrão
+        const imgs = Array.isArray(ev.imagens) ? ev.imagens : [];
+        const filtradas = imgs.filter(img => !isPlaceholderImage(img));
+        if (filtradas.length > 0) {
+            ev.imagens = filtradas;
+            return;
+        }
+        if (midiaManifest) {
+            const manifestImgs = midiaManifest[ev.nome] || midiaManifest?.__placeholder__ || [];
+            if (manifestImgs.length > 0) {
+                ev.imagens = manifestImgs;
+                return;
+            }
+        }
+        ev.imagens = [placeholderUrl];
+    };
 
     const capitalize = (str) => str ? str.charAt(0).toUpperCase() + str.slice(1) : '';
     const normalizeTipo = (value) => (value || '').toString().trim().toLowerCase();
@@ -35,7 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             const response = await fetch('data/eventos.json?v=' + Date.now());
             eventos = await response.json();
-            // Carregar manifesto de mídia
+            // Carregar manifesto de mídia (pode conter links do Drive)
             try {
                 const manifestResp = await fetch('data/midia_manifest.json?v=' + Date.now());
                 if (manifestResp.ok) {
@@ -47,11 +72,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             eventos.forEach(ev => {
                 ev.tipo = normalizeTipo(ev.tipo);
                 ensureBairroOption(ev.bairro);
-                // Aplicar imagens do manifesto se não houver imagens definidas
-                if ((!ev.imagens || ev.imagens.length === 0) && midiaManifest) {
-                    const imgs = midiaManifest[ev.nome] || midiaManifest?.__placeholder__ || [];
-                    ev.imagens = imgs;
-                }
+                aplicarImagens(ev);
             });
             filteredEventos = eventos;
             // Garantir que tipos existentes apareçam no select
@@ -713,16 +734,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             const manifestResp = await fetch('data/midia_manifest.json?v=' + Date.now());
             if (manifestResp.ok) {
                 midiaManifest = await manifestResp.json();
-                eventos.forEach(ev => {
-                    if ((!ev.imagens || ev.imagens.length === 0) && midiaManifest) {
-                        const imgs = midiaManifest[ev.nome] || midiaManifest?.__placeholder__ || [];
-                        ev.imagens = imgs;
-                    }
-                });
             }
         } catch (e) {
             console.warn('Manifesto de mídia não disponível no carregamento inicial.');
         }
+        eventos.forEach(ev => aplicarImagens(ev));
         filteredEventos = eventos;
         if (eventos.length > 0 && document.getElementById('eventoTotal')) {
             document.getElementById('eventoTotal').textContent = eventos.length;
