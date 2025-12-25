@@ -15,6 +15,33 @@ Roteiro SP-26 é uma aplicação web desenvolvida para ajudar viajantes a planej
 - **Filtrar por preferência**: buscar eventos por tipo, bairro ou dia disponível
 - **Consultar informações**: sites, Instagram, distância e detalhes completos
 
+## 🚀 Como Usar
+
+1. Acesse [Roteiro SP-26](https://vfl15.github.io/Roteiro-SP-26/)
+2. Navegue pela aba **Eventos** para explorar e editar pontos de interesse
+3. Use a aba **Classificação** para reordenar e filtrar eventos
+4. Suas edições são salvas localmente no navegador
+
+## 🎯 Objetivo Principal
+
+Roteiro SP-26 é uma **ferramenta de logística de viagem** desenvolvida para ajudar grupos a chegarem em **consenso rápido e preciso** sobre itinerários. 
+
+Através de tecnologia e inteligência digital, simplificamos o processo de planejamento considerando as preferências e valores de cada participante do grupo, facilitando decisões coletivas com base em dados organizados.
+
+A ferramenta é pensada para **consenso interno** entre membros do grupo, permitindo que todos visualizem opções, horários e detalhes antes de tomar decisões coletivas.
+
+## 💾 Persistência
+
+- **Edições locais**: Salvas em localStorage do navegador
+- **Ordem de eventos**: Sincronizada via Firebase Realtime Database
+- **Sincronização**: Em tempo real entre abas/dispositivos (via Firebase)
+
+## 💝 Sobre
+
+Desenvolvido com ❤️ para planejar uma viagem incrível em São Paulo com quem amo! 
+
+Feito com dedicação e muito carinho para explorar o melhor que São Paulo tem a oferecer. 🌃
+
 ## ✨ Funcionalidades
 
 ### 📋 Página de Eventos
@@ -36,67 +63,6 @@ Roteiro SP-26 é uma aplicação web desenvolvida para ajudar viajantes a planej
 ### 🗺️ Página de Mapas
 - Placeholder para integração futura com mapas interativos
 
-## 🛠️ Tecnologias
-
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Backend**: Firebase Realtime Database (para sincronização de ordem)
-- **Armazenamento**: JSON local + localStorage para edições
-- **Hosting**: GitHub Pages
-
-## 🚀 Como Usar
-
-1. Acesse [Roteiro SP-26](https://vfl15.github.io/Roteiro-SP-26/)
-2. Navegue pela aba **Eventos** para explorar e editar pontos de interesse
-3. Use a aba **Classificação** para reordenar e filtrar eventos
-4. Suas edições são salvas localmente no navegador
-
-## 📊 Dados
-
-A aplicação contém 46 eventos em São Paulo com informações sobre:
-- Nome e descrição
-- Tipo (Passeio, Ingestão, Compras)
-- Localização (bairro e endereço)
-- Horários de funcionamento por dia
-- Horário de visitação
-- Links para site e Instagram
-- Imagens de galeria
-
-## 🎯 Objetivo Principal
-
-Roteiro SP-26 é uma **ferramenta de logística de viagem** desenvolvida para ajudar grupos a chegarem em **consenso rápido e preciso** sobre itinerários. 
-
-Através de tecnologia e inteligência digital, simplificamos o processo de planejamento considerando as preferências e valores de cada participante do grupo, facilitando decisões coletivas com base em dados organizados.
-
-## 🤝 Uso
-
-Este é um **projeto de hospedagem privada** para fins de planejamento em grupo. Não é um projeto open source e não há abertura para contribuições externas ou sugestões públicas.
-
-A ferramenta é pensada para **consenso interno** entre membros do grupo, permitindo que todos visualizem opções, horários e detalhes antes de tomar decisões coletivas.
-
-## 💾 Persistência
-
-- **Edições locais**: Salvas em localStorage do navegador
-- **Ordem de eventos**: Sincronizada via Firebase Realtime Database
-- **Sincronização**: Em tempo real entre abas/dispositivos (via Firebase)
-
-## 🤝 Contribuições
-
-Este é um projeto privado para planejamento de viagem em grupo. Não há abertura para contribuições ou sugestões externas.
-
-## 💝 Sobre
-
-Desenvolvido com ❤️ para planejar uma viagem incrível em São Paulo com quem amo! 
-
-Feito com dedicação e muito carinho para explorar o melhor que São Paulo tem a oferecer. 🌃
-
----
-
-**Mantido por:** [VFL15](https://github.com/VFL15)  
-**Repositório:** [github.com/VFL15/Roteiro-SP-26](https://github.com/VFL15/Roteiro-SP-26)
-4. Em "Source", selecione a branch `main` e pasta `root`
-5. Clique em "Save"
-6. Seu site estará disponível em `https://seu-usuario.github.io/nome-repositorio/`
-
 ## Recursos
 
 - ✅ Sincronização em tempo real entre todos os usuários
@@ -106,15 +72,12 @@ Feito com dedicação e muito carinho para explorar o melhor que São Paulo tem 
 - ✅ Funciona offline depois do primeiro carregamento
 - ✅ Totalmente gratuito (Firebase free tier: 1GB armazenamento, 10GB/mês download)
 
-## Estrutura
+## 🛠️ Tecnologias
 
-```
-sp26/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── estado.js
-└── data/
-    └── eventos.json
-```
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Backend**: Firebase Realtime Database (para sincronização de ordem)
+- **Armazenamento**: JSON local + localStorage para edições
+- **Hosting**: GitHub Pages
+
+**Mantido por:** [VFL15](https://github.com/VFL15)  
+**Repositório:** [github.com/VFL15/Roteiro-SP-26](https://github.com/VFL15/Roteiro-SP-26)
