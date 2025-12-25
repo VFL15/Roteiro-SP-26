@@ -853,14 +853,20 @@ document.addEventListener('DOMContentLoaded', async () => {
                         
                         // Mobile: Touch events
                         item.addEventListener('touchstart', (e) => {
-                            if (!isEditingImages) return;
+                            if (!isEditingImages) {
+                                item.dataset.touchMoved = 'false';
+                                return;
+                            }
                             draggedElement = item;
                             touchStartY = e.touches[0].clientY;
                             item.style.opacity = '0.5';
                         }, false);
                         
                         item.addEventListener('touchmove', (e) => {
-                            if (!isEditingImages) return;
+                            if (!isEditingImages) {
+                                item.dataset.touchMoved = 'true';
+                                return;
+                            }
                             e.preventDefault();
                         }, false);
                         
@@ -881,6 +887,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                             draggedElement.style.opacity = '1';
                             draggedElement = null;
                         }, false);
+                        
+                        // Evitar abrir link quando houve rolagem por toque
+                        item.addEventListener('click', (e) => {
+                            if (!isEditingImages && item.dataset.touchMoved === 'true') {
+                                e.preventDefault();
+                                item.dataset.touchMoved = 'false';
+                            }
+                        });
                     });
                     
                     // Função auxiliar para executar o drop
@@ -905,8 +919,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 link.rel = 'noopener noreferrer';
                                 link.className = 'midia-item';
                                 link.dataset.imgIndex = idx;
-                                link.draggable = false;
-                                link.style.cssText = 'text-decoration:none; display:block; width:calc((100% - 10px) / 2); cursor:pointer; user-select:none; touch-action:pan-y; -webkit-user-select:none;';
+                                if (isEditingImages) {
+                                    link.draggable = true;
+                                    link.style.cssText = 'text-decoration:none; display:block; width:calc((100% - 10px) / 2); cursor:grab; user-select:none; touch-action:none; -webkit-user-select:none;';
+                                } else {
+                                    link.draggable = false;
+                                    link.style.cssText = 'text-decoration:none; display:block; width:calc((100% - 10px) / 2); cursor:pointer; user-select:none; touch-action:pan-y; -webkit-user-select:none;';
+                                }
                                 
                                 const img_el = document.createElement('img');
                                 img_el.src = img;
