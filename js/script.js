@@ -680,12 +680,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 
                 let imagesHtml = '';
                 if (evento.imagens && evento.imagens.length > 0) {
-                    imagesHtml = '<div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:15px; justify-content:center;">';
+                    imagesHtml = '<div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:15px;">';
                     evento.imagens.forEach(img => {
                         imagesHtml += `
-                            <a href="${img}" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:block;">
+                            <a href="${img}" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:block; width:calc((100% - 10px) / 2);">
                                 <img src="${img}" alt="imagem do evento" referrerpolicy="no-referrer" loading="lazy"
-                                     style="width:200px; height:auto; object-fit:contain; border-radius:8px; background:#f0f0f0;"
+                                     style="width:100%; height:auto; object-fit:contain; background:#f0f0f0;"
                                      onerror="this.onerror=null;this.src='${placeholderUrl}';">
                             </a>
                         `;
