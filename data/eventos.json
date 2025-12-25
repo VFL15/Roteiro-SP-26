@@ -22,8 +22,7 @@
             "assets/images/placeholder.svg"
         ],
         "site": "https://akibastation.com.br/loja-fisica",
-        "instagram": "@akibastationsp",
-        "drive_midia": "https://drive.google.com/drive/folders/1phH7CmFurR6DbgsmjTfIkaZNeI1qCnd_?usp=sharing"
+        "instagram": "@akibastationsp"
     },
     {
         "nome": "Akiba Station - Thomaz Gonzaga",
@@ -1174,5 +1173,213 @@
         ],
         "site": "https://zedohamburger.com.br",
         "instagram": "@zedohamburger"
+    }
+    ,
+    {
+        "nome": "Via Palazzo",
+        "descricao": "",
+        "tipo": "Passeio",
+        "bairro": "",
+        "endereco": "Via Palazzo",
+        "latitude": 0,
+        "longitude": 0,
+        "distancia_airbnb_m": 0,
+        "horarios_funcionamento": {
+            "quinta": "",
+            "sexta": "",
+            "sabado": "",
+            "domingo": ""
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "site": "",
+        "instagram": ""
+    }
+    ,
+    {
+        "nome": "The Cavern Club",
+        "descricao": "",
+        "tipo": "Passeio",
+        "bairro": "",
+        "endereco": "The Cavern Club",
+        "latitude": 0,
+        "longitude": 0,
+        "distancia_airbnb_m": 0,
+        "horarios_funcionamento": {
+            "quinta": "",
+            "sexta": "",
+            "sabado": "",
+            "domingo": ""
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "site": "",
+        "instagram": ""
+    }
+    ,
+    {
+        "nome": "Roller Jam - Moema",
+        "descricao": "",
+        "tipo": "Passeio",
+        "bairro": "",
+        "endereco": "Roller Jam - Moema",
+        "latitude": 0,
+        "longitude": 0,
+        "distancia_airbnb_m": 0,
+        "horarios_funcionamento": {
+            "quinta": "",
+            "sexta": "",
+            "sabado": "",
+            "domingo": ""
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "site": "",
+        "instagram": ""
+    }
+    ,
+    {
+        "nome": "Jardim Dourado",
+        "descricao": "",
+        "tipo": "Passeio",
+        "bairro": "",
+        "endereco": "Jardim Dourado",
+        "latitude": 0,
+        "longitude": 0,
+        "distancia_airbnb_m": 0,
+        "horarios_funcionamento": {
+            "quinta": "",
+            "sexta": "",
+            "sabado": "",
+            "domingo": ""
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "site": "",
+        "instagram": ""
+    }
+    ,
+    {
+        "nome": "Griffinn Café e Afins",
+        "descricao": "",
+        "tipo": "Passeio",
+        "bairro": "",
+        "endereco": "Griffinn Café e Afins",
+        "latitude": 0,
+        "longitude": 0,
+        "distancia_airbnb_m": 0,
+        "horarios_funcionamento": {
+            "quinta": "",
+            "sexta": "",
+            "sabado": "",
+            "domingo": ""
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "site": "",
+        "instagram": ""
+    }
+    ,
+    {
+        "nome": "Cinema ao ar livre",
+        "descricao": "",
+        "tipo": "Passeio",
+        "bairro": "",
+        "endereco": "Cinema ao ar livre",
+        "latitude": 0,
+        "longitude": 0,
+        "distancia_airbnb_m": 0,
+        "horarios_funcionamento": {
+            "quinta": "",
+            "sexta": "",
+            "sabado": "",
+            "domingo": ""
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "site": "",
+        "instagram": ""
+    }
+    ,
+    {
+        "nome": "Beco Hexagonal",
+        "descricao": "",
+        "tipo": "Passeio",
+        "bairro": "",
+        "endereco": "Beco Hexagonal",
+        "latitude": 0,
+        "longitude": 0,
+        "distancia_airbnb_m": 0,
+        "horarios_funcionamento": {
+            "quinta": "",
+            "sexta": "",
+            "sabado": "",
+            "domingo": ""
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "site": "",
+        "instagram": ""
+    }
+    ,
+    {
+        "nome": "Bar Charles Edward",
+        "descricao": "",
+        "tipo": "Passeio",
+        "bairro": "",
+        "endereco": "Bar Charles Edward",
+        "latitude": 0,
+        "longitude": 0,
+        "distancia_airbnb_m": 0,
+        "horarios_funcionamento": {
+            "quinta": "",
+            "sexta": "",
+            "sabado": "",
+            "domingo": ""
+        },
+        "horario_visitacao": "A definir",
+        "reservar": "não",
+        "reserva": "",
+        "imagens": [
+            "assets/images/placeholder.svg",
+            "assets/images/placeholder.svg"
+        ],
+        "site": "",
+        "instagram": ""
     }
 ]
