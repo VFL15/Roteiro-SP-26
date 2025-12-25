@@ -714,7 +714,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     
                     <!-- Aba Mídia -->
                     <div class="modal-tab-content" id="tab-midia" style="display: block;">
-                        <button id="edit-images-btn" style="margin-bottom: 12px; padding: 6px 12px; background: #9F3132; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px;">✏️ Editar</button>
+                        <button id="edit-images-btn" style="margin-bottom: 12px; padding: 6px 12px; background: #9F3132; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px;">✏️ Alterar posicionamento das imagens</button>
                         ${evento.imagens && evento.imagens.length > 0 ? imagesHtml : '<p style="color: #999; text-align: center;">Nenhuma imagem disponível</p>'}
                     </div>
                     
@@ -789,7 +789,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 
                 const toggleEditMode = (button) => {
                     isEditingImages = !isEditingImages;
-                    button.textContent = isEditingImages ? '✅ Pronto' : '✏️ Editar';
+                    button.textContent = isEditingImages ? '✅ Pronto' : '✏️ Alterar posicionamento das imagens';
                     button.style.background = isEditingImages ? '#4CAF50' : '#9F3132';
                     
                     // Mudar comportamento das imagens
