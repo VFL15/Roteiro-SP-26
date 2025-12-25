@@ -680,12 +680,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 
                 let imagesHtml = '';
                 if (evento.imagens && evento.imagens.length > 0) {
-                    imagesHtml = '<div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:15px;">';
-                    evento.imagens.forEach(img => {
+                    imagesHtml = '<div id="midia-container" style="display:flex; flex-wrap:wrap; gap:4px; margin-bottom:4px;">';
+                    evento.imagens.forEach((img, idx) => {
                         imagesHtml += `
-                            <a href="${img}" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:block; width:calc((100% - 10px) / 2);">
+                            <a href="${img}" target="_blank" rel="noopener noreferrer" class="midia-item" data-img-index="${idx}"
+                               draggable="true"
+                               style="text-decoration:none; display:block; width:calc((100% - 10px) / 2); cursor:grab; user-select:none;">
                                 <img src="${img}" alt="imagem do evento" referrerpolicy="no-referrer" loading="lazy"
-                                     style="width:100%; height:auto; object-fit:contain; background:#f0f0f0;"
+                                     style="width:100%; height:auto; object-fit:contain; background:#f0f0f0; pointer-events:none;"
                                      onerror="this.onerror=null;this.src='${placeholderUrl}';">
                             </a>
                         `;
@@ -784,6 +786,50 @@ document.addEventListener('DOMContentLoaded', async () => {
                         }
                     });
                 });
+                
+                // Setup drag-and-drop para reordenar imagens
+                const setupImageDragDrop = () => {
+                    const midiaContainer = modalContent.querySelector('#midia-container');
+                    if (!midiaContainer) return;
+                    
+                    const items = midiaContainer.querySelectorAll('.midia-item');
+                    let draggedElement = null;
+                    
+                    items.forEach(item => {
+                        item.addEventListener('dragstart', (e) => {
+                            draggedElement = item;
+                            item.style.opacity = '0.5';
+                            e.dataTransfer.effectAllowed = 'move';
+                        });
+                        
+                        item.addEventListener('dragend', (e) => {
+                            item.style.opacity = '1';
+                            draggedElement = null;
+                        });
+                        
+                        item.addEventListener('dragover', (e) => {
+                            e.preventDefault();
+                            e.dataTransfer.dropEffect = 'move';
+                        });
+                        
+                        item.addEventListener('drop', (e) => {
+                            e.preventDefault();
+                            if (draggedElement && draggedElement !== item) {
+                                const draggedIdx = parseInt(draggedElement.dataset.imgIndex);
+                                const targetIdx = parseInt(item.dataset.imgIndex);
+                                
+                                // Reordenar array de imagens
+                                const [movedImg] = evento.imagens.splice(draggedIdx, 1);
+                                evento.imagens.splice(targetIdx, 0, movedImg);
+                                
+                                // Salvar no Firebase
+                                saveEvento();
+                            }
+                        });
+                    });
+                };
+                
+                setupImageDragDrop();
             }
             modal.style.display = 'flex';
             document.getElementById('close-modal').addEventListener('click', () => {
