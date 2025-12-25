@@ -302,7 +302,7 @@
     {
         "nome": "Botanikafé Jardins",
         "descricao": "Local arejado que serve comida saudável, drinques artesanais e brunch.",
-        "tipo": "Alimentação",
+        "tipo": "Ingestão",
         "bairro": "Jardins",
         "endereco": "Alameda Lorena, 1765",
         "latitude": -23.566,
@@ -327,9 +327,9 @@
     {
         "nome": "Galeria do Rock",
         "descricao": "",
-        "tipo": "Compras",
+        "tipo": "Passeio",
         "bairro": "República",
-        "endereco": "Galeria do Rock - República",
+        "endereco": "Av. São João, 439",
         "latitude": -23.544,
         "longitude": -46.639,
         "distancia_airbnb_m": 1000,
@@ -354,7 +354,7 @@
         "descricao": "",
         "tipo": "Compras",
         "bairro": "Liberdade",
-        "endereco": "Sogo Plaza Shopping - Liberdade",
+        "endereco": "Av. da Liberdade, 363",
         "latitude": -23.559,
         "longitude": -46.633,
         "distancia_airbnb_m": 1600,
@@ -371,15 +371,15 @@
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "site": "https://sogoplaza.com.br",
+        "site": "sogoplaza.com.br",
         "instagram": "@sogoplaza"
     },
     {
         "nome": "CCBB",
         "descricao": "Centro Cultural Banco do Brasil",
-        "tipo": "Cultural",
+        "tipo": "Passeio",
         "bairro": "Centro Histórico",
-        "endereco": "Centro Cultural Banco do Brasil",
+        "endereco": "R. Álvares Penteado, 112",
         "latitude": -23.548,
         "longitude": -46.634,
         "distancia_airbnb_m": 1200,
@@ -396,15 +396,15 @@
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "site": "https://ccbb.com.br/sao-paulo",
+        "site": "ccbb.com.br/sao-paulo",
         "instagram": "@ccbbsp"
     },
     {
         "nome": "Por um Punhado de Dólares",
-        "descricao": "",
-        "tipo": "Alimentação",
+        "descricao": "Cafeteria e bar.",
+        "tipo": "Ingestão",
         "bairro": "Consolação",
-        "endereco": "Consolação - São Paulo",
+        "endereco": "R. Nestor Pestana, 115",
         "latitude": -23.556,
         "longitude": -46.659,
         "distancia_airbnb_m": 230,
@@ -427,9 +427,9 @@
     {
         "nome": "Museu da Imigração Japonesa",
         "descricao": "Museu Histórico da Imigração Japonesa no Brasil",
-        "tipo": "Cultural",
+        "tipo": "Passeio",
         "bairro": "Liberdade",
-        "endereco": "Museu Histórico da Imigração Japonesa no Brasil",
+        "endereco": "R. São Joaquim, 381",
         "latitude": -23.562,
         "longitude": -46.632,
         "distancia_airbnb_m": 2200,
@@ -446,7 +446,7 @@
             "assets/images/placeholder.svg",
             "assets/images/placeholder.svg"
         ],
-        "site": "https://bunkyo.org.br/br/museu-historico",
+        "site": "bunkyo.org.br/br/museu-historico",
         "instagram": "@museumhijb"
     },
     {

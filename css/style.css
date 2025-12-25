@@ -35,18 +35,14 @@ body {
 
 /* Top header */
 .top-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     height: 36px;
     background-color: #9F3132;
-    z-index: 999;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 0 12px;
+    flex-shrink: 0;
 }
 
 .filter-btn {
@@ -80,17 +76,13 @@ body {
 
 /* Filter Panel */
 .filter-panel {
-    position: fixed;
-    top: 36px;
-    left: 0;
-    right: 0;
     background: #F4F7FC;
     padding: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 998;
     display: none;
     flex-direction: column;
     gap: 12px;
+    flex-shrink: 0;
 }
 
 .filter-panel.active {
@@ -166,7 +158,6 @@ body {
     width: 100%;
     max-width: 100vw;
     height: calc(100vh - 72px);
-    margin-top: 36px;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none; /* Firefox: hide scrollbar */
@@ -191,6 +182,10 @@ body {
     font-family: 'Poiret One', system-ui, sans-serif;
 }
 
+#page-mapas {
+    background: transparent;
+}
+
 /* Visitacao page styling */
 .visitacao-content {
     display: flex;
@@ -200,6 +195,32 @@ body {
     font-size: 24px;
     color: #F4F7FC;
     font-family: 'Poiret One', system-ui, sans-serif;
+}
+
+/* Classificação page - flex layout for header + filters + list */
+#page-classificacao {
+    display: none;
+}
+
+#page-classificacao.active {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden !important;
+}
+
+#page-classificacao .top-header {
+    z-index: 50;
+}
+
+#page-classificacao .filter-panel {
+    z-index: 49;
+}
+
+#page-classificacao .sortable-list {
+    flex: 1;
+    overflow-y: auto;
+    height: auto;
+    min-height: auto;
 }
 
 .sortable-list {
@@ -562,6 +583,117 @@ textarea.editor-input {
 .action-btn.reset {
     background: #e0e0e0;
     color: #545358;
+}
+
+/* ===== ROTEIRO PAGE ===== */
+.roteiro-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 12px;
+    gap: 12px;
+}
+
+/* Abas de dias */
+.dias-tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #F4F7FC;
+}
+
+.dia-tab {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 12px;
+    color: #F4F7FC;
+    cursor: pointer;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.dia-tab.active {
+    background: #D4AF37;
+    color: #9F3132;
+    font-weight: bold;
+}
+
+.dia-tab:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Timeline de roteiros */
+.roteiros-timeline {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.roteiro-dia {
+    display: none;
+}
+
+.roteiro-dia.active {
+    display: block;
+}
+
+.roteiro-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.roteiro-item {
+    background: #F4F7FC;
+    border-left: 4px solid #D4AF37;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.roteiro-item-horario {
+    font-weight: bold;
+    color: #D4AF37;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.roteiro-item-nome {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.roteiro-item-endereco {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.roteiro-item-tipo {
+    display: inline-block;
+    background: #D4AF37;
+    color: #9F3132;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.roteiro-vazio {
+    text-align: center;
+    color: #999;
+    padding: 24px;
+    font-style: italic;
+}
+
+.leaflet-container {
+    background: #e3e3e3;
+    font-family: Arial, sans-serif;
 }
 
 .action-btn.reset:hover {

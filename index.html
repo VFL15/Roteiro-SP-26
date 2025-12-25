@@ -6,46 +6,10 @@
     <title>SP26</title>
     <link rel="stylesheet" href="css/style.css?v=5">
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-    <!-- Header superior -->
-    <header class="top-header">
-        <button class="filter-btn" id="filterBtn">
-            <span class="filter-icon">🔍</span>
-            <span class="filter-label">Filtros</span>
-        </button>
-    </header>
-
-    <!-- Painel de filtros -->
-    <div class="filter-panel" id="filterPanel">
-        <div class="filter-group">
-            <label>Tipo:</label>
-            <select id="filterTipo" class="filter-select">
-                <option value="">Todos</option>
-            </select>
-        </div>
-        <div class="filter-group">
-            <label>Local:</label>
-            <select id="filterLocal" class="filter-select">
-                <option value="">Todos</option>
-            </select>
-        </div>
-        <div class="filter-group">
-            <label>Dia:</label>
-            <select id="filterDia" class="filter-select">
-                <option value="">Todos</option>
-                <option value="quinta">Quinta</option>
-                <option value="sexta">Sexta</option>
-                <option value="sabado">Sábado</option>
-                <option value="domingo">Domingo</option>
-            </select>
-        </div>
-        <div class="filter-actions">
-            <button id="clearFilters" class="filter-action-btn clear">Limpar</button>
-            <button id="applyFilters" class="filter-action-btn apply">Aplicar</button>
-        </div>
-    </div>
-    
     <!-- Página de Eventos (Editor Carrossel) -->
     <div id="page-eventos" class="page active">
         <div class="eventos-carousel">
@@ -149,6 +113,44 @@
 
     <!-- Página de Classificação -->
     <div id="page-classificacao" class="page">
+        <!-- Header de filtros (apenas nesta página) -->
+        <header class="top-header">
+            <button class="filter-btn" id="filterBtn">
+                <span class="filter-icon">🔍</span>
+                <span class="filter-label">Filtros</span>
+            </button>
+        </header>
+
+        <!-- Painel de filtros -->
+        <div class="filter-panel" id="filterPanel">
+            <div class="filter-group">
+                <label>Tipo:</label>
+                <select id="filterTipo" class="filter-select">
+                    <option value="">Todos</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Local:</label>
+                <select id="filterLocal" class="filter-select">
+                    <option value="">Todos</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Dia:</label>
+                <select id="filterDia" class="filter-select">
+                    <option value="">Todos</option>
+                    <option value="quinta">Quinta</option>
+                    <option value="sexta">Sexta</option>
+                    <option value="sabado">Sábado</option>
+                    <option value="domingo">Domingo</option>
+                </select>
+            </div>
+            <div class="filter-actions">
+                <button id="clearFilters" class="filter-action-btn clear">Limpar</button>
+                <button id="applyFilters" class="filter-action-btn apply">Aplicar</button>
+            </div>
+        </div>
+
         <ul id="sortable-list" class="sortable-list"></ul>
     </div>
 
@@ -159,6 +161,35 @@
         </div>
     </div>
 
+    <!-- Página de Roteiro -->
+    <div id="page-roteiro" class="page">
+        <div class="roteiro-container">
+            <!-- Abas de dias -->
+            <div class="dias-tabs">
+                <button class="dia-tab active" data-dia="quinta">Quinta</button>
+                <button class="dia-tab" data-dia="sexta">Sexta</button>
+                <button class="dia-tab" data-dia="sabado">Sábado</button>
+                <button class="dia-tab" data-dia="domingo">Domingo</button>
+            </div>
+
+            <!-- Timeline de roteiros por dia -->
+            <div class="roteiros-timeline">
+                <div id="roteiro-quinta" class="roteiro-dia active">
+                    <div class="roteiro-list"></div>
+                </div>
+                <div id="roteiro-sexta" class="roteiro-dia">
+                    <div class="roteiro-list"></div>
+                </div>
+                <div id="roteiro-sabado" class="roteiro-dia">
+                    <div class="roteiro-list"></div>
+                </div>
+                <div id="roteiro-domingo" class="roteiro-dia">
+                    <div class="roteiro-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Barra de navegação inferior -->
     <nav class="bottom-nav">
         <button class="nav-item active" data-page="eventos">
@@ -166,12 +197,16 @@
             <span class="nav-label">Eventos</span>
         </button>
         <button class="nav-item" data-page="classificacao">
-            <span class="nav-icon">📋</span>
+            <span class="nav-icon">⭐</span>
             <span class="nav-label">Classificação</span>
+        </button>
+        <button class="nav-item" data-page="roteiro">
+            <span class="nav-icon">📋</span>
+            <span class="nav-label">Roteiro</span>
         </button>
         <button class="nav-item" data-page="mapas">
             <span class="nav-icon">🗺️</span>
-            <span class="nav-label">Mapas</span>
+            <span class="nav-label">Mapa</span>
         </button>
     </nav>
     
@@ -193,6 +228,8 @@
         const app = initializeApp(firebaseConfig);
         window.firebaseDb = getDatabase(app);
     </script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/script.js?v=5" type="module"></script>
 </body>
 </html>
