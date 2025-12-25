@@ -822,6 +822,34 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 const [movedImg] = evento.imagens.splice(draggedIdx, 1);
                                 evento.imagens.splice(targetIdx, 0, movedImg);
                                 
+                                // Atualizar DOM imediatamente
+                                const midiaContainer = modalContent.querySelector('#midia-container');
+                                if (midiaContainer) {
+                                    midiaContainer.innerHTML = '';
+                                    evento.imagens.forEach((img, idx) => {
+                                        const link = document.createElement('a');
+                                        link.href = img;
+                                        link.target = '_blank';
+                                        link.rel = 'noopener noreferrer';
+                                        link.className = 'midia-item';
+                                        link.dataset.imgIndex = idx;
+                                        link.draggable = true;
+                                        link.style.cssText = 'text-decoration:none; display:block; width:calc((100% - 10px) / 2); cursor:grab; user-select:none;';
+                                        
+                                        const img_el = document.createElement('img');
+                                        img_el.src = img;
+                                        img_el.alt = 'imagem do evento';
+                                        img_el.referrerPolicy = 'no-referrer';
+                                        img_el.loading = 'lazy';
+                                        img_el.style.cssText = 'width:100%; height:auto; object-fit:contain; background:#f0f0f0; pointer-events:none;';
+                                        img_el.onerror = function() { this.onerror=null; this.src='${placeholderUrl}'; };
+                                        
+                                        link.appendChild(img_el);
+                                        midiaContainer.appendChild(link);
+                                    });
+                                    setupImageDragDrop();
+                                }
+                                
                                 // Salvar no Firebase
                                 saveEvento();
                             }
