@@ -685,7 +685,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                         const display = img.length > 38 ? img.slice(0, 35) + '…' : img;
                         imagesHtml += `
                             <a href="${img}" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:#444; display:block;">
-                                <img src="${img}" alt="imagem do evento" style="width:100%; max-height:150px; object-fit:cover; border-radius:8px;" onerror="this.onerror=null;this.src='${placeholderUrl}';">
+                                <img src="${img}" alt="imagem do evento" referrerpolicy="no-referrer" loading="lazy"
+                                     style="width:100%; max-height:170px; min-height:120px; object-fit:cover; border-radius:8px; background:#f0f0f0;"
+                                     onerror="this.onerror=null;this.src='${placeholderUrl}';">
                                 <div style="font-size:11px; margin-top:4px; word-break:break-all;">${display}</div>
                             </a>
                         `;
