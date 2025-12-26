@@ -491,7 +491,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    padding: 10px 20px 20px 20px;
     height: calc(100% - 70px);
     overflow-y: auto;
     overflow-x: hidden;
@@ -510,9 +510,9 @@ body {
     background: #fff;
     border-radius: 12px;
     padding: 20px;
-    padding-bottom: 80px; /* Extra bottom padding for mobile menu */
+    padding-bottom: 30px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 
@@ -537,9 +537,10 @@ body {
 }
 
 .carousel-title {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     color: #F4F7FC;
+    letter-spacing: 0.5px;
 }
 
 .evento-editor {
