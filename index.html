@@ -12,16 +12,15 @@
 <body>
     <!-- Página de Eventos (Editor Carrossel) -->
     <div id="page-eventos" class="page active">
+        <div class="carousel-header">
+            <button class="carousel-nav prev" id="prevEvento">◀</button>
+            <div class="carousel-title">
+                <span id="eventoNumber">1</span> / <span id="eventoTotal">0</span>
+            </div>
+            <button class="carousel-nav next" id="nextEvento">▶</button>
+        </div>
         <div class="eventos-carousel">
             <div class="carousel-container">
-                <div class="carousel-header">
-                    <button class="carousel-nav prev" id="prevEvento">◀</button>
-                    <div class="carousel-title">
-                        <span id="eventoNumber">1</span> / <span id="eventoTotal">0</span>
-                    </div>
-                    <button class="carousel-nav next" id="nextEvento">▶</button>
-                </div>
-                
                 <div class="evento-editor">
                     <div class="editor-field">
                         <label>Nome</label>
@@ -92,15 +91,13 @@
                         <label>Link de Reserva</label>
                         <input type="text" id="edit-reserva" class="editor-input" placeholder="https://...">
                     </div>
-                    <div class="editor-row">
-                        <div class="editor-field">
-                            <label>Site</label>
-                            <input type="text" id="edit-site" class="editor-input">
-                        </div>
-                        <div class="editor-field">
-                            <label>Instagram</label>
-                            <input type="text" id="edit-instagram" class="editor-input">
-                        </div>
+                    <div class="editor-field">
+                        <label>Site</label>
+                        <input type="text" id="edit-site" class="editor-input">
+                    </div>
+                    <div class="editor-field">
+                        <label>Instagram</label>
+                        <input type="text" id="edit-instagram" class="editor-input">
                     </div>
                     <div class="editor-actions">
                         <button id="saveEvento" class="action-btn save">💾 Salvar</button>
