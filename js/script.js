@@ -561,7 +561,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         const eventsToShow = (activeFilters.bairro || activeFilters.dia) ? filteredEventos : eventos;
         
-        items.forEach(eventId => {
+        items.forEach((eventId, idx) => {
             const found = getEventoById(eventId);
             if (!found) return;
             const { evento, index: eventIdx } = found;
@@ -573,6 +573,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             const li = document.createElement('li');
             li.classList.add('sortable-item');
             li.dataset.eventId = eventId;
+
+            const rankBadge = document.createElement('div');
+            rankBadge.className = 'item-rank';
+            rankBadge.textContent = idx + 1;
             
             const arrowsBox = document.createElement('div');
             arrowsBox.className = 'arrows-box';
@@ -609,6 +613,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             textBox.appendChild(textSpan);
             textBox.appendChild(badgesDiv);
             
+            li.appendChild(rankBadge);
             li.appendChild(arrowsBox);
             li.appendChild(textBox);
             
