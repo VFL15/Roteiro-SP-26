@@ -468,7 +468,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function loadItems() {
         const orderRef = ref(window.firebaseDb, 'eventOrder');
-        
+
+        // Função auxiliar para obter o nome pelo id
+        const nameFor = (id) => {
+            const found = getEventoById(id);
+            return found?.evento?.nome || id;
+        };
+
         onValue(orderRef, (snapshot) => {
             if (snapshot.exists()) {
                 const raw = snapshot.val();
@@ -479,30 +485,30 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!items || items.length === 0) {
                 items = eventos.map(ev => eventoId(ev));
             }
-            
+
             // Garantir que todos os eventos existentes estejam no array items
             // (evitar que eventos fiquem de fora se o eventOrder estiver desatualizado)
             const itemsSet = new Set(items);
             const missingEvents = eventos
                 .map(ev => eventoId(ev))
                 .filter(id => !itemsSet.has(id));
-            
+
             if (missingEvents.length > 0) {
                 items = [...items, ...missingEvents];
-                // Ordenar alfabeticamente por nome ao completar itens faltantes
-                const nameFor = (id) => {
-                    const found = getEventoById(id);
-                    return found?.evento?.nome || id;
-                };
+                // Ordenar alfabeticamente por nome ao completar itens faltantes e persistir
                 items.sort((a, b) => nameFor(a).localeCompare(nameFor(b), 'pt-BR', { sensitivity: 'accent' }));
-                // Salvar ordem atualizada no Firebase
                 saveOrder();
+            } else {
+                // Mesmo sem merge, manter exibição em ordem alfabética
+                items.sort((a, b) => nameFor(a).localeCompare(nameFor(b), 'pt-BR', { sensitivity: 'accent' }));
             }
-            
+
             renderList();
         }, (error) => {
             console.error('Error loading order:', error);
             items = eventos.map(ev => eventoId(ev));
+            // Garantir ordenação alfabética na falha
+            items.sort((a, b) => nameFor(a).localeCompare(nameFor(b), 'pt-BR', { sensitivity: 'accent' }));
             renderList();
         });
     }
