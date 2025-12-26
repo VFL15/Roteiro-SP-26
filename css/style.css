@@ -471,12 +471,28 @@ body {
 }
 
 /* Eventos Editor Carousel */
+#page-eventos {
+    position: relative;
+}
+
+.carousel-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #9F3132;
+    padding: 15px 20px;
+    font-family: 'Poiret One', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .eventos-carousel {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
-    height: 100%;
+    height: calc(100% - 70px);
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch; /* smooth momentum scrolling on mobile */
@@ -499,16 +515,7 @@ body {
     margin-bottom: 20px;
 }
 
-.carousel-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #9F3132;
-    padding: 15px 20px;
-    margin: -72px -20px 20px -20px;
-    border-radius: 12px 12px 0 0;
-    font-family: 'Poiret One', sans-serif;
-}
+
 
 .carousel-nav {
     background: rgba(244, 247, 252, 0.2);
