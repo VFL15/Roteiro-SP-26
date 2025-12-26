@@ -6,8 +6,8 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: -webkit-linear-gradient(0deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
-    background: linear-gradient(0deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
+    background: -webkit-linear-gradient(90deg, #8ca2f1, #b293db, #f396c9, #fac53f, #f23e42);
+    background: linear-gradient(90deg, #8ca2f1, #b293db, #f396c9, #fac53f, #f23e42);
     margin: 0;
     padding: 0;
     overflow: hidden !important;
