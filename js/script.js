@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const pageRoteiro = document.getElementById('page-roteiro');
     const pageMapas = document.getElementById('page-mapas');
     const pageDocumentos = document.getElementById('page-documentos');
+    const docsTabs = document.querySelectorAll('.docs-tab');
+    const docsPanels = document.querySelectorAll('.docs-panel');
     const navButtons = document.querySelectorAll('.nav-item');
     
     // Variáveis globais
@@ -410,6 +412,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             } else if (targetPage === 'documentos') {
                 pageDocumentos.classList.add('active');
             }
+        });
+    });
+
+    // =========================
+    // TABS DA PÁGINA DOCS
+    // =========================
+    docsTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.getAttribute('data-doc');
+            docsTabs.forEach(t => t.classList.remove('active'));
+            docsPanels.forEach(p => p.classList.remove('active'));
+            tab.classList.add('active');
+            const panel = document.querySelector(`.docs-panel[data-doc="${target}"]`);
+            if (panel) panel.classList.add('active');
         });
     });
 

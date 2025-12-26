@@ -212,6 +212,53 @@ body {
     line-height: 1.5;
 }
 
+.docs-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0 12px 0;
+}
+
+.docs-tab {
+    flex: 1;
+    padding: 10px 12px;
+    border: 2px solid #9F3132;
+    border-radius: 8px;
+    background: #fff;
+    color: #9F3132;
+    font-weight: 700;
+    font-family: 'Poiret One', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.docs-tab.active {
+    background: #9F3132;
+    color: #F4F7FC;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.docs-tab:hover {
+    transform: translateY(-1px);
+}
+
+.docs-panels {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.docs-panel {
+    display: none;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.docs-panel.active {
+    display: flex;
+}
+
 /* Visitacao page styling */
 .visitacao-content {
     display: flex;
