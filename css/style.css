@@ -188,6 +188,30 @@ body {
     background: transparent;
 }
 
+/* Documentos page styling */
+#page-documentos {
+    background: #f7f7f7;
+}
+
+.documentos-content {
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.documentos-content h2 {
+    margin-bottom: 10px;
+    font-family: 'Poiret One', sans-serif;
+    color: #9F3132;
+}
+
+.documentos-content p {
+    margin: 0;
+    line-height: 1.5;
+}
+
 /* Visitacao page styling */
 .visitacao-content {
     display: flex;

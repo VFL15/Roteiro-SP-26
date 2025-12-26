@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const pageClassificacao = document.getElementById('page-classificacao');
     const pageRoteiro = document.getElementById('page-roteiro');
     const pageMapas = document.getElementById('page-mapas');
+    const pageDocumentos = document.getElementById('page-documentos');
     const navButtons = document.querySelectorAll('.nav-item');
     
     // Variáveis globais
@@ -395,6 +396,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             pageClassificacao.classList.remove('active');
             pageRoteiro.classList.remove('active');
             pageMapas.classList.remove('active');
+            pageDocumentos.classList.remove('active');
             
             if (targetPage === 'eventos') {
                 pageEventos.classList.add('active');
@@ -405,6 +407,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 gerarRoteiros();
             } else if (targetPage === 'mapas') {
                 pageMapas.classList.add('active');
+            } else if (targetPage === 'documentos') {
+                pageDocumentos.classList.add('active');
             }
         });
     });
