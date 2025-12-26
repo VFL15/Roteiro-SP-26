@@ -1,3 +1,18 @@
+/* Pages visibility */
+.page {
+    display: none;
+    width: 100%;
+    max-width: 100vw;
+    height: calc(100vh - 72px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 48px;
+    box-sizing: border-box;
+}
+
+.page.active {
+    display: block;
+}
 html {
     overflow: hidden !important;
     height: 100%;
@@ -42,10 +57,13 @@ body {
 }
 
 .filter-btn {
-    background: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    background: #9F3132;
     border: none;
     border-radius: 18px;
-    height: 28px;
+    height: 36px;
     padding: 0 12px;
     display: flex;
     align-items: center;
@@ -53,10 +71,12 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: 'Poiret One', sans-serif;
+    z-index: 100;
+    color: #F4F7FC;
 }
 
 .filter-btn:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: #8a2a2b;
 }
 
 .filter-icon {
@@ -70,19 +90,39 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Filter Panel */
-.filter-panel {
-    background: #F4F7FC;
-    padding: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    display: none;
-    flex-direction: column;
-    gap: 12px;
-    flex-shrink: 0;
+/* Filters bar (horizontal) */
+.filter-bar {
+    background: transparent;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: nowrap; /* manter tudo em uma linha */
+    white-space: nowrap; /* evitar quebra de linha em textos */
 }
 
-.filter-panel.active {
+.filter-label-text {
+    color: #F4F7FC;
+    font-weight: 600;
+    font-family: 'Poiret One', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+}
+
+.filter-group-inline {
     display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.filter-group-inline label {
+    color: #F4F7FC;
+    font-weight: 600;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
 }
 
 .filter-group {
@@ -91,74 +131,55 @@ body {
     gap: 6px;
 }
 
-.filter-group label {
-    font-size: 13px;
-    font-weight: 600;
-    color: #545358;
-    font-family: 'Poiret One', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
 .filter-select {
-    padding: 8px 12px;
+    padding: 2px 6px;
     border: 1px solid #ddd;
     border-radius: 6px;
-    font-size: 14px;
-    background: white;
+    font-size: 11px;
+    background: #fff;
     color: #545358;
     cursor: pointer;
+    height: 26px;
+    width: 78px; /* compacto para caber em uma linha */
 }
 
-.filter-actions {
+.filter-actions-inline {
     display: flex;
-    gap: 8px;
-    margin-top: 8px;
+    gap: 6px;
 }
 
 .filter-action-btn {
-    flex: 1;
-    padding: 10px;
+    padding: 5px 8px;
     border: none;
     border-radius: 6px;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: 'Poiret One', sans-serif;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
+    height: 26px;
+    min-width: 60px;
 }
 
 .filter-action-btn.clear {
-    background: #f0f0f0;
-    color: #545358;
+    background: rgba(244, 247, 252, 0.2);
+    color: #F4F7FC;
+    border: 1px solid #F4F7FC;
 }
 
 .filter-action-btn.clear:hover {
-    background: #e0e0e0;
+    background: rgba(244, 247, 252, 0.3);
 }
 
 .filter-action-btn.apply {
-    background: #9F3132;
+    background: #7a2329;
     color: #F4F7FC;
 }
 
 .filter-action-btn.apply:hover {
-    background: #8a2a2b;
-}
-
-/* Pages container */
-.page {
-    display: none;
-    width: 100%;
-    max-width: 100vw;
-    height: calc(100vh - 72px);
-    overflow-y: auto;
-    overflow-x: hidden;
-    scrollbar-width: none; /* Firefox: hide scrollbar */
-    padding-bottom: 48px; /* Space for bottom navigation menu */
-    box-sizing: border-box;
+    background: #6a1f25;
 }
 
 .page::-webkit-scrollbar {
@@ -191,58 +212,6 @@ body {
 
 .documentos-content {
     padding: 20px;
-    max-width: 700px;
-    margin: 0 auto;
-    color: #333;
-    font-family: Arial, sans-serif;
-}
-
-.documentos-content h2 {
-    margin-bottom: 10px;
-    font-family: 'Poiret One', sans-serif;
-    color: #9F3132;
-}
-
-.documentos-content p {
-    margin: 0;
-    line-height: 1.5;
-}
-
-.docs-tabs {
-    display: flex;
-    gap: 8px;
-    margin: 16px 0 12px 0;
-}
-
-.docs-tab {
-    flex: 1;
-    padding: 10px 12px;
-    border: 2px solid #9F3132;
-    border-radius: 8px;
-    background: #fff;
-    color: #9F3132;
-    font-weight: 700;
-    font-family: 'Poiret One', sans-serif;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.docs-tab.active {
-    background: #9F3132;
-    color: #F4F7FC;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.docs-tab:hover {
-    transform: translateY(-1px);
-}
-
-.docs-panels {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    padding: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .docs-panel {
@@ -279,6 +248,7 @@ body {
 
 #page-classificacao .top-header {
     z-index: 50;
+    display: none;
 }
 
 #page-classificacao .filter-panel {

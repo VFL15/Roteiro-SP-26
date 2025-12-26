@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Variáveis globais
     let eventos = [];
     let filteredEventos = [];
-    let activeFilters = { tipo: '', bairro: '', dia: '' };
+    let activeFilters = { tipo: '', bairro: '' };
     let items = [];
     const list = document.getElementById('sortable-list');
     const tipoSelect = document.getElementById('edit-tipo');
@@ -387,33 +387,56 @@ document.addEventListener('DOMContentLoaded', async () => {
     // =========================
     // NAVEGAÇÃO ENTRE PÁGINAS
     // =========================
+    const showPage = (targetPage) => {
+        // Safety: ensure elements exist
+        if (!pageEventos || !pageClassificacao || !pageRoteiro || !pageMapas || !pageDocumentos) {
+            console.warn('Page elements missing');
+            return;
+        }
+
+        pageEventos.classList.remove('active');
+        pageClassificacao.classList.remove('active');
+        pageRoteiro.classList.remove('active');
+        pageMapas.classList.remove('active');
+        pageDocumentos.classList.remove('active');
+
+        console.log('Switching to page:', targetPage);
+
+        switch (targetPage) {
+            case 'eventos':
+                pageEventos.classList.add('active');
+                break;
+            case 'classificacao':
+                pageClassificacao.classList.add('active');
+                break;
+            case 'roteiro':
+                pageRoteiro.classList.add('active');
+                gerarRoteiros();
+                break;
+            case 'mapas':
+                pageMapas.classList.add('active');
+                break;
+            case 'documentos':
+                pageDocumentos.classList.add('active');
+                break;
+            default:
+                pageEventos.classList.add('active');
+        }
+    };
+
+    // Attach handlers
     navButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const targetPage = btn.getAttribute('data-page');
-            
             navButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            
-            pageEventos.classList.remove('active');
-            pageClassificacao.classList.remove('active');
-            pageRoteiro.classList.remove('active');
-            pageMapas.classList.remove('active');
-            pageDocumentos.classList.remove('active');
-            
-            if (targetPage === 'eventos') {
-                pageEventos.classList.add('active');
-            } else if (targetPage === 'classificacao') {
-                pageClassificacao.classList.add('active');
-            } else if (targetPage === 'roteiro') {
-                pageRoteiro.classList.add('active');
-                gerarRoteiros();
-            } else if (targetPage === 'mapas') {
-                pageMapas.classList.add('active');
-            } else if (targetPage === 'documentos') {
-                pageDocumentos.classList.add('active');
-            }
+            showPage(targetPage);
         });
     });
+
+    // Set initial page according to current active nav button
+    const initialActive = document.querySelector('.bottom-nav .nav-item.active');
+    showPage(initialActive?.getAttribute('data-page') || 'eventos');
 
     // =========================
     // TABS DA PÁGINA DOCS
@@ -430,45 +453,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     // =========================
-    // FILTROS
+    // FILTROS (barra horizontal - automático)
     // =========================
-    const filterBtn = document.getElementById('filterBtn');
-    const filterPanel = document.getElementById('filterPanel');
     const filterTipo = document.getElementById('filterTipo');
     const filterLocal = document.getElementById('filterLocal');
-    const filterDia = document.getElementById('filterDia');
-    const applyFiltersBtn = document.getElementById('applyFilters');
-    const clearFiltersBtn = document.getElementById('clearFilters');
 
-    filterBtn.addEventListener('click', () => {
-        filterPanel.classList.toggle('active');
-    });
-
-    applyFiltersBtn.addEventListener('click', () => {
+    // Aplicar filtros automaticamente ao mudar seleção
+    filterTipo?.addEventListener('change', () => {
         activeFilters.tipo = filterTipo.value;
-        activeFilters.bairro = filterLocal.value;
-        activeFilters.dia = filterDia.value;
         applyFilters();
-        filterPanel.classList.remove('active');
     });
 
-    clearFiltersBtn.addEventListener('click', () => {
-        filterTipo.value = '';
-        filterLocal.value = '';
-        filterDia.value = '';
-        activeFilters.tipo = '';
-        activeFilters.bairro = '';
-        activeFilters.dia = '';
+    filterLocal?.addEventListener('change', () => {
+        activeFilters.bairro = filterLocal.value;
         applyFilters();
-        filterPanel.classList.remove('active');
     });
 
     function applyFilters() {
         filteredEventos = eventos.filter(evento => {
             let matchTipo = !activeFilters.tipo || evento.tipo === activeFilters.tipo;
             let matchBairro = !activeFilters.bairro || evento.bairro === activeFilters.bairro;
-            let matchDia = !activeFilters.dia || (evento.horarios_funcionamento[activeFilters.dia] && evento.horarios_funcionamento[activeFilters.dia] !== 'Fechado');
-            return matchTipo && matchBairro && matchDia;
+            return matchTipo && matchBairro;
         });
         renderList();
     }
@@ -559,14 +564,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!list) return;
         list.innerHTML = '';
         
-        const eventsToShow = (activeFilters.bairro || activeFilters.dia) ? filteredEventos : eventos;
+        const eventsToShow = (activeFilters.tipo || activeFilters.bairro) ? filteredEventos : eventos;
         
         items.forEach((eventId, idx) => {
             const found = getEventoById(eventId);
             if (!found) return;
             const { evento, index: eventIdx } = found;
             
-            if ((activeFilters.bairro || activeFilters.dia) && !filteredEventos.includes(evento)) {
+            if ((activeFilters.tipo || activeFilters.bairro) && !filteredEventos.includes(evento)) {
                 return;
             }
             
