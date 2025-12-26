@@ -264,16 +264,16 @@ body {
 
 .sortable-list {
     list-style-type: none;
-    padding: 0 0 48px 32px; /* Left padding to make room for fixed numbers; bottom padding for menu */
+    padding: 0 0 16px 32px; /* padding inferior bem baixo para reduzir espaço antes do menu */
     margin: 0;
     width: 100%;
-    min-height: calc(100vh - 92px);
+    min-height: auto;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     overflow-y: auto;
     overflow-x: hidden;
-    height: calc(100vh - 92px);
+    height: auto;
     scrollbar-width: none; /* Firefox: hide native */
 }
 
@@ -483,7 +483,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: #545358;
+    background: #C3272B;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
