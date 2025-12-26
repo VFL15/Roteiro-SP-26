@@ -489,6 +489,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             if (missingEvents.length > 0) {
                 items = [...items, ...missingEvents];
+                // Ordenar alfabeticamente por nome ao completar itens faltantes
+                const nameFor = (id) => {
+                    const found = getEventoById(id);
+                    return found?.evento?.nome || id;
+                };
+                items.sort((a, b) => nameFor(a).localeCompare(nameFor(b), 'pt-BR', { sensitivity: 'accent' }));
                 // Salvar ordem atualizada no Firebase
                 saveOrder();
             }

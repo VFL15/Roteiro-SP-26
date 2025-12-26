@@ -76,7 +76,6 @@
     },
     {
         "nome": "Bar do Cofre",
-        "descricao": "Farol Santander / SubAstor",
         "tipo": "Alimentação",
         "bairro": "Centro Histórico",
         "endereco": "Farol Santander / SubAstor",
@@ -102,7 +101,6 @@
     {
         "nome": "Bar dos Arcos",
         "descricao": "",
-        "tipo": "Alimentação",
         "bairro": "República",
         "endereco": "Bar dos Arcos - República",
         "latitude": -23.5435,
@@ -128,7 +126,6 @@
         "nome": "Beco do Batman",
         "descricao": "",
         "tipo": "Cultural",
-        "bairro": "Vila Madalena",
         "endereco": "Beco do Batman - Vila Madalena",
         "latitude": -23.555,
         "longitude": -46.69,
@@ -154,7 +151,6 @@
         "descricao": "Hamburgueria com temática de Pulp Fiction",
         "tipo": "Alimentação",
         "bairro": "Jardim Paulista",
-        "endereco": "Big Kahuna - Jardim Paulista",
         "latitude": -23.568,
         "longitude": -46.672,
         "distancia_airbnb_m": 3500,
@@ -175,12 +171,11 @@
         "instagram": "@bigkahunaburgerr"
     },
     {
-        "nome": "Botanikafé Jardins",
+        "nome": "Botanikafé - Jardins",
         "descricao": "Local arejado que serve comida saudável, drinques artesanais e brunch.",
         "tipo": "Ingestão",
         "bairro": "Jardins",
         "endereco": "Alameda Lorena, 1765",
-        "latitude": -23.566,
         "longitude": -46.67,
         "distancia_airbnb_m": 3200,
         "horarios_funcionamento": {
@@ -200,7 +195,7 @@
         "instagram": "@botanikafe"
     },
     {
-        "nome": "Botanikafé Pinheiros",
+        "nome": "Botanikafé - Pinheiros",
         "descricao": "Local arejado que serve comida saudável, drinques artesanais e brunch.",
         "tipo": "Ingestão",
         "bairro": "Pinheiros",
@@ -450,7 +445,7 @@
         "instagram": "@kmart.sp"
     },
     {
-        "nome": "L40 Cozinha de Latitude",
+        "nome": "L40",
         "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Vila Olímpia",
@@ -500,7 +495,7 @@
         "instagram": "sonzera_records"
     },
     {
-        "nome": "Mamute Frutaria & Restaurante",
+        "nome": "Mamute",
         "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Butantã",
@@ -800,7 +795,7 @@
         "instagram": "@porumpunhadodedolares"
     },
     {
-        "nome": "Praça Antônio Prado",
+        "nome": "Cinema ao ar livre",
         "descricao": "Cinema ao ar livre",
         "tipo": "Cultural",
         "bairro": "Centro Histórico",
@@ -1100,7 +1095,7 @@
         "instagram": ""
     },
     {
-        "nome": "Vinícola Urbana",
+        "nome": "Vinícola Urbana",
         "descricao": "",
         "tipo": "Alimentação",
         "bairro": "Pinheiros",
@@ -1285,32 +1280,6 @@
         "tipo": "Passeio",
         "bairro": "",
         "endereco": "Griffinn Café e Afins",
-        "latitude": 0,
-        "longitude": 0,
-        "distancia_airbnb_m": 0,
-        "horarios_funcionamento": {
-            "quinta": "",
-            "sexta": "",
-            "sabado": "",
-            "domingo": ""
-        },
-        "horario_visitacao": "A definir",
-        "reservar": "não",
-        "reserva": "",
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "site": "",
-        "instagram": ""
-    }
-    ,
-    {
-        "nome": "Cinema ao ar livre",
-        "descricao": "",
-        "tipo": "Passeio",
-        "bairro": "",
-        "endereco": "Cinema ao ar livre",
         "latitude": 0,
         "longitude": 0,
         "distancia_airbnb_m": 0,
