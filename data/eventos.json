@@ -968,31 +968,7 @@
         ],
         "site": "https://getin.app/sao-paulo/riviera-bar",
         "instagram": "@rivierabarsp"
-    },
-    {
-        "nome": "Rodoviária",
-        "descricao": "Terminal Rodoviário do Tietê",
-        "tipo": "Ida/Volta",
-        "bairro": "Santana",
-        "endereco": "Terminal Rodoviário do Tietê",
-        "latitude": -23.514,
-        "longitude": -46.627,
-        "distancia_airbnb_m": 5700,
-        "horarios_funcionamento": {
-            "quinta": "24h",
-            "sexta": "24h",
-            "sabado": "24h",
-            "domingo": "24h"
-        },
-        "horario_visitacao": "A definir",
-        "reservar": "não",
-        "reserva": "",
-        "imagens": [
-            "assets/images/placeholder.svg",
-            "assets/images/placeholder.svg"
-        ],
-        "site": "",
-        "instagram": ""
+        
     },
     {
         "nome": "Roller Jam - Moema",

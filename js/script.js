@@ -286,6 +286,27 @@ document.addEventListener('DOMContentLoaded', async () => {
                 console.error('Erro ao sincronizar com Firebase:', error);
             });
     };
+
+    // Exportar eventos atuais (em memória) para um arquivo JSON
+    const downloadEventosJSON = () => {
+        try {
+            const blob = new Blob([JSON.stringify(eventos, null, 4)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            const date = new Date().toISOString().slice(0, 10);
+            a.download = `eventos_export_${date}.json`;
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => {
+                URL.revokeObjectURL(url);
+                a.remove();
+            }, 0);
+        } catch (err) {
+            console.error('Falha ao exportar eventos:', err);
+            alert('Falha ao exportar eventos. Veja o console para detalhes.');
+        }
+    };
     
     // Event listeners do editor
     document.getElementById('prevEvento')?.addEventListener('click', () => {
@@ -300,6 +321,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     document.getElementById('saveEvento')?.addEventListener('click', saveEvento);
     document.getElementById('resetEvento')?.addEventListener('click', () => displayEvento(currentEventoIndex));
+    document.getElementById('exportEventos')?.addEventListener('click', downloadEventosJSON);
     
     const handleTipoChange = () => {
         if (!tipoSelect) return;
