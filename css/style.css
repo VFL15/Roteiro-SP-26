@@ -8,6 +8,7 @@
     overflow-x: hidden;
     padding-bottom: 48px;
     box-sizing: border-box;
+    color: #9F3132;
 }
 
 .page.active {
@@ -281,17 +282,17 @@ body {
 }
 
 #page-classificacao .sortable-list {
-    padding: 0 0 8px 32px;
+    padding: 0 0 0px 28px;
 }
 
 #page-classificacao .sortable-item:last-child {
-    margin-bottom: 4px;
+    margin-bottom: 0px;
 }
 
 #page-classificacao .sortable-list::after {
     content: "";
     display: block;
-    height: 36px; /* spacer stays inside the list so the last card clears the nav */
+    height: 40px; /* spacer stays inside the list so the last card clears the nav */
 }
 
 /* WebKit: hide native scrollbar of the list */
@@ -466,7 +467,7 @@ body {
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     font-family: 'Poiret One', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-    border-radius: 30px 30px 0 0;
+    border-radius: 12px 12px 0 0;
     overflow: hidden;
 }
 .bottom-nav * {
@@ -500,7 +501,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: #C3272B;
+    background: #545358;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -509,11 +510,11 @@ body {
 }
 
 .nav-item:first-child {
-    border-radius: 30px 0 0 0;
+    border-radius: 12px 0 0 0;
 }
 
 .nav-item:last-child {
-    border-radius: 0 30px 0 0;
+    border-radius: 0 12px 0 0;
 }
 
 .nav-item:hover {
