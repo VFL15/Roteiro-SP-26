@@ -238,6 +238,9 @@ body {
 /* Classificação page - flex layout for header + filters + list */
 #page-classificacao {
     display: none;
+    /* Only subtract bottom nav height so the list meets the menu */
+    height: calc(100vh - 36px);
+    padding-bottom: 8px;
 }
 
 #page-classificacao.active {
@@ -275,6 +278,14 @@ body {
     overflow-x: hidden;
     height: auto;
     scrollbar-width: none; /* Firefox: hide native */
+}
+
+#page-classificacao .sortable-list {
+    padding: 0 0 8px 32px;
+}
+
+#page-classificacao .sortable-item:last-child {
+    margin-bottom: 4px;
 }
 
 /* WebKit: hide native scrollbar of the list */
