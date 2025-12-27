@@ -8,7 +8,6 @@
     overflow-x: hidden;
     padding-bottom: 48px;
     box-sizing: border-box;
-    color: #9F3132;
 }
 
 .page.active {
@@ -22,6 +21,7 @@ html {
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #9F3132;
     background: linear-gradient(0deg, #f06419, #e27aff, #29ffbf);
     margin: 0;
     padding: 0;
@@ -93,7 +93,7 @@ body {
 
 /* Filters bar (horizontal) */
 .filter-bar {
-    background: transparent;
+    background: #9F3132;
     padding: 8px 12px;
     display: flex;
     align-items: center;
@@ -292,7 +292,7 @@ body {
 #page-classificacao .sortable-list::after {
     content: "";
     display: block;
-    height: 40px; /* spacer stays inside the list so the last card clears the nav */
+    height: 60px; /* spacer stays inside the list so the last card clears the nav */
 }
 
 /* WebKit: hide native scrollbar of the list */
@@ -345,27 +345,42 @@ body {
     display: flex;
     flex-direction: column;
     margin-right: 10px;
+    gap: 2px;
 }
 
-.sortable-item .buttons .arrow {
+.arrows-box .arrow {
     background: none;
     border: none;
-    font-size: 18px;
+    width: 24px;
+    height: 20px;
     cursor: pointer;
-    padding: 5px;
-    color: #007bff;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
 }
 
-.sortable-item .buttons .arrow:hover {
-    color: #0056b3;
+.arrows-box .arrow:hover {
+    transform: scale(1.1);
 }
 
-.sortable-item .buttons .arrow.up::before {
-    content: '↑';
+.arrows-box .arrow.up::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid #9F3132;
 }
 
-.sortable-item .buttons .arrow.down::before {
-    content: '↓';
+.arrows-box .arrow.down::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #9F3132;
 }
 
 .sortable-item .item-text {
@@ -501,11 +516,11 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: #545358;
+    background: #F4F7FC;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #F4F7FC;
+    color: #5D0F1C;
     gap: 4px;
 }
 
@@ -529,7 +544,7 @@ body {
 
 .nav-icon {
     font-size: 1em; /* igual à altura do texto */
-    color: #F4F7FC;
+    color: #5D0F1C;
     transition: transform 0.3s ease;
 }
 

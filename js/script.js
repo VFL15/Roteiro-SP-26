@@ -588,11 +588,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             const upBtn = document.createElement('button');
             upBtn.type = 'button';
             upBtn.className = 'arrow up';
-            upBtn.textContent = '↑';
             const downBtn = document.createElement('button');
             downBtn.type = 'button';
             downBtn.className = 'arrow down';
-            downBtn.textContent = '↓';
             arrowsBox.appendChild(upBtn);
             arrowsBox.appendChild(downBtn);
             
