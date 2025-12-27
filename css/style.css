@@ -288,6 +288,12 @@ body {
     margin-bottom: 4px;
 }
 
+#page-classificacao .sortable-list::after {
+    content: "";
+    display: block;
+    height: 36px; /* spacer stays inside the list so the last card clears the nav */
+}
+
 /* WebKit: hide native scrollbar of the list */
 .sortable-list::-webkit-scrollbar {
     display: none;
