@@ -22,6 +22,9 @@ html {
 body {
     font-family: Arial, sans-serif;
     background-color: #9F3132;
+    background-image: linear-gradient(0deg, #f06419, #e27aff, #29ffbf);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     padding: 0;
     overflow: hidden !important;
